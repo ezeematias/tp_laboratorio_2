@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    static class Calculadora
+    public static class Calculadora
     {
         public static double Operar(Numero num1, Numero num2, string operador)
         {
@@ -16,7 +16,7 @@ namespace Entidades
                 case "-":
                     output = num1 - num2;
                     break;
-                case "/":
+                case "/":                    
                     output = num1 / num2;
                     break;
                 case "*":

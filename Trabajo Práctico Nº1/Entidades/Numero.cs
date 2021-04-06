@@ -108,8 +108,8 @@ namespace Entidades
         }
         private static double ValidarNumero(string strNumero)
         {
-            double retorno = 0;
-            double.TryParse(strNumero, out retorno);
+            //double retorno = 0;
+            double.TryParse(strNumero, out double retorno);
             return retorno;
         }
 
@@ -117,6 +117,5 @@ namespace Entidades
         {
             this.numero = ValidarNumero(strNumero);
         }
-
     }
 }
