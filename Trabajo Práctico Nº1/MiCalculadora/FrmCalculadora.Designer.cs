@@ -44,17 +44,17 @@ namespace MiCalculadora
             // txtNumero1
             // 
             this.txtNumero1.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNumero1.Font = new System.Drawing.Font("OCR-A BT", 30F);
-            this.txtNumero1.Location = new System.Drawing.Point(24, 105);
+            this.txtNumero1.Font = new System.Drawing.Font("Calibri", 30F);
+            this.txtNumero1.Location = new System.Drawing.Point(20, 110);
             this.txtNumero1.Multiline = true;
             this.txtNumero1.Name = "txtNumero1";
-            this.txtNumero1.Size = new System.Drawing.Size(165, 57);
+            this.txtNumero1.Size = new System.Drawing.Size(165, 53);
             this.txtNumero1.TabIndex = 1;
             // 
             // btnOperar
             // 
             this.btnOperar.Font = new System.Drawing.Font("Calibri", 12F);
-            this.btnOperar.Location = new System.Drawing.Point(24, 170);
+            this.btnOperar.Location = new System.Drawing.Point(20, 170);
             this.btnOperar.Name = "btnOperar";
             this.btnOperar.Size = new System.Drawing.Size(148, 50);
             this.btnOperar.TabIndex = 4;
@@ -65,17 +65,17 @@ namespace MiCalculadora
             // txtNumero2
             // 
             this.txtNumero2.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNumero2.Font = new System.Drawing.Font("OCR-A BT", 30F);
-            this.txtNumero2.Location = new System.Drawing.Point(303, 105);
+            this.txtNumero2.Font = new System.Drawing.Font("Calibri", 30F);
+            this.txtNumero2.Location = new System.Drawing.Point(299, 110);
             this.txtNumero2.Multiline = true;
             this.txtNumero2.Name = "txtNumero2";
-            this.txtNumero2.Size = new System.Drawing.Size(165, 57);
+            this.txtNumero2.Size = new System.Drawing.Size(165, 53);
             this.txtNumero2.TabIndex = 3;
             // 
             // btnLimpiar
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Calibri", 12F);
-            this.btnLimpiar.Location = new System.Drawing.Point(178, 170);
+            this.btnLimpiar.Location = new System.Drawing.Point(174, 170);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(136, 50);
             this.btnLimpiar.TabIndex = 5;
@@ -86,7 +86,7 @@ namespace MiCalculadora
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(320, 170);
+            this.button3.Location = new System.Drawing.Point(316, 170);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(148, 50);
             this.button3.TabIndex = 6;
@@ -96,7 +96,7 @@ namespace MiCalculadora
             // btnDecimalBinario
             // 
             this.btnDecimalBinario.Font = new System.Drawing.Font("Calibri", 12F);
-            this.btnDecimalBinario.Location = new System.Drawing.Point(24, 225);
+            this.btnDecimalBinario.Location = new System.Drawing.Point(20, 225);
             this.btnDecimalBinario.Name = "btnDecimalBinario";
             this.btnDecimalBinario.Size = new System.Drawing.Size(216, 50);
             this.btnDecimalBinario.TabIndex = 7;
@@ -106,7 +106,7 @@ namespace MiCalculadora
             // btnBinarioDecimal
             // 
             this.btnBinarioDecimal.Font = new System.Drawing.Font("Calibri", 12F);
-            this.btnBinarioDecimal.Location = new System.Drawing.Point(246, 225);
+            this.btnBinarioDecimal.Location = new System.Drawing.Point(242, 225);
             this.btnBinarioDecimal.Name = "btnBinarioDecimal";
             this.btnBinarioDecimal.Size = new System.Drawing.Size(222, 50);
             this.btnBinarioDecimal.TabIndex = 8;
@@ -119,16 +119,16 @@ namespace MiCalculadora
             this.cboOperador.CausesValidation = false;
             this.cboOperador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboOperador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboOperador.Font = new System.Drawing.Font("OCR-A BT", 33F);
+            this.cboOperador.Font = new System.Drawing.Font("Calibri", 28F);
             this.cboOperador.FormattingEnabled = true;
             this.cboOperador.Items.AddRange(new object[] {
             "+",
             "-",
             "*",
             "/"});
-            this.cboOperador.Location = new System.Drawing.Point(195, 105);
+            this.cboOperador.Location = new System.Drawing.Point(191, 110);
             this.cboOperador.Name = "cboOperador";
-            this.cboOperador.Size = new System.Drawing.Size(102, 57);
+            this.cboOperador.Size = new System.Drawing.Size(102, 53);
             this.cboOperador.TabIndex = 2;
             // 
             // lblResultado
@@ -139,9 +139,9 @@ namespace MiCalculadora
             this.lblResultado.AutoEllipsis = true;
             this.lblResultado.BackColor = System.Drawing.Color.DarkSlateGray;
             this.lblResultado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblResultado.Font = new System.Drawing.Font("OCR-A BT", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultado.Font = new System.Drawing.Font("Calibri", 36F);
             this.lblResultado.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblResultado.Location = new System.Drawing.Point(24, 18);
+            this.lblResultado.Location = new System.Drawing.Point(20, 18);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(444, 68);
             this.lblResultado.TabIndex = 9;

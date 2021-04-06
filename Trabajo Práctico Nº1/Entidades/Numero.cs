@@ -21,7 +21,7 @@ namespace Entidades
 
         public Numero(string strNumero)
         {
-            SetNumero(strNumero);
+            this.SetNumero = strNumero;        
         }
 
         public string BinarioDecimal(string binario)
@@ -113,9 +113,12 @@ namespace Entidades
             return retorno;
         }
 
-        public void SetNumero(string strNumero)
+        public string SetNumero
         {
-            this.numero = ValidarNumero(strNumero);
+            set
+            {
+                this.numero = ValidarNumero(value);
+            }
         }
     }
 }
