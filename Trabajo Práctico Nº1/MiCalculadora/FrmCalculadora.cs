@@ -45,7 +45,18 @@ namespace MiCalculadora
             this.txtNumero1.Text = "";
             this.txtNumero2.Text = "";
             this.lblResultado.Text = "0";
-  
+            
         }
+
+        private void Limpiar()
+        {
+
+        }
+
+        private void MiCalculadora_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
