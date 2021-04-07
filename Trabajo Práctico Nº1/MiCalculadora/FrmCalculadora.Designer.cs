@@ -118,7 +118,6 @@ namespace MiCalculadora
             this.cboOperador.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cboOperador.CausesValidation = false;
             this.cboOperador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboOperador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboOperador.Font = new System.Drawing.Font("Calibri", 28F);
             this.cboOperador.FormattingEnabled = true;
             this.cboOperador.Items.AddRange(new object[] {
@@ -128,6 +127,7 @@ namespace MiCalculadora
             "/"});
             this.cboOperador.Location = new System.Drawing.Point(191, 110);
             this.cboOperador.Name = "cboOperador";
+            this.cboOperador.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cboOperador.Size = new System.Drawing.Size(102, 53);
             this.cboOperador.TabIndex = 2;
             // 
