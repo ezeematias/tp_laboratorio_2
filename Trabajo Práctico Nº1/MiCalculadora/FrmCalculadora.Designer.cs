@@ -34,7 +34,7 @@ namespace MiCalculadora
             this.btnOperar = new System.Windows.Forms.Button();
             this.txtNumero2 = new System.Windows.Forms.TextBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.btnDecimalBinario = new System.Windows.Forms.Button();
             this.btnBinarioDecimal = new System.Windows.Forms.Button();
             this.cboOperador = new System.Windows.Forms.ComboBox();
@@ -83,15 +83,15 @@ namespace MiCalculadora
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // button3
+            // btnCerrar
             // 
-            this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(316, 170);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(148, 50);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "&Cerrar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnCerrar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.Location = new System.Drawing.Point(316, 170);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(148, 50);
+            this.btnCerrar.TabIndex = 6;
+            this.btnCerrar.Text = "&Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
             // 
             // btnDecimalBinario
             // 
@@ -158,7 +158,7 @@ namespace MiCalculadora
             this.Controls.Add(this.cboOperador);
             this.Controls.Add(this.btnBinarioDecimal);
             this.Controls.Add(this.btnDecimalBinario);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.txtNumero2);
             this.Controls.Add(this.btnOperar);
@@ -183,7 +183,7 @@ namespace MiCalculadora
         private System.Windows.Forms.Button btnOperar;
         private System.Windows.Forms.TextBox txtNumero2;
         private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnDecimalBinario;
         private System.Windows.Forms.Button btnBinarioDecimal;
         private System.Windows.Forms.ComboBox cboOperador;
