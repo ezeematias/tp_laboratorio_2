@@ -71,7 +71,7 @@ namespace Entidades
             {
                 for (int i = 0; i < binario.Length; i++)
                 {
-                    if (binario[i] == '1' && binario[i] == '0')
+                    if (binario[i] == '1' || binario[i] == '0')
                     {
                         output = true;
                     }

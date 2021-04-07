@@ -102,6 +102,7 @@ namespace MiCalculadora
             this.btnDecimalBinario.TabIndex = 7;
             this.btnDecimalBinario.Text = "Convertir a &Binario";
             this.btnDecimalBinario.UseVisualStyleBackColor = true;
+            this.btnDecimalBinario.Click += new System.EventHandler(this.btnDecimalBinario_Click);
             // 
             // btnBinarioDecimal
             // 
@@ -112,9 +113,11 @@ namespace MiCalculadora
             this.btnBinarioDecimal.TabIndex = 8;
             this.btnBinarioDecimal.Text = "Convertir a &Decimal";
             this.btnBinarioDecimal.UseVisualStyleBackColor = true;
+            this.btnBinarioDecimal.Click += new System.EventHandler(this.btnBinarioDecimal_Click);
             // 
             // cboOperador
             // 
+            this.cboOperador.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.cboOperador.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cboOperador.CausesValidation = false;
             this.cboOperador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;

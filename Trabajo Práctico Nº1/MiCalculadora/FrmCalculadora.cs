@@ -69,5 +69,20 @@ namespace MiCalculadora
 
         }
 
+        private void btnDecimalBinario_Click(object sender, EventArgs e)
+        {
+            Numero numero = new Numero();
+            string binario;
+            binario = numero.DecimalBinario(this.lblResultado.Text);
+            this.lblResultado.Text = binario;
+        }
+
+        private void btnBinarioDecimal_Click(object sender, EventArgs e)
+        {
+            Numero numero = new Numero();
+            string binario;
+            binario = numero.BinarioDecimal(this.lblResultado.Text);
+            this.lblResultado.Text = binario;
+        }
     }
 }
