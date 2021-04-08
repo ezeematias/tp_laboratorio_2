@@ -26,25 +26,11 @@ namespace Entidades
 
         public string BinarioDecimal(string binario)
         {
-            /*
-            int exponente = binario.Length - 1;
-            int numDecimal = 0;
-
-            for (int i = 0; i < binario.Length; i++)
-            {
-                if (int.Parse(binario.Substring(i, 1)) == 1)
-                {
-                    numDecimal += int.Parse(System.Math.Pow(2, double.Parse(exponente.ToString())).ToString());
-                }
-                exponente--;
-            }
-            return numDecimal.ToString();
-            */
             if (EsBinario(binario))
             {
                 return Convert.ToInt32(binario, 2).ToString();
             }
-            return "Valor Inválido";
+            return "VALOR INVÁLIDO";
         }
 
         public string DecimalBinario(double numero)
@@ -53,7 +39,7 @@ namespace Entidades
             {
                 return Convert.ToString((int)numero, 2);
             }
-            return "Valor Inválido";
+            return "VALOR INVÁLIDO";
         }
         public string DecimalBinario(string numero)
         {
@@ -61,7 +47,7 @@ namespace Entidades
             {
              return DecimalBinario(doubleNum);
             }
-            return "Valor Inválido";
+            return "VALOR INVÁLIDO";
         }
 
         private bool EsBinario(string binario)
@@ -107,8 +93,7 @@ namespace Entidades
             return output;
         }
         private static double ValidarNumero(string strNumero)
-        {
-            //double retorno = 0;
+        {          
             double.TryParse(strNumero, out double retorno);
             return retorno;
         }

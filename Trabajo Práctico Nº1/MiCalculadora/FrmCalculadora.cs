@@ -15,8 +15,7 @@ namespace MiCalculadora
     public partial class MiCalculadora : Form
     {
         private Numero num1;
-        private Numero num2;
-        private string operador;
+        private Numero num2; 
         private double resultado;
 
         public MiCalculadora()
@@ -26,56 +25,91 @@ namespace MiCalculadora
 
         private void btnOperar_Click(object sender, EventArgs e)
         {
-            resultado = Operar(this.txtNumero1.Text, this.txtNumero2.Text, this.cboOperador.Text);
-            if (resultado == double.MinValue)
+
+            if (double.TryParse(this.txtNumero1.Text, out double aux1) || double.TryParse(this.txtNumero2.Text, out double aux2))
             {
-                this.lblResultado.Text = "ERROR";
+                resultado = Operar(this.txtNumero1.Text, this.txtNumero2.Text, this.cmbOperador.Text);
+                if (resultado == double.MinValue)
+                {
+                    this.lblResultado.Text = "ERROR";
+                    MessageBox.Show("No se puede dividir por 0 (Cero)", "¡ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Limpiar();
+                }
+                else
+                {
+                    this.lblResultado.Text = resultado.ToString();
+                    btnBinarioDecimal.Enabled = false;
+                    btnDecimalBinario.Enabled = true;
+                }
             }
             else
             {
-                this.lblResultado.Text = resultado.ToString();
-            }            
+                MessageBox.Show("Se deben colocar valores numéricos", "ATENCIÓN!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Limpiar();
+            }
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            this.txtNumero1.Text = "";
-            this.txtNumero2.Text = "";
-            this.lblResultado.Text = "0";            
+            Limpiar();
         }
 
         private void Limpiar()
         {
-
+            txtNumero1.Text = string.Empty;
+            txtNumero2.Text = string.Empty;
+            cmbOperador.SelectedIndex = 0;
+            this.lblResultado.Text = "0";
+            btnBinarioDecimal.Enabled = false;
+            btnDecimalBinario.Enabled = true;
         }
 
         private double Operar(string numero1, string numero2, string operador)
         {
             num1 = new Numero(this.txtNumero1.Text);
             num2 = new Numero(this.txtNumero2.Text);
-            this.operador = this.cboOperador.Text;
-            return Calculadora.Operar(num1, num2, this.operador);
+            return Calculadora.Operar(num1, num2, operador);
         }
 
         private void MiCalculadora_Load(object sender, EventArgs e)
         {
-
+            this.lblResultado.Text = "0";
+            cmbOperador.SelectedIndex = 0;
         }
 
         private void btnDecimalBinario_Click(object sender, EventArgs e)
         {
-            Numero numero = new Numero();
-            string binario;
-            binario = numero.DecimalBinario(this.lblResultado.Text);
-            this.lblResultado.Text = binario;
+            btnDecimalBinario.Enabled = false;
+            if (!(this.lblResultado.Text == "0"))
+            {
+                string binario = num1.DecimalBinario(this.lblResultado.Text);
+                this.lblResultado.Text = binario;
+            }
+            btnBinarioDecimal.Enabled = true;
         }
 
         private void btnBinarioDecimal_Click(object sender, EventArgs e)
         {
-            Numero numero = new Numero();
-            string binario;
-            binario = numero.BinarioDecimal(this.lblResultado.Text);
-            this.lblResultado.Text = binario;
+            btnBinarioDecimal.Enabled = false;
+            if (!(this.lblResultado.Text == "0"))
+            {
+                string binario = num1.BinarioDecimal(this.lblResultado.Text);
+                this.lblResultado.Text = binario;
+            }
+            btnDecimalBinario.Enabled = true;
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void MiCalculadora_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro que desea salir?", "Cerrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }
