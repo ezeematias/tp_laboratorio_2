@@ -26,12 +26,6 @@ namespace MiCalculadora
 
         private void btnOperar_Click(object sender, EventArgs e)
         {
-            /*
-            num1 = new Numero(this.txtNumero1.Text);
-            num2 = new Numero(this.txtNumero2.Text);
-            operador = this.cboOperador.Text;
-            resultado = Calculadora.Operar(num1, num2, operador);
-            */
             resultado = Operar(this.txtNumero1.Text, this.txtNumero2.Text, this.cboOperador.Text);
             if (resultado == double.MinValue)
             {
@@ -47,8 +41,7 @@ namespace MiCalculadora
         {
             this.txtNumero1.Text = "";
             this.txtNumero2.Text = "";
-            this.lblResultado.Text = "0";
-            
+            this.lblResultado.Text = "0";            
         }
 
         private void Limpiar()
@@ -60,8 +53,8 @@ namespace MiCalculadora
         {
             num1 = new Numero(this.txtNumero1.Text);
             num2 = new Numero(this.txtNumero2.Text);
-            operador = this.cboOperador.Text;
-            return Calculadora.Operar(num1, num2, operador);
+            this.operador = this.cboOperador.Text;
+            return Calculadora.Operar(num1, num2, this.operador);
         }
 
         private void MiCalculadora_Load(object sender, EventArgs e)
