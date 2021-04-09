@@ -26,14 +26,13 @@ namespace MiCalculadora
         private void btnOperar_Click(object sender, EventArgs e)
         {
 
-            if (double.TryParse(this.txtNumero1.Text, out double aux1) || double.TryParse(this.txtNumero2.Text, out double aux2))
+            if (double.TryParse(this.txtNumero1.Text, out double aux1) && double.TryParse(this.txtNumero2.Text, out double aux2))
             {
                 resultado = Operar(this.txtNumero1.Text, this.txtNumero2.Text, this.cmbOperador.Text);
                 if (resultado == double.MinValue)
                 {
                     this.lblResultado.Text = "ERROR";
-                    MessageBox.Show("No se puede dividir por 0 (Cero)", "¡ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Limpiar();
+                    MessageBox.Show("No se puede dividir por 0(Cero)", "¡ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);                    
                 }
                 else
                 {
@@ -44,8 +43,7 @@ namespace MiCalculadora
             }
             else
             {
-                MessageBox.Show("Se deben colocar valores numéricos", "ATENCIÓN!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Limpiar();
+                MessageBox.Show("Se deben colocar solo valores numéricos", "¡ATENCIÓN!", MessageBoxButtons.OK, MessageBoxIcon.Warning);                
             }
         }
 
@@ -106,7 +104,7 @@ namespace MiCalculadora
 
         private void MiCalculadora_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro que desea salir?", "Cerrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            if (MessageBox.Show("¿Está seguro que desea salir?", "¡CERRAR!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 e.Cancel = true;
             }
