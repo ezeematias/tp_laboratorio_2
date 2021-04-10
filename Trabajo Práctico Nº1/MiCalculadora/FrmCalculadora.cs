@@ -46,6 +46,7 @@ namespace MiCalculadora
             }
             else
             {
+                this.lblResultado.Text = "ERROR";
                 MessageBox.Show("Se deben colocar solo valores numéricos", "¡ATENCIÓN!", MessageBoxButtons.OK, MessageBoxIcon.Warning);                
             }
         }
