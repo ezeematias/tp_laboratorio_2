@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 
-
 namespace MiCalculadora
 {
     public partial class MiCalculadora : Form
@@ -22,11 +21,15 @@ namespace MiCalculadora
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Evento generado al presionar el botón Operar. 
+        /// Realiza las operaciones declaradas por el usuario dentro de los campos del Forms.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOperar_Click(object sender, EventArgs e)
         {
-
-            if (double.TryParse(this.txtNumero1.Text, out double aux1) && double.TryParse(this.txtNumero2.Text, out double aux2))
+            if (double.TryParse(this.txtNumero1.Text.Replace(".", ","), out _) && double.TryParse(this.txtNumero2.Text.Replace(".", ","), out _))
             {
                 resultado = Operar(this.txtNumero1.Text, this.txtNumero2.Text, this.cmbOperador.Text);
                 if (resultado == double.MinValue)
@@ -47,11 +50,20 @@ namespace MiCalculadora
             }
         }
 
+        /// <summary>
+        /// Evento generado al presionar el botón Limpiar. 
+        /// Vuelve a los campos a su estado inicial.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
         }
 
+        /// <summary>
+        /// Método que inicializa los campos del forms.
+        /// </summary>
         private void Limpiar()
         {
             txtNumero1.Text = string.Empty;
@@ -62,32 +74,62 @@ namespace MiCalculadora
             btnDecimalBinario.Enabled = true;
         }
 
+        /// <summary>
+        /// Método que realiza las operaciones solicitadas en el Forms.
+        /// Llama a la lógica del programa para su funcionamiento.
+        /// </summary>
+        /// <param name="numero1"></param>
+        /// <param name="numero2"></param>
+        /// <param name="operador"></param>
+        /// <returns></returns>
         private double Operar(string numero1, string numero2, string operador)
         {
-            num1 = new Numero(this.txtNumero1.Text);
-            num2 = new Numero(this.txtNumero2.Text);
+            num1 = new Numero(numero1.Replace(".", ","));
+            num2 = new Numero(numero2.Replace(".", ","));
             return Calculadora.Operar(num1, num2, operador);
         }
 
+        /// <summary>
+        /// Establece los campos en su estado inicial al abrir el Forms.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MiCalculadora_Load(object sender, EventArgs e)
         {
             this.lblResultado.Text = "0";
             cmbOperador.SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// Evento generado al presionar el botón Decimal a Binario. 
+        /// Realiza la conversioens del resultado de la operación en Binario.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDecimalBinario_Click(object sender, EventArgs e)
         {
+            double.TryParse(this.lblResultado.Text, out double aux);
             btnDecimalBinario.Enabled = false;
-            if (!(this.lblResultado.Text == "0"))
+            if (aux > 0)
             {
                 string binario = num1.DecimalBinario(this.lblResultado.Text);
                 this.lblResultado.Text = binario;
+            }else if (aux < 0)
+            {
+                MessageBox.Show("                    ¡LO SENTIMOS!\n\nEn ésta versión no es posible convertir\nenteros negativos a binarios.", "¡ATENCIÓN!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
             btnBinarioDecimal.Enabled = true;
         }
 
+        /// <summary>
+        /// Evento generado al presionar el botón Binario a Decimal. 
+        /// Realiza la conversioens del resultado de la operación en Decimal.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBinarioDecimal_Click(object sender, EventArgs e)
-        {
+        {            
             btnBinarioDecimal.Enabled = false;
             if (!(this.lblResultado.Text == "0"))
             {
@@ -97,11 +139,23 @@ namespace MiCalculadora
             btnDecimalBinario.Enabled = true;
         }
 
+        /// <summary>
+        /// Evento generado al presionar el botón Cerrar.
+        /// Cierra el programa.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// Evento para cerrar el Forms.
+        /// Cierra el programa.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MiCalculadora_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("¿Está seguro que desea salir?", "¡CERRAR!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)

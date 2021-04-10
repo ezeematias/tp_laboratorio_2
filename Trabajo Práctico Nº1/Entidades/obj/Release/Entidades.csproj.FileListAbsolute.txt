@@ -1,0 +1,6 @@
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº1\Entidades\bin\Release\Entidades.dll
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº1\Entidades\bin\Release\Entidades.pdb
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº1\Entidades\obj\Release\Entidades.csprojAssemblyReference.cache
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº1\Entidades\obj\Release\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº1\Entidades\obj\Release\Entidades.dll
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº1\Entidades\obj\Release\Entidades.pdb
