@@ -18,12 +18,21 @@ namespace Entidades
         public static double Operar(Numero num1, Numero num2, string operador)
         {
             double output = 0;
-            switch (ValidarOperador(operador[0]))
+            char auxOperador;
+            if (operador == "")
+            {
+                auxOperador = '+';
+            }
+            else
+            {
+                auxOperador = operador[0];
+            }
+            switch (ValidarOperador(auxOperador))
             {
                 case "-":
                     output = num1 - num2;
                     break;
-                case "/":                    
+                case "/":
                     output = num1 / num2;
                     break;
                 case "*":
@@ -35,7 +44,7 @@ namespace Entidades
             }
             return output;
         }
-        
+
         /// <summary>
         /// Valida que el operador sea válido para la operación.
         /// </summary>
