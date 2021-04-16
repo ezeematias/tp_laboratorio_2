@@ -13,9 +13,9 @@ namespace MiCalculadora
 {
     public partial class MiCalculadora : Form
     {
-        private Numero num1;
-        private Numero num2; 
-        private double resultado;
+        private static Numero num1;
+        private static Numero num2; 
+        private static double resultado;
 
         public MiCalculadora()
         {
@@ -83,10 +83,10 @@ namespace MiCalculadora
         /// <param name="numero2"></param>
         /// <param name="operador"></param>
         /// <returns></returns>
-        private double Operar(string numero1, string numero2, string operador)
+        private static double Operar(string numero1, string numero2, string operador)
         {
-            num1 = new Numero(numero1.Replace(".", ","));
-            num2 = new Numero(numero2.Replace(".", ","));
+           num1 = new Numero(numero1.Replace(".", ","));
+           num2 = new Numero(numero2.Replace(".", ","));
             return Calculadora.Operar(num1, num2, operador);
         }
 
