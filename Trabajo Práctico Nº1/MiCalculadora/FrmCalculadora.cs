@@ -111,14 +111,14 @@ namespace MiCalculadora
         {
             double.TryParse(this.lblResultado.Text, out double aux);
             btnDecimalBinario.Enabled = false;            
-            if (aux > 0)
+            if (aux < 0)
+            {
+                MessageBox.Show("En esta versión nos quedamos con el valor absoluto de los números negativos", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }            
+            if (aux != 0)
             {
                 string binario = num1.DecimalBinario(this.lblResultado.Text);
                 this.lblResultado.Text = binario;
-            }else if (aux < 0)
-            {
-                MessageBox.Show("                    ¡LO SENTIMOS!\n\nEn ésta versión no es posible convertir\nenteros negativos a binarios.", "¡ATENCIÓN!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
             }
             btnBinarioDecimal.Enabled = true;
         }

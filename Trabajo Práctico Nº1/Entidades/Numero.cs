@@ -40,7 +40,7 @@ namespace Entidades
         /// Convierte el string del numero binario en decimal.
         /// </summary>
         /// <param name="binario"></param>
-        /// <returns></returns>
+        /// <returns>El número decimal sinó Valor inválido.</returns>
         public string BinarioDecimal(string binario)
         {
             if (EsBinario(binario))
@@ -54,21 +54,26 @@ namespace Entidades
         /// Convierte el bouble del número en string binario.
         /// </summary>
         /// <param name="numero"></param>
-        /// <returns></returns>
+        /// <returns>El número decimal sinó Valor inválido.</returns>
         public string DecimalBinario(double numero)
         {
+            string output= "VALOR INVÁLIDO";
+            if (numero < 0)
+            {
+                numero *= -1;
+            }
             if (numero > 0)
             {
-                return Convert.ToString((int)numero, 2);
+                output = Convert.ToString((int)numero, 2);
             }
-            return "VALOR INVÁLIDO";
+            return output;
         }
 
         /// <summary>
         /// Convierte el string del número en string binario.
         /// </summary>
         /// <param name="numero"></param>
-        /// <returns></returns>
+        /// <returns>El número binario sinó Valor inválido</returns>
         public string DecimalBinario(string numero)
         {
             if (double.TryParse(numero, out double doubleNum))
@@ -82,7 +87,7 @@ namespace Entidades
         /// Comprueba que el string recibido sea un número binario.
         /// </summary>
         /// <param name="binario"></param>
-        /// <returns></returns>
+        /// <returns>TRUE o FALSE</returns>
         private bool EsBinario(string binario)
         {
             bool output = false;
@@ -108,7 +113,7 @@ namespace Entidades
         /// </summary>
         /// <param name="n1"></param>
         /// <param name="n2"></param>
-        /// <returns></returns>
+        /// <returns>n1.numero - n2.numero</returns>
         public static double operator -(Numero n1, Numero n2)
         {
             return n1.numero - n2.numero;
@@ -119,7 +124,7 @@ namespace Entidades
         /// </summary>
         /// <param name="n1"></param>
         /// <param name="n2"></param>
-        /// <returns></returns>
+        /// <returns>n1.numero + n2.numero;</returns>
         public static double operator +(Numero n1, Numero n2)
         {
             return n1.numero + n2.numero;
@@ -130,7 +135,7 @@ namespace Entidades
         /// </summary>
         /// <param name="n1"></param>
         /// <param name="n2"></param>
-        /// <returns></returns>
+        /// <returns>n1.numero * n2.numero</returns>
         public static double operator *(Numero n1, Numero n2)
         {
             return n1.numero * n2.numero;
@@ -141,7 +146,7 @@ namespace Entidades
         /// </summary>
         /// <param name="n1"></param>
         /// <param name="n2"></param>
-        /// <returns></returns>
+        /// <returns>output = n1.numero / n2.numero</returns>
         public static double operator /(Numero n1, Numero n2)
         {
             double output = double.MinValue;
@@ -156,7 +161,7 @@ namespace Entidades
         /// Valida que el número recibido en string sea correcto.
         /// </summary>
         /// <param name="strNumero"></param>
-        /// <returns></returns>
+        /// <returns>El número parseado a double.</returns>
         private static double ValidarNumero(string strNumero)
         {
             double.TryParse(strNumero, out double retorno);

@@ -14,7 +14,7 @@ namespace Entidades
         /// <param name="num1"></param>
         /// <param name="num2"></param>
         /// <param name="operador"></param>
-        /// <returns></returns>
+        /// <returns>El resultado de la operación.</returns>
         public static double Operar(Numero num1, Numero num2, string operador)
         {
             double output = 0;
@@ -49,7 +49,7 @@ namespace Entidades
         /// Valida que el operador sea válido para la operación.
         /// </summary>
         /// <param name="operador"></param>
-        /// <returns></returns>
+        /// <returns>Operador en formato string.</returns>
         private static string ValidarOperador(char operador)
         {
             string output;
