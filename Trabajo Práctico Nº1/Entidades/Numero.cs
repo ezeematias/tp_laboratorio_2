@@ -22,7 +22,7 @@ namespace Entidades
         /// Constructor
         /// </summary>
         /// <param name="numero"></param>
-        public Numero(double numero)
+        public Numero(double numero) : this()
         {
             this.numero = numero;
         }
@@ -31,7 +31,7 @@ namespace Entidades
         /// Constructor
         /// </summary>
         /// <param name="strNumero"></param>
-        public Numero(string strNumero)
+        public Numero(string strNumero) : this ()
         {
             this.SetNumero = strNumero;
         }

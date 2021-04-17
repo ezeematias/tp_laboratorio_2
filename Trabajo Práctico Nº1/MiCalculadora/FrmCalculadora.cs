@@ -110,7 +110,7 @@ namespace MiCalculadora
         private void btnDecimalBinario_Click(object sender, EventArgs e)
         {
             double.TryParse(this.lblResultado.Text, out double aux);
-            btnDecimalBinario.Enabled = false;
+            btnDecimalBinario.Enabled = false;            
             if (aux > 0)
             {
                 string binario = num1.DecimalBinario(this.lblResultado.Text);
