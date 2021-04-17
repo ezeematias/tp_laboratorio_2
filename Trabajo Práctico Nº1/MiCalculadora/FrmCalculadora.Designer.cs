@@ -178,7 +178,7 @@ namespace MiCalculadora
             this.lblResultado.AutoEllipsis = true;
             this.lblResultado.BackColor = System.Drawing.Color.DarkSlateGray;
             this.lblResultado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblResultado.Font = new System.Drawing.Font("Calibri", 36F);
+            this.lblResultado.Font = new System.Drawing.Font("Calibri", 31F);
             this.lblResultado.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblResultado.Location = new System.Drawing.Point(20, 18);
             this.lblResultado.Name = "lblResultado";
