@@ -24,3 +24,16 @@ C:\Users\eunia\Desktop\FACULTAD\SEGUNDO CUATRIMESTRE\PROGRAMACIÓN Y LABORATORIO
 C:\Users\eunia\Desktop\FACULTAD\SEGUNDO CUATRIMESTRE\PROGRAMACIÓN Y LABORATORIO II\REPOSITORIOS\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\MiCalculadora\obj\Debug\MiCalculadora.csproj.CopyComplete
 C:\Users\eunia\Desktop\FACULTAD\SEGUNDO CUATRIMESTRE\PROGRAMACIÓN Y LABORATORIO II\REPOSITORIOS\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\MiCalculadora\obj\Debug\MiCalculadora.exe
 C:\Users\eunia\Desktop\FACULTAD\SEGUNDO CUATRIMESTRE\PROGRAMACIÓN Y LABORATORIO II\REPOSITORIOS\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\MiCalculadora\obj\Debug\MiCalculadora.pdb
+C:\Users\eunia\Source\Repos\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\MiCalculadora\obj\Debug\MiCalculadora.csprojAssemblyReference.cache
+C:\Users\eunia\Source\Repos\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\MiCalculadora\obj\Debug\MiCalculadora.MiCalculadora.resources
+C:\Users\eunia\Source\Repos\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\MiCalculadora\obj\Debug\MiCalculadora.Properties.Resources.resources
+C:\Users\eunia\Source\Repos\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\MiCalculadora\obj\Debug\MiCalculadora.csproj.GenerateResource.cache
+C:\Users\eunia\Source\Repos\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\MiCalculadora\obj\Debug\MiCalculadora.csproj.CoreCompileInputs.cache
+C:\Users\eunia\Source\Repos\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\MiCalculadora\obj\Debug\MiCalculadora.exe
+C:\Users\eunia\Source\Repos\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\MiCalculadora\obj\Debug\MiCalculadora.pdb
+C:\Users\eunia\Source\Repos\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\MiCalculadora\bin\Debug\MiCalculadora.exe.config
+C:\Users\eunia\Source\Repos\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\MiCalculadora\bin\Debug\MiCalculadora.exe
+C:\Users\eunia\Source\Repos\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\MiCalculadora\bin\Debug\MiCalculadora.pdb
+C:\Users\eunia\Source\Repos\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\MiCalculadora\bin\Debug\Entidades.dll
+C:\Users\eunia\Source\Repos\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\MiCalculadora\bin\Debug\Entidades.pdb
+C:\Users\eunia\Source\Repos\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\MiCalculadora\obj\Debug\MiCalculadora.csproj.CopyComplete

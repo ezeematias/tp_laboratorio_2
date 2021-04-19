@@ -10,3 +10,9 @@ C:\Users\eunia\Desktop\FACULTAD\SEGUNDO CUATRIMESTRE\PROGRAMACIÓN Y LABORATORIO
 C:\Users\eunia\Desktop\FACULTAD\SEGUNDO CUATRIMESTRE\PROGRAMACIÓN Y LABORATORIO II\REPOSITORIOS\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\eunia\Desktop\FACULTAD\SEGUNDO CUATRIMESTRE\PROGRAMACIÓN Y LABORATORIO II\REPOSITORIOS\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\Entidades\obj\Debug\Entidades.dll
 C:\Users\eunia\Desktop\FACULTAD\SEGUNDO CUATRIMESTRE\PROGRAMACIÓN Y LABORATORIO II\REPOSITORIOS\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\Entidades\obj\Debug\Entidades.pdb
+C:\Users\eunia\Source\Repos\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\Entidades\bin\Debug\Entidades.dll
+C:\Users\eunia\Source\Repos\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\Entidades\bin\Debug\Entidades.pdb
+C:\Users\eunia\Source\Repos\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\eunia\Source\Repos\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\eunia\Source\Repos\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\Entidades\obj\Debug\Entidades.dll
+C:\Users\eunia\Source\Repos\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº1\Entidades\obj\Debug\Entidades.pdb

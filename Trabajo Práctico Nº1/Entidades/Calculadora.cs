@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
+    /// <summary>
+    /// Clase Calculadora.
+    /// </summary>
     public static class Calculadora
     {
         /// <summary>
         /// Realiza la operación recibida por parametro y devuelve el resultado.
         /// </summary>
-        /// <param name="num1"></param>
-        /// <param name="num2"></param>
-        /// <param name="operador"></param>
+        /// <param name="num1">Primer número para realizar la operación.</param>
+        /// <param name="num2">Segund número para realizar la operación.</param>
+        /// <param name="operador">Operador para realizar la operación.</param>
         /// <returns>El resultado de la operación.</returns>
         public static double Operar(Numero num1, Numero num2, string operador)
         {
@@ -48,7 +51,7 @@ namespace Entidades
         /// <summary>
         /// Valida que el operador sea válido para la operación.
         /// </summary>
-        /// <param name="operador"></param>
+        /// <param name="operador">Operador para ser validado.</param>
         /// <returns>Operador en formato string.</returns>
         private static string ValidarOperador(char operador)
         {
