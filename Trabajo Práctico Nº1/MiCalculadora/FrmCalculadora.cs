@@ -86,10 +86,10 @@ namespace MiCalculadora
         /// Método que realiza las operaciones solicitadas en el Forms.
         /// Llama a la lógica del programa para su funcionamiento.
         /// </summary>
-        /// <param name="numero1"></param>
-        /// <param name="numero2"></param>
-        /// <param name="operador"></param>
-        /// <returns></returns>
+        /// <param name="numero1">Primer número para operar.</param>
+        /// <param name="numero2">Segundo número para operar</param>
+        /// <param name="operador">Operador para poder operar.</param>
+        /// <returns>Resultado de la operación.</returns>
         private static double Operar(string numero1, string numero2, string operador)
         {
             num1 = new Numero(numero1.Replace(".", ","));
