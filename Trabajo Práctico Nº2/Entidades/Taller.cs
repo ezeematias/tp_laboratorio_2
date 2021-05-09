@@ -14,16 +14,26 @@ namespace Entidades
         private List<Vehiculo> vehiculos;
         private int espacioDisponible;
 
+        /// <summary>
+        /// Enumerado del tipo de vehículo en el taller.
+        /// </summary>
         public enum ETipo
         {
             Ciclomotor, Sedan, SUV, Todos
         }
 
         #region "Constructores"
+        /// <summary>
+        /// Constructor de Taller
+        /// </summary>
         private Taller()
         {
             this.vehiculos = new List<Vehiculo>();
         }
+
+        /// <summary>
+        /// Constructor de Taller
+        /// </summary>
         public Taller(int espacioDisponible) : this()
         {
             this.espacioDisponible = espacioDisponible;
@@ -33,8 +43,9 @@ namespace Entidades
         #region "Sobrecargas"
         /// <summary>
         /// Muestro el estacionamiento y TODOS los vehículos
+        /// Sobrecarga del ToString para listar los datos de los vehículos enel Taller.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Retorna el listado del los vehículos en el taller.</returns>
         public override string ToString()
         {
             return Listar(this, ETipo.Todos);
@@ -49,7 +60,7 @@ namespace Entidades
         /// </summary>
         /// <param name="t">Elemento a exponer</param>
         /// <param name="tipo">Tipos de ítems de la lista a mostrar</param>
-        /// <returns></returns>
+        /// <returns>Listado de vehículos en el taller.</returns>
         public static string Listar(Taller t, ETipo tipo)
         {
             StringBuilder sb = new StringBuilder();
@@ -86,7 +97,7 @@ namespace Entidades
         /// </summary>
         /// <param name="t">Objeto donde se agregará el elemento</param>
         /// <param name="vehiculo">Objeto a agregar</param>
-        /// <returns></returns>
+        /// <returns>Retorna el objto con el nuevo vehículo agregado o sin él.</returns>
         public static Taller operator +(Taller t, Vehiculo vehiculo)
         {
             if (!(t is null) && !(vehiculo is null) && (t.vehiculos.Count < t.espacioDisponible))
@@ -108,7 +119,7 @@ namespace Entidades
         /// </summary>
         /// <param name="t">Objeto donde se quitará el elemento</param>
         /// <param name="vehiculo">Objeto a quitar</param>
-        /// <returns></returns>
+        /// <returns>Retorna el objeto sin el vehículo.</returns>
         public static Taller operator -(Taller t, Vehiculo vehiculo)
         {
 

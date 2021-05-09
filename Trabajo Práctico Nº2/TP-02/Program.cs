@@ -36,7 +36,7 @@ namespace TP_02_2018
             taller += m1;
             taller += m2;
             taller += a1;
-            taller += a2;
+            taller += a2;                                                                                                                                       
             taller += a3;
             taller += a4;
 
@@ -57,7 +57,7 @@ namespace TP_02_2018
             // Vuelvo a agregar c2
             taller += c2;
 
-            // Muestro solo Moto
+            // Muestro solo Moto                                                                                                                                
             Console.WriteLine(Taller.Listar(taller, Taller.ETipo.Ciclomotor));
             Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
             Console.ReadKey();
@@ -66,7 +66,7 @@ namespace TP_02_2018
             // Muestro solo Automovil
             Console.WriteLine(Taller.Listar(taller, Taller.ETipo.Sedan));
             Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
-            Console.ReadKey();
+            Console.ReadKey();                                                                                                                                   
             Console.Clear();
 
             // Muestro solo Camioneta

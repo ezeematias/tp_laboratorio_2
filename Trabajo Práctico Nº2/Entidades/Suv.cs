@@ -6,12 +6,21 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
+    /// <summary>
+    /// Clase Suv que hereda de Vehículo.
+    /// </summary>
     public class Suv : Vehiculo
     {
-        public Suv(EMarca marca, string chasis, ConsoleColor color)
-            : base(chasis, marca, color)
+        /// <summary>
+        /// Constructor de Suv.
+        /// </summary>
+        /// <param name="marca">Atributo marca para el vehículo.</param>
+        /// <param name="chasis">Atributo chasis para el vehículo.</param>
+        /// <param name="color">Atributo color para el vehículo.</param>
+        public Suv(EMarca marca, string chasis, ConsoleColor color) : base(chasis, marca, color)
         {
         }
+
         /// <summary>
         /// SUV son 'Grande'
         /// </summary>
@@ -23,6 +32,10 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Lista los datos del Suv.
+        /// </summary>
+        /// <returns>Retorna los datos en string del Suv.</returns>
         public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();

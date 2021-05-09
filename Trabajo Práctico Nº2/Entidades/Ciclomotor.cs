@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
+    /// <summary>
+    /// Clase Ciclomotor que hereda de Vehículo.
+    /// </summary>
     public class Ciclomotor : Vehiculo
     {
+        /// <summary>
+        /// Constructor Ciclomotor.
+        /// </summary>
+        /// <param name="marca">Atributo marca para el vehículo.</param>
+        /// <param name="chasis">Atributo chasis para el vehículo.</param>
+        /// <param name="color">Atributo color para el vehículo.</param>
         public Ciclomotor(EMarca marca, string chasis, ConsoleColor color) : base(chasis, marca, color)
         {
         }
@@ -23,6 +32,10 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Lista los datos del Ciclomotor.
+        /// </summary>
+        /// <returns>Retorna los datos en string del Ciclomotor.</returns>
         public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
