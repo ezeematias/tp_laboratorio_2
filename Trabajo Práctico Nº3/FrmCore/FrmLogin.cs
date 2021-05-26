@@ -47,11 +47,12 @@ namespace FrmCore
             if (int.TryParse(tbxUser.Text, out int user) && user == op.UserID && int.TryParse(tbxPass.Text, out int pass) && pass == op.Pass)
             {
                 this.Hide();
-                if (DialogResult.Abort == production.ShowDialog())
+                DialogResult dialogResult = production.ShowDialog();  
+                if (DialogResult.Abort == dialogResult)
                 {
                     this.Dispose();
                 }
-                else if (DialogResult.Cancel == production.ShowDialog())
+                else if (DialogResult.Cancel == dialogResult)
                 {
                     this.Show();
                 }

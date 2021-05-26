@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Library;
 
 namespace FrmCore
 {
@@ -16,7 +17,10 @@ namespace FrmCore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogin());
+            Application.Run(new FrmLogin());     
+            
+
+
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Library;
 
 namespace FrmCore
 {
@@ -15,19 +16,23 @@ namespace FrmCore
         bool switchP = false;
         public FrmInternalOrder()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
 
         private void FrmInternalOrder_Load(object sender, EventArgs e)
         {
-            dgvInternalOrder.Rows.Add();
+            dgvInternalOrder.DataSource = null;
+            dgvInternalOrder.DataSource = CoreSystem.InternalOrders;
         }
 
+
+        // este es el swithc
         private void button1_Click(object sender, EventArgs e)
         {
             if(!switchP)
             {
                 btnP.ImageIndex = 1;
+                //dgvInternalOrder.DataSource = CoreSystem.InternalOrders; //este lo puse para probar recien, pero nop.
             }
             else
             {

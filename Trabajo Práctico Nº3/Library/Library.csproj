@@ -45,8 +45,10 @@
     <Compile Include="AccessPanel.cs" />
     <Compile Include="Attendance.cs" />
     <Compile Include="Components.cs" />
+    <Compile Include="CoreSystem.cs" />
     <Compile Include="Device.cs" />
     <Compile Include="Enumerate.cs" />
+    <Compile Include="InternalOrder.cs" />
     <Compile Include="Operator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

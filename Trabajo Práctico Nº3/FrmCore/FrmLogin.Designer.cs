@@ -57,6 +57,7 @@ namespace FrmCore
             // 
             this.btnSignIn.BackColor = System.Drawing.Color.AliceBlue;
             this.btnSignIn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSignIn.FlatAppearance.BorderSize = 0;
             this.btnSignIn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Thistle;
             this.btnSignIn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Thistle;
             this.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

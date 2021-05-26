@@ -8,11 +8,14 @@ namespace Library
 {
     public enum ECode
     {
-        UT_BioPanel_ACC,
-        UT_ReadPanel_ACC,
-        UT_FingerAtt_ID,
-        UT_FingerAcc_ID,
-        UT_FaceDepot_ID,       
+        CNT_BioPanel_ACC,
+        CNT_ReadPanel_ACC,
+        CNT_A9_CR,
+        CNT_A60_ID,
+        CNT_E7_CR,
+        CNT_E22_ID,
+        CNT_FD5_FD,
+        CNT_FD10_FC,
     }
 
     public enum EType

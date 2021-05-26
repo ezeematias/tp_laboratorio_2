@@ -26,14 +26,5 @@ namespace FrmCore
         {
             this.lblOperatorName.Text = FrmLogin.op.ToString();
         }
-
-        private void FrmAssembly_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
-            if (!(this.DialogResult == DialogResult.OK)&&(MessageBox.Show("All data will be lost.\nAre you sure you want to go out?", "EXIT!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No))
-            {
-                this.DialogResult = DialogResult.Abort;               
-            }
-        }
     }
 }
