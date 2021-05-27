@@ -70,7 +70,6 @@ namespace FrmCore
             this.btnSignIn.Text = "&Sign In";
             this.btnSignIn.UseVisualStyleBackColor = false;
             this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
-            this.btnSignIn.Enter += new System.EventHandler(this.btnSignIn_Enter);
             // 
             // btnExit
             // 

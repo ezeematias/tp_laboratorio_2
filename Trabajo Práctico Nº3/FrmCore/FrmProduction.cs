@@ -50,6 +50,7 @@ namespace FrmCore
 
         private void FrmProduction_Load(object sender, EventArgs e)
         {
+            //lblTitleOperator.Text = FrmLogin.operatorLog.ToString();
         }
 
         private void btnOrder_MouseMove(object sender, MouseEventArgs e)

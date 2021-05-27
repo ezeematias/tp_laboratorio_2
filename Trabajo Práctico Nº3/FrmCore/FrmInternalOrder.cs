@@ -12,8 +12,7 @@ using Library;
 namespace FrmCore
 {
     public partial class FrmInternalOrder : Form
-    {
-        bool switchP = false;
+    {        
         public FrmInternalOrder()
         {
             InitializeComponent(); 
@@ -23,22 +22,6 @@ namespace FrmCore
         {
             dgvInternalOrder.DataSource = null;
             dgvInternalOrder.DataSource = CoreSystem.InternalOrders;
-        }
-
-
-        // este es el swithc
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if(!switchP)
-            {
-                btnP.ImageIndex = 1;
-                //dgvInternalOrder.DataSource = CoreSystem.InternalOrders; //este lo puse para probar recien, pero nop.
-            }
-            else
-            {
-                btnP.ImageIndex = 0;
-            }
-            switchP = !switchP;
         }
     }
 }

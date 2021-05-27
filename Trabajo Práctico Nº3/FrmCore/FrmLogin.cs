@@ -13,9 +13,7 @@ namespace FrmCore
 {
     public partial class FrmLogin : Form
     {
-        public static Operator op = new Operator("Ezequiel", "Unía", 8080, 8624);
-        public static FrmProduction production;
-
+        public static Operator operatorLog;
         public FrmLogin()
         {
             InitializeComponent();
@@ -37,27 +35,47 @@ namespace FrmCore
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
+            SetTextBox();
+        }
 
+        private void SetTextBox()
+        {
+            this.tbxUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75f, System.Drawing.FontStyle.Italic);
+            this.tbxPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75f, System.Drawing.FontStyle.Italic);
+            this.tbxPass.UseSystemPasswordChar = false;
+            this.tbxUser.Text = "Operator";
+            this.tbxPass.Text = "Password";
         }
 
         private void ValidateUser()
         {
-            production = new FrmProduction();
-
-            if (int.TryParse(tbxUser.Text, out int user) && user == op.UserID && int.TryParse(tbxPass.Text, out int pass) && pass == op.Pass)
+            bool invalidUser = true;
+            if (int.TryParse(tbxUser.Text, out int user) && int.TryParse(tbxPass.Text, out int pass))
             {
-                this.Hide();
-                DialogResult dialogResult = production.ShowDialog();  
-                if (DialogResult.Abort == dialogResult)
+                foreach (Operator op in CoreSystem.Operators)
                 {
-                    this.Dispose();
-                }
-                else if (DialogResult.Cancel == dialogResult)
-                {
-                    this.Show();
+                    if (op.UserID == user && op.Pass == pass)
+                    {
+                        invalidUser = false;
+                        operatorLog = op;
+                        FrmProduction production = new FrmProduction();
+                        this.Hide();
+                        SetTextBox();
+                        DialogResult dialogResult = production.ShowDialog();
+                        if (DialogResult.Abort == dialogResult)
+                        {
+                            this.Dispose();
+                        }
+                        else if (DialogResult.Cancel == dialogResult)
+                        {
+                            SetTextBox();
+                            this.Show();
+                        }
+                        break;
+                    }
                 }
             }
-            else
+            if(invalidUser)
             {
                 MessageBox.Show("Incorrect operator number or password", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -83,11 +101,6 @@ namespace FrmCore
             this.tbxPass.Text = "";
         }
 
-        private void btnSignIn_Enter(object sender, EventArgs e)
-        {
-            ValidateUser();
-        }
-
         private void tbxUser_TextChanged(object sender, EventArgs e)
         {
             this.tbxUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75f, System.Drawing.FontStyle.Regular);
@@ -97,7 +110,6 @@ namespace FrmCore
         {
             this.tbxPass.UseSystemPasswordChar = true;
             this.tbxPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75f, System.Drawing.FontStyle.Regular);
-
         }
     }
 }

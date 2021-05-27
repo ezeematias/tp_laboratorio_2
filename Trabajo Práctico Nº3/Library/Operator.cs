@@ -32,7 +32,7 @@ namespace Library
             StringBuilder sb = new StringBuilder();
             sb.Append($"Operator: {this.name} {this.lastName}");
             return sb.ToString();
-        }
+        }        
 
         public static bool operator + (Operator o, Device d)
         {

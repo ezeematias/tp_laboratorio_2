@@ -230,15 +230,18 @@ namespace FrmCore
             // 
             // lblTitleOperator
             // 
-            this.lblTitleOperator.AutoSize = true;
+            this.lblTitleOperator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTitleOperator.AutoEllipsis = true;
             this.lblTitleOperator.BackColor = System.Drawing.Color.Transparent;
             this.lblTitleOperator.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleOperator.ForeColor = System.Drawing.Color.White;
-            this.lblTitleOperator.Location = new System.Drawing.Point(554, 9);
+            this.lblTitleOperator.Location = new System.Drawing.Point(388, 8);
             this.lblTitleOperator.Name = "lblTitleOperator";
-            this.lblTitleOperator.Size = new System.Drawing.Size(119, 16);
+            this.lblTitleOperator.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTitleOperator.Size = new System.Drawing.Size(380, 16);
             this.lblTitleOperator.TabIndex = 0;
             this.lblTitleOperator.Text = "Name Operador";
+            this.lblTitleOperator.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pnlCenter
             // 
@@ -258,7 +261,7 @@ namespace FrmCore
             this.ptbLogo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ptbLogo.Location = new System.Drawing.Point(0, 0);
             this.ptbLogo.Name = "ptbLogo";
-            this.ptbLogo.Size = new System.Drawing.Size(619, 415);
+            this.ptbLogo.Size = new System.Drawing.Size(774, 519);
             this.ptbLogo.TabIndex = 0;
             this.ptbLogo.TabStop = false;
             // 
@@ -271,6 +274,7 @@ namespace FrmCore
             this.Controls.Add(this.pnlCenter);
             this.Controls.Add(this.pnlTitliOperator);
             this.Controls.Add(this.pnlSideMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProduction";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stock";
@@ -279,7 +283,6 @@ namespace FrmCore
             this.pnlSideMenu.ResumeLayout(false);
             this.pnlSubMenuOptions.ResumeLayout(false);
             this.pnlTitliOperator.ResumeLayout(false);
-            this.pnlTitliOperator.PerformLayout();
             this.pnlCenter.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.ResumeLayout(false);
