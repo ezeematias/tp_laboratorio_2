@@ -43,6 +43,7 @@ namespace FrmCore
             this.lblTitleOperator = new System.Windows.Forms.Label();
             this.pnlCenter = new System.Windows.Forms.Panel();
             this.ptbLogo = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlSideMenu.SuspendLayout();
             this.pnlSubMenuOptions.SuspendLayout();
             this.pnlTitliOperator.SuspendLayout();
@@ -92,12 +93,13 @@ namespace FrmCore
             // pnlSubMenuOptions
             // 
             this.pnlSubMenuOptions.BackColor = System.Drawing.Color.Transparent;
+            this.pnlSubMenuOptions.Controls.Add(this.button1);
             this.pnlSubMenuOptions.Controls.Add(this.btnOptionSignOff);
             this.pnlSubMenuOptions.Controls.Add(this.btnOptionExit);
             this.pnlSubMenuOptions.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlSubMenuOptions.Location = new System.Drawing.Point(0, 441);
+            this.pnlSubMenuOptions.Location = new System.Drawing.Point(0, 407);
             this.pnlSubMenuOptions.Name = "pnlSubMenuOptions";
-            this.pnlSubMenuOptions.Size = new System.Drawing.Size(229, 67);
+            this.pnlSubMenuOptions.Size = new System.Drawing.Size(229, 101);
             this.pnlSubMenuOptions.TabIndex = 1;
             // 
             // btnOptionSignOff
@@ -108,10 +110,10 @@ namespace FrmCore
             this.btnOptionSignOff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOptionSignOff.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOptionSignOff.ForeColor = System.Drawing.Color.Gray;
-            this.btnOptionSignOff.Location = new System.Drawing.Point(0, 5);
+            this.btnOptionSignOff.Location = new System.Drawing.Point(0, 39);
             this.btnOptionSignOff.Margin = new System.Windows.Forms.Padding(50, 3, 3, 3);
             this.btnOptionSignOff.Name = "btnOptionSignOff";
-            this.btnOptionSignOff.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnOptionSignOff.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnOptionSignOff.Size = new System.Drawing.Size(229, 31);
             this.btnOptionSignOff.TabIndex = 1;
             this.btnOptionSignOff.Text = "Sign Off";
@@ -127,10 +129,10 @@ namespace FrmCore
             this.btnOptionExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOptionExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOptionExit.ForeColor = System.Drawing.Color.Gray;
-            this.btnOptionExit.Location = new System.Drawing.Point(0, 36);
+            this.btnOptionExit.Location = new System.Drawing.Point(0, 70);
             this.btnOptionExit.Margin = new System.Windows.Forms.Padding(50, 3, 3, 3);
             this.btnOptionExit.Name = "btnOptionExit";
-            this.btnOptionExit.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnOptionExit.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnOptionExit.Size = new System.Drawing.Size(229, 31);
             this.btnOptionExit.TabIndex = 0;
             this.btnOptionExit.Text = "Exit";
@@ -265,6 +267,24 @@ namespace FrmCore
             this.ptbLogo.TabIndex = 0;
             this.ptbLogo.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Gray;
+            this.button1.Location = new System.Drawing.Point(0, 8);
+            this.button1.Margin = new System.Windows.Forms.Padding(50, 3, 3, 3);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(229, 31);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "About";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // FrmProduction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,5 +324,6 @@ namespace FrmCore
         private System.Windows.Forms.Label lblTitleOperator;
         private System.Windows.Forms.Panel pnlCenter;
         private System.Windows.Forms.PictureBox ptbLogo;
+        private System.Windows.Forms.Button button1;
     }
 }
