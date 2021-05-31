@@ -27,8 +27,16 @@ namespace Library
                     this.numberAccess = 1;
                 }
             }
-        } 
+        }
 
+        
+        protected override void AddComponent()
+        {
+            throw new NotImplementedException();
+        }
+        
+
+        /*
         protected override bool Test()
         {
             bool output = false;
@@ -39,5 +47,6 @@ namespace Library
             }
             return output;
         }
+        */
     }
 }

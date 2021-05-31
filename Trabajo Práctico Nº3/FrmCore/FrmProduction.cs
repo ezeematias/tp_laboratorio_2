@@ -13,6 +13,7 @@ namespace FrmCore
 {
     public partial class FrmProduction : Form
     {
+        public static bool orderAssembly = false;
         bool aux = false;
         private Form activeForm = null;
 
@@ -25,13 +26,18 @@ namespace FrmCore
         private void CustomizeDesing()
         {
             pnlSubMenuOptions.Visible = false;
+            pnlSubMenuStock.Visible = false;
         }
 
         private void HideSubMenu()
         {
-            if(pnlSubMenuOptions.Visible)
+            if (pnlSubMenuOptions.Visible)
             {
                 pnlSubMenuOptions.Visible = false;
+            }
+            if (pnlSubMenuStock.Visible)
+            {
+                pnlSubMenuStock.Visible = false;
             }
         }
 
@@ -50,7 +56,7 @@ namespace FrmCore
 
         private void FrmProduction_Load(object sender, EventArgs e)
         {
-            //lblTitleOperator.Text = FrmLogin.operatorLog.ToString();
+            // lblTitleOperator.Text = FrmLogin.operatorLog.ToString();
         }
 
         private void btnOrder_MouseMove(object sender, MouseEventArgs e)
@@ -99,7 +105,7 @@ namespace FrmCore
 
         private void OpenChildForm(Form childForm)
         {
-            if(activeForm != null)
+            if (activeForm != null)
             {
                 activeForm.Close();
             }
@@ -155,10 +161,35 @@ namespace FrmCore
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FrmInternalOrder());            
+            OpenChildForm(new FrmInternalOrder());               
         }
 
         private void btnAssembly_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmAssembly());
+        }
+
+        private void btnStock_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlSubMenuStock);
+        }
+
+        private void btnComponents_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmComponents());
+        }
+
+        private void btnDevices_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmDevices());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmAbout());
+        }
+
+        private void FrmProduction_BackColorChanged(object sender, EventArgs e)
         {
             OpenChildForm(new FrmAssembly());
         }

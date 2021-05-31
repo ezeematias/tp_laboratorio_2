@@ -34,7 +34,9 @@ namespace FrmCore
             this.iltSwitch01 = new System.Windows.Forms.ImageList(this.components);
             this.dgvInternalOrder = new System.Windows.Forms.DataGridView();
             this.btnAceptOrder = new System.Windows.Forms.Button();
+            this.pnlOrder = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInternalOrder)).BeginInit();
+            this.pnlOrder.SuspendLayout();
             this.SuspendLayout();
             // 
             // iltSwitch01
@@ -56,7 +58,7 @@ namespace FrmCore
             this.dgvInternalOrder.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvInternalOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInternalOrder.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dgvInternalOrder.Location = new System.Drawing.Point(92, 71);
+            this.dgvInternalOrder.Location = new System.Drawing.Point(85, 35);
             this.dgvInternalOrder.Name = "dgvInternalOrder";
             this.dgvInternalOrder.ReadOnly = true;
             this.dgvInternalOrder.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
@@ -65,7 +67,7 @@ namespace FrmCore
             this.dgvInternalOrder.RowTemplate.ReadOnly = true;
             this.dgvInternalOrder.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvInternalOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInternalOrder.Size = new System.Drawing.Size(568, 304);
+            this.dgvInternalOrder.Size = new System.Drawing.Size(568, 371);
             this.dgvInternalOrder.TabIndex = 4;
             // 
             // btnAceptOrder
@@ -78,29 +80,41 @@ namespace FrmCore
             this.btnAceptOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnAceptOrder.Location = new System.Drawing.Point(92, 407);
+            this.btnAceptOrder.Location = new System.Drawing.Point(85, 427);
             this.btnAceptOrder.Name = "btnAceptOrder";
             this.btnAceptOrder.Size = new System.Drawing.Size(568, 38);
             this.btnAceptOrder.TabIndex = 5;
             this.btnAceptOrder.Text = "&Accept Order";
             this.btnAceptOrder.UseVisualStyleBackColor = false;
+            this.btnAceptOrder.Click += new System.EventHandler(this.btnAceptOrder_Click);
+            // 
+            // pnlOrder
+            // 
+            this.pnlOrder.BackColor = System.Drawing.Color.Transparent;
+            this.pnlOrder.Controls.Add(this.dgvInternalOrder);
+            this.pnlOrder.Controls.Add(this.btnAceptOrder);
+            this.pnlOrder.Location = new System.Drawing.Point(0, 0);
+            this.pnlOrder.Name = "pnlOrder";
+            this.pnlOrder.Size = new System.Drawing.Size(774, 529);
+            this.pnlOrder.TabIndex = 6;
             // 
             // FrmInternalOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(774, 519);
-            this.Controls.Add(this.btnAceptOrder);
-            this.Controls.Add(this.dgvInternalOrder);
+            this.ClientSize = new System.Drawing.Size(774, 529);
+            this.Controls.Add(this.pnlOrder);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmInternalOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "FrmInternalOrder";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmInternalOrder_FormClosing);
             this.Load += new System.EventHandler(this.FrmInternalOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInternalOrder)).EndInit();
+            this.pnlOrder.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -109,5 +123,6 @@ namespace FrmCore
         private System.Windows.Forms.ImageList iltSwitch01;
         private System.Windows.Forms.DataGridView dgvInternalOrder;
         private System.Windows.Forms.Button btnAceptOrder;
+        private System.Windows.Forms.Panel pnlOrder;
     }
 }

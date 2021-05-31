@@ -8,26 +8,77 @@ namespace Library
 {
     public class Components
     {
-        string nameComponent;
+        EComponents nameComponent;
         int countComponent;
 
-        public Components(string nameComponent, int countComponent)
+        public Components(EComponents nameComponent, int countComponent)
         {
             this.nameComponent = nameComponent;
             this.countComponent = countComponent;
         }
 
-        public string NameComponent { get => nameComponent; set => nameComponent = value; }
+        public EComponents NameComponent { get => nameComponent; set => nameComponent = value; }
+        public int CountComponent { get => countComponent; set => countComponent = value; }
 
-        public int CountComponent 
-        { get
+        
+        public static bool operator ==(List<Components> l, Components c)
+        {
+            if (!(l is null && c is null))
             {
-                return countComponent;
-            }           
-          set
-            {
-                this.countComponent = value; 
+                foreach (Components item in l)
+                {
+                    if (item.NameComponent == c.NameComponent && item.CountComponent >= c.CountComponent)
+                    {
+                        return true;
+                    }
+                }
             }
+            return false;
         }
+
+        public static bool operator !=(List<Components> l, Components c)
+        {
+            return !(l == c);
+        }
+        
+        
+        public static bool operator -(List<Components> l, Components c)
+        {
+            if (!(l is null && c is null))
+            {
+                foreach (Components item in l)
+                {
+                    if (item.NameComponent == c.NameComponent && item.CountComponent >= c.CountComponent)
+                    {
+                        item.CountComponent -= c.CountComponent;
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+        
+
+        /*
+        public static bool operator -(List<Components> l, List<Components> c)
+        {
+            if (!(l is null && c is null))
+            {
+                foreach (Components itemL in l)
+                {
+                    foreach (Components itemC in c)
+                    {
+                        if (itemL.NameComponent == itemC.NameComponent && itemL.CountComponent >= itemC.CountComponent)
+                        {
+                            itemL.CountComponent -= itemC.CountComponent;
+                            return true;
+                        }                    
+                    }
+                }
+            }
+            return false;
+        }
+        */
+
     }
 }

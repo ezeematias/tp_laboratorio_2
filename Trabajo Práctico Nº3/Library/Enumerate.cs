@@ -18,22 +18,41 @@ namespace Library
         CNT_FD10_FC,
     }
 
-    public enum EType
-    {
-        FingerPrint,
-        Face,
-        Card,
-    }
-
     public enum EComponents
     {
         Mother,
         Core,
-        ModuleAccess,
+        Package,
+        Case,
         Display,
+        Touch,
+        Keyboard,
+        Led,
         FingerPrint,
-        FaceCamera,
-        ReadCard
+        Camera,
+        RFID,
+        Relay,
+        Face,
+        TimeLog,
+        Sound,
+        Temp,
+        WiFi,
+        RS32,
+        ADMS
+    }
+
+    public enum EType
+    {
+        AccessControl,
+        PanelAccess,
+        Attendance,
+    }
+
+    public enum EValidation
+    {
+        Finger,
+        Face,
+        Card
     }
 
 

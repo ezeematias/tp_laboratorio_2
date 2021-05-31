@@ -46,11 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAssembly.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmAssembly.Designer.cs">
       <DependentUpon>FrmAssembly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmComponents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmComponents.Designer.cs">
+      <DependentUpon>FrmComponents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDevices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDevices.Designer.cs">
+      <DependentUpon>FrmDevices.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmInternalOrder.cs">
       <SubType>Form</SubType>
@@ -64,6 +82,12 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPreviewComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPreviewComponent.Designer.cs">
+      <DependentUpon>FrmPreviewComponent.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmProduction.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,14 +96,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAssembly.resx">
       <DependentUpon>FrmAssembly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmComponents.resx">
+      <DependentUpon>FrmComponents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDevices.resx">
+      <DependentUpon>FrmDevices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInternalOrder.resx">
       <DependentUpon>FrmInternalOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPreviewComponent.resx">
+      <DependentUpon>FrmPreviewComponent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProduction.resx">
       <DependentUpon>FrmProduction.cs</DependentUpon>

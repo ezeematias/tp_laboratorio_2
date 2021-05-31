@@ -11,6 +11,15 @@ namespace Library
         public AccessControl(ECode codeInternal, EType typeDevice, double serialNumber) : base(codeInternal, typeDevice, serialNumber)
         {
         }
+
+        
+        protected override void AddComponent()
+        {
+            throw new NotImplementedException();
+        }
+        
+
+        /*
         protected override bool Test()
         {
             bool output = false;
@@ -20,7 +29,8 @@ namespace Library
             }
             return output;
         }
+        */
 
-        
+
     }
 }

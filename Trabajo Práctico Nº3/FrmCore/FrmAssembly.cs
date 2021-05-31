@@ -14,195 +14,73 @@ namespace FrmCore
     public partial class FrmAssembly : Form
     {
         private List<bool> switchBool;
+        private EType eType;
 
         public FrmAssembly()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.OK;
-        }
-
         private void FrmAssembly_Load(object sender, EventArgs e)
         {
             LoadOrderSelected();
             LoadBoolFalse();
+            HideSubMenu();
+            EnableButtons();
+            ButtonForType(CoreSystem.SelectedOrder.ETypeDevice);
+            LoadListAssembly();
         }
 
-
-        private void LoadOrderSelected(int index = 0)
+        private void LoadOrderSelected()
         {
-            int n = dgvOrder.Rows.Add();
-            /*
-            dgvOrder.Rows[n].SetValues(CoreSystem.InternalOrders[index].NumberOrder);
-            dgvOrder.Rows[n].SetValues(CoreSystem.InternalOrders[index].NameDevice); 
-            dgvOrder.Rows[n].SetValues(CoreSystem.InternalOrders[index].ETypeDevice);
-            dgvOrder.Rows[n].SetValues(CoreSystem.InternalOrders[index].CountDevice); 
-            */
-            dgvOrder.Rows[0].Cells[0].Value = CoreSystem.InternalOrders[index].NumberOrder;
-            dgvOrder.Rows[0].Cells[1].Value = CoreSystem.InternalOrders[index].NameDevice;
-            dgvOrder.Rows[0].Cells[2].Value = CoreSystem.InternalOrders[index].ETypeDevice;
-            dgvOrder.Rows[0].Cells[3].Value = CoreSystem.InternalOrders[index].CountDevice;
-
+            dgvOrder.DataSource = null;
+            dgvOrder.DataSource = new List<InternalOrder> { CoreSystem.SelectedOrder };
+        }
+        private void LoadListAssembly()
+        {
+            dgvPreview.DataSource = null;
+            dgvPreview.DataSource = CoreSystem.PreviewDevices;
+            //dgvPreview.DataSource = new BindingList<Device>(CoreSystem.PreviewDevices);
         }
 
         private void LoadBoolFalse()
         {
             switchBool = new List<bool>();
-            for (int i = 0; i < 16; i++)
+            for (int i = 0; i < 5; i++)
             {
                 switchBool.Add(false);
             }
         }
 
-        private void btnMother_Click(object sender, EventArgs e)
+        private void btnWiFi_Click(object sender, EventArgs e)
         {
             if (switchBool[0] == false)
             {
-                this.btnMother.ImageIndex = 1;
+                this.btnWiFi.ImageIndex = 1;
             }
             else
             {
-                this.btnMother.ImageIndex = 0;
+                this.btnWiFi.ImageIndex = 0;
             }
             switchBool[0] = !switchBool[0];
         }
 
-        private void btnCore_Click(object sender, EventArgs e)
+        private void btnAdms_Click(object sender, EventArgs e)
         {
             if (switchBool[1] == false)
             {
-                this.btnCore.ImageIndex = 1;
+                this.btnLAdms.ImageIndex = 1;
             }
             else
             {
-                this.btnCore.ImageIndex = 0;
+                this.btnLAdms.ImageIndex = 0;
             }
             switchBool[1] = !switchBool[1];
         }
 
-        private void btnPackage_Click(object sender, EventArgs e)
+        private void btnTemp_Click(object sender, EventArgs e)
         {
             if (switchBool[2] == false)
-            {
-                this.btnPackage.ImageIndex = 1;
-            }
-            else
-            {
-                this.btnPackage.ImageIndex = 0;
-            }
-            switchBool[2] = !switchBool[2];
-        }
-
-        private void btnCase_Click(object sender, EventArgs e)
-        {
-            if (switchBool[3] == false)
-            {
-                this.btnCase.ImageIndex = 1;
-            }
-            else
-            {
-                this.btnCase.ImageIndex = 0;
-            }
-            switchBool[3] = !switchBool[3];
-        }
-        
-        private void btnDisplay_Click(object sender, EventArgs e)
-        {
-            if (switchBool[4] == false)
-            {
-                this.btnDisplay.ImageIndex = 1;
-            }
-            else
-            {
-                this.btnDisplay.ImageIndex = 0;
-            }
-            switchBool[4] = !switchBool[4];
-        }
-
-        private void btnTouch_Click(object sender, EventArgs e)
-        {
-            if (switchBool[5] == false)
-            {
-                this.btnTouch.ImageIndex = 1;
-            }
-            else
-            {
-                this.btnTouch.ImageIndex = 0;
-            }
-            switchBool[5] = !switchBool[5];
-        }
-
-        private void btnKeyboard_Click(object sender, EventArgs e)
-        {
-            if (switchBool[6] == false)
-            {
-                this.btnKeyboard.ImageIndex = 1;
-            }
-            else
-            {
-                this.btnKeyboard.ImageIndex = 0;                
-            }
-            switchBool[6] = !switchBool[6];
-        }
-
-        private void btnLed_Click(object sender, EventArgs e)
-        {
-            if (switchBool[7] == false)
-            {
-                this.btnLed.ImageIndex = 1;
-            }
-            else
-            {
-                this.btnLed.ImageIndex = 0;
-            }
-            switchBool[7] = !switchBool[7];
-        }
-
-        private void btnFingerPrint_Click(object sender, EventArgs e)
-        {
-            if (switchBool[8] == false)
-            {
-                this.btnFingerPrint.ImageIndex = 1;
-            }
-            else
-            {
-                this.btnFingerPrint.ImageIndex = 0;
-            }
-            switchBool[8] = !switchBool[8];
-        }
-
-        private void btnCamera_Click(object sender, EventArgs e)
-        {
-            if (switchBool[9] == false)
-            {
-                this.btnCamera.ImageIndex = 1;
-            }
-            else
-            {
-                this.btnCamera.ImageIndex = 0;
-            }
-            switchBool[9] = !switchBool[9];
-        }
-
-        private void btnSpiralRFID_Click(object sender, EventArgs e)
-        {
-            if (switchBool[10] == false)
-            {
-                this.btnSpiralRFID.ImageIndex = 1;
-            }
-            else
-            {
-                this.btnSpiralRFID.ImageIndex = 0;
-            }
-            switchBool[10] = !switchBool[10];
-        }
-
-        private void btnTemperature_Click(object sender, EventArgs e)
-        {
-            if (switchBool[11] == false)
             {
                 this.btnTemperature.ImageIndex = 1;
             }
@@ -210,59 +88,242 @@ namespace FrmCore
             {
                 this.btnTemperature.ImageIndex = 0;
             }
-            switchBool[11] = !switchBool[11];
+            switchBool[2] = !switchBool[2];
         }
 
-        private void btnRelay_Click(object sender, EventArgs e)
+        private void btnRs32_Click(object sender, EventArgs e)
         {
-            if (switchBool[12] == false)
+            if (switchBool[3] == false)
             {
-                this.btnRelay.ImageIndex = 1;
+                this.btnRs32.ImageIndex = 1;
             }
             else
             {
-                this.btnRelay.ImageIndex = 0;
+                this.btnRs32.ImageIndex = 0;
             }
-            switchBool[12] = !switchBool[12];
+            switchBool[3] = !switchBool[3];
         }
 
-        private void btnFace_Click(object sender, EventArgs e)
+        private void btnAddDevice_Click(object sender, EventArgs e)
         {
-            if (switchBool[13] == false)
+            if (CoreSystem.SelectedOrder.ETypeDevice == eType && !(CoreSystem.DeviceAssembly is null))
             {
-                this.btnFace.ImageIndex = 1;
+                CoreSystem.PreviewDevices.Add(CoreSystem.DeviceAssembly);
+                CoreSystem.DeviceAssembly = null;
+                LoadListAssembly();
+
             }
             else
             {
-                this.btnFace.ImageIndex = 0;
+                MessageBox.Show("The device to be assembled must be of the same type as the order", "TYPE ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            switchBool[13] = !switchBool[13];
+        }
+        private void BuilderDevice()
+        {
+            CoreSystem.DeviceAssembly = null;
+            switch (eType)
+            {
+                case EType.AccessControl:
+                    CoreSystem.DeviceAssembly = new AccessControl(CoreSystem.SelectedOrder.NameDevice, EType.AccessControl, 111);                    
+                    break;
+
+                case EType.PanelAccess:
+                    CoreSystem.DeviceAssembly = new AccessPanel(CoreSystem.SelectedOrder.NameDevice, EType.PanelAccess, 222, 2);                    
+                    break;
+
+                case EType.Attendance:
+                    CoreSystem.DeviceAssembly = new Attendance(CoreSystem.SelectedOrder.NameDevice, EType.Attendance, 333);                    
+                    break;
+            }
         }
 
-        private void btnTime_Click(object sender, EventArgs e)
+        private void HideSubMenu()
         {
-            if (switchBool[14] == false)
+            if (pnlAC.Visible)
             {
-                this.btnTime.ImageIndex = 1;
+                pnlAC.Visible = false;
+                ButtonFormatTransparent(btnAccessControl);
+            }
+            if (pnlAT.Visible)
+            {
+                pnlAT.Visible = false;
+                ButtonFormatTransparent(btnAttendance);
+            }
+            if (pnlPA.Visible)
+            {
+                pnlPA.Visible = false;
+                ButtonFormatTransparent(btnPanelAccess);
+            }
+        }
+
+        private void ShowSubMenu(Panel subMenu)
+        {
+            if (!subMenu.Visible)
+            {
+                HideSubMenu();
+                subMenu.Visible = true;
+                TrasparentButtonsSubPanel();
             }
             else
             {
-                this.btnTime.ImageIndex = 0;
+                subMenu.Visible = false;
+                ButtonFormatTransparent(btnPanelAccess);
+                ButtonFormatTransparent(btnAttendance);
+                ButtonFormatTransparent(btnAccessControl);
             }
-            switchBool[14] = !switchBool[14];
         }
 
-        private void btnSound_Click(object sender, EventArgs e)
+        private void btnAttendance_Click(object sender, EventArgs e)
         {
-            if (switchBool[15] == false)
+            this.eType = EType.Attendance;
+            ButtonFormatColor(btnAttendance);
+            ShowSubMenu(pnlAT);
+            //BuilderDevice();
+        }
+
+        private void btnAccessControl_Click(object sender, EventArgs e)
+        {
+            this.eType = EType.AccessControl;
+            ButtonFormatColor(btnAccessControl);
+            ShowSubMenu(pnlAC);
+            //BuilderDevice();
+        }
+        private void btnPanelAccess_Click(object sender, EventArgs e)
+        {
+            this.eType = EType.PanelAccess;
+            ButtonFormatColor(btnPanelAccess);
+            ShowSubMenu(pnlPA);
+            //BuilderDevice();
+        }
+
+        private void EnableButtons()
+        {
+            if (CoreSystem.SelectedOrder is null)
             {
-                this.btnSound.ImageIndex = 1;
+                this.Enabled = false;
+            }
+        }
+
+        private void btnViewListDevice_Click(object sender, EventArgs e)
+        {
+
+            if (!(CoreSystem.DeviceAssembly is null))
+            {
+                FrmPreviewComponent preview = new FrmPreviewComponent();
+                preview.ShowDialog();
             }
             else
             {
-                this.btnSound.ImageIndex = 0;
+                MessageBox.Show("No data loaded", "DATA ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            switchBool[15] = !switchBool[15];
+
         }
+
+        private void btnFingerRFIDPA_Click(object sender, EventArgs e)
+        {
+            ButtonFormatColor(btnFingerRFIDPA);
+            ButtonFormatTransparent(btnRFIDPA);
+            BuilderDevice();
+            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.FingerPrint, 1));
+            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.Relay, 2));
+            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.RFID, 1));
+        }
+
+        private void btnRFIDPA_Click(object sender, EventArgs e)
+        {
+            ButtonFormatColor(btnRFIDPA);
+            ButtonFormatTransparent(btnFingerRFIDPA);
+            BuilderDevice();
+            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.RFID, 1));
+            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.Relay, 2));
+
+        }
+
+        private void btnFingerAT_Click(object sender, EventArgs e)
+        {
+            ButtonFormatColor(btnFingerAT);
+            ButtonFormatTransparent(btnFaceAT);
+            BuilderDevice();
+            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.FingerPrint, 1));
+            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.RFID, 1));
+            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.TimeLog, 1));
+        }
+
+        private void btnFaceAT_Click(object sender, EventArgs e)
+        {
+            ButtonFormatColor(btnFaceAT);
+            ButtonFormatTransparent(btnFingerAT);
+            BuilderDevice();
+            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.Face, 1));
+            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.RFID, 1));
+            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.Camera, 1));
+            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.TimeLog, 1));
+        }
+
+        private void btnFingerAC_Click(object sender, EventArgs e)
+        {
+            ButtonFormatColor(btnFingerAC);
+            ButtonFormatTransparent(btnFaceAC);
+            BuilderDevice();
+            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.FingerPrint, 1));
+            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.RFID, 1));
+            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.Relay, 1));
+
+        }
+
+        private void btnFaceAC_Click(object sender, EventArgs e)
+        {            
+            ButtonFormatColor(btnFaceAC);
+            ButtonFormatTransparent(btnFingerAC);
+            BuilderDevice();
+            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.Face, 1));
+            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.Camera, 1));
+            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.RFID, 1));
+            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.Relay, 1));
+        }
+
+        private void ButtonFormatColor(Button button)
+        {
+            button.BackColor = Color.FromArgb(77, 30, 91);
+        }
+        private void ButtonFormatTransparent(Button button)
+        {
+            button.BackColor = Color.Transparent;
+        }
+
+        private void TrasparentButtonsSubPanel()
+        {
+            ButtonFormatTransparent(btnFingerAC);
+            ButtonFormatTransparent(btnFaceAC);
+            ButtonFormatTransparent(btnRFIDPA);
+            ButtonFormatTransparent(btnFingerRFIDPA);
+            ButtonFormatTransparent(btnFingerAT);
+            ButtonFormatTransparent(btnFaceAT);
+        }
+
+        private void ButtonForType(EType type)
+        {
+            switch (type)
+            {
+                case EType.AccessControl:
+                    btnAccessControl.Enabled = true;
+                    btnAttendance.Enabled = false;
+                    btnPanelAccess.Enabled = false;
+                    break;
+                case EType.PanelAccess:
+                    btnAccessControl.Enabled = false;
+                    btnAttendance.Enabled = false;
+                    btnPanelAccess.Enabled = true;
+                    break;
+
+                case EType.Attendance:
+                    btnAccessControl.Enabled = false;
+                    btnAttendance.Enabled = true;
+                    btnPanelAccess.Enabled = false;
+                    break;
+
+            }
+        }
+
     }
 }
