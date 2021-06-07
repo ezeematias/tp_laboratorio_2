@@ -19,7 +19,7 @@ namespace FrmCore
         }
         private void FrmPreviewComponent_Load(object sender, EventArgs e)
         {
-            dgvPreview.DataSource = CoreSystem.DeviceAssembly.Components;
+            dgvPreview.DataSource = CoreSystem.ListAssembly;
         }
     }
 }

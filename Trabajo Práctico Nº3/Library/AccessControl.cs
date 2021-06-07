@@ -8,29 +8,21 @@ namespace Library
 {
     public class AccessControl : Device
     {
-        public AccessControl(ECode codeInternal, EType typeDevice, double serialNumber) : base(codeInternal, typeDevice, serialNumber)
+        public AccessControl(ECode codeInternal, EType typeDevice, double serialNumber, EValidation eValidation) : base(codeInternal, typeDevice, serialNumber)
         {
+            AddComponent(eValidation);
         }
 
-        
-        protected override void AddComponent()
+        protected override void AddComponent(EValidation eValidation)
         {
-            throw new NotImplementedException();
-        }
-        
-
-        /*
-        protected override bool Test()
-        {
-            bool output = false;
-            if (base.Test() && Components.Contains(EComponents.Display) && Components.Contains(EComponents.ModuleAccess))
+            if (eValidation == EValidation.Finger)
             {
-                output = true;
+                base.Components = CoreSystem.ComponentsAccFinger;
             }
-            return output;
+            else
+            {
+                base.Components = CoreSystem.ComponentsAccFace;
+            }
         }
-        */
-
-
     }
 }

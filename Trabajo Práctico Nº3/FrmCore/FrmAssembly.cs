@@ -13,8 +13,9 @@ namespace FrmCore
 {
     public partial class FrmAssembly : Form
     {
-        private List<bool> switchBool;
         private EType eType;
+        private EValidation eValidation;
+        private bool pressButton = false;
 
         public FrmAssembly()
         {
@@ -24,11 +25,14 @@ namespace FrmCore
         private void FrmAssembly_Load(object sender, EventArgs e)
         {
             LoadOrderSelected();
-            LoadBoolFalse();
             HideSubMenu();
             EnableButtons();
-            ButtonForType(CoreSystem.SelectedOrder.ETypeDevice);
-            LoadListAssembly();
+            CoreSystem.ListAssembly = null;
+            if (!(CoreSystem.SelectedOrder is null) && !(CoreSystem.PreviewDevices is null))
+            {
+                ButtonForType(CoreSystem.SelectedOrder.ETypeDevice);
+                dgvPreview.DataSource = new BindingList<Device>(CoreSystem.PreviewDevices);
+            }
         }
 
         private void LoadOrderSelected()
@@ -40,78 +44,26 @@ namespace FrmCore
         {
             dgvPreview.DataSource = null;
             dgvPreview.DataSource = CoreSystem.PreviewDevices;
-            //dgvPreview.DataSource = new BindingList<Device>(CoreSystem.PreviewDevices);
-        }
-
-        private void LoadBoolFalse()
-        {
-            switchBool = new List<bool>();
-            for (int i = 0; i < 5; i++)
-            {
-                switchBool.Add(false);
-            }
-        }
-
-        private void btnWiFi_Click(object sender, EventArgs e)
-        {
-            if (switchBool[0] == false)
-            {
-                this.btnWiFi.ImageIndex = 1;
-            }
-            else
-            {
-                this.btnWiFi.ImageIndex = 0;
-            }
-            switchBool[0] = !switchBool[0];
-        }
-
-        private void btnAdms_Click(object sender, EventArgs e)
-        {
-            if (switchBool[1] == false)
-            {
-                this.btnLAdms.ImageIndex = 1;
-            }
-            else
-            {
-                this.btnLAdms.ImageIndex = 0;
-            }
-            switchBool[1] = !switchBool[1];
-        }
-
-        private void btnTemp_Click(object sender, EventArgs e)
-        {
-            if (switchBool[2] == false)
-            {
-                this.btnTemperature.ImageIndex = 1;
-            }
-            else
-            {
-                this.btnTemperature.ImageIndex = 0;
-            }
-            switchBool[2] = !switchBool[2];
-        }
-
-        private void btnRs32_Click(object sender, EventArgs e)
-        {
-            if (switchBool[3] == false)
-            {
-                this.btnRs32.ImageIndex = 1;
-            }
-            else
-            {
-                this.btnRs32.ImageIndex = 0;
-            }
-            switchBool[3] = !switchBool[3];
         }
 
         private void btnAddDevice_Click(object sender, EventArgs e)
         {
-            if (CoreSystem.SelectedOrder.ETypeDevice == eType && !(CoreSystem.DeviceAssembly is null))
+            if (CoreSystem.SelectedOrder.ETypeDevice == eType && !(CoreSystem.ListAssembly is null) && pressButton == true)
             {
-                CoreSystem.PreviewDevices.Add(CoreSystem.DeviceAssembly);
-                CoreSystem.DeviceAssembly = null;
-                LoadListAssembly();
-
+                if (Stock.ThereIsStock(CoreSystem.ListAssembly, out string component))
+                {
+                    CoreSystem.LoadDevices(eType,eValidation);
+                    CoreSystem.PreviewDevices.Add(CoreSystem.DeviceAssembly);
+                    CoreSystem.DeviceAssembly = null;
+                    PressButton();
+                    LoadListAssembly();
+                    TrasparentButtonsSubPanel();
+                    HideSubMenu();
+                }
+                else
+                {
+                    MessageBox.Show($"The missing materials are:\n\n{component}", "NO STOCK!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
@@ -120,21 +72,8 @@ namespace FrmCore
         }
         private void BuilderDevice()
         {
-            CoreSystem.DeviceAssembly = null;
-            switch (eType)
-            {
-                case EType.AccessControl:
-                    CoreSystem.DeviceAssembly = new AccessControl(CoreSystem.SelectedOrder.NameDevice, EType.AccessControl, 111);                    
-                    break;
-
-                case EType.PanelAccess:
-                    CoreSystem.DeviceAssembly = new AccessPanel(CoreSystem.SelectedOrder.NameDevice, EType.PanelAccess, 222, 2);                    
-                    break;
-
-                case EType.Attendance:
-                    CoreSystem.DeviceAssembly = new Attendance(CoreSystem.SelectedOrder.NameDevice, EType.Attendance, 333);                    
-                    break;
-            }
+            CoreSystem.ListAssembly = null;
+            CoreSystem.LoadListAssembly(eType, eValidation);            
         }
 
         private void HideSubMenu()
@@ -176,24 +115,24 @@ namespace FrmCore
         private void btnAttendance_Click(object sender, EventArgs e)
         {
             this.eType = EType.Attendance;
+            PressButton();
             ButtonFormatColor(btnAttendance);
             ShowSubMenu(pnlAT);
-            //BuilderDevice();
         }
 
         private void btnAccessControl_Click(object sender, EventArgs e)
         {
             this.eType = EType.AccessControl;
+            PressButton();
             ButtonFormatColor(btnAccessControl);
             ShowSubMenu(pnlAC);
-            //BuilderDevice();
         }
         private void btnPanelAccess_Click(object sender, EventArgs e)
         {
             this.eType = EType.PanelAccess;
+            PressButton();
             ButtonFormatColor(btnPanelAccess);
             ShowSubMenu(pnlPA);
-            //BuilderDevice();
         }
 
         private void EnableButtons()
@@ -204,10 +143,18 @@ namespace FrmCore
             }
         }
 
+        private void PressButton()
+        {
+            pressButton = !pressButton;
+            if (pressButton == false)
+            {
+                CoreSystem.ListAssembly = null;
+            }
+        }
+
         private void btnViewListDevice_Click(object sender, EventArgs e)
         {
-
-            if (!(CoreSystem.DeviceAssembly is null))
+            if (!(CoreSystem.ListAssembly is null))
             {
                 FrmPreviewComponent preview = new FrmPreviewComponent();
                 preview.ShowDialog();
@@ -216,70 +163,54 @@ namespace FrmCore
             {
                 MessageBox.Show("No data loaded", "DATA ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void btnFingerRFIDPA_Click(object sender, EventArgs e)
         {
+            eValidation = EValidation.Finger;
             ButtonFormatColor(btnFingerRFIDPA);
             ButtonFormatTransparent(btnRFIDPA);
             BuilderDevice();
-            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.FingerPrint, 1));
-            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.Relay, 2));
-            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.RFID, 1));
         }
 
         private void btnRFIDPA_Click(object sender, EventArgs e)
         {
+            eValidation = EValidation.Card;
             ButtonFormatColor(btnRFIDPA);
             ButtonFormatTransparent(btnFingerRFIDPA);
             BuilderDevice();
-            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.RFID, 1));
-            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.Relay, 2));
-
         }
 
         private void btnFingerAT_Click(object sender, EventArgs e)
         {
+            eValidation = EValidation.Finger;
             ButtonFormatColor(btnFingerAT);
             ButtonFormatTransparent(btnFaceAT);
             BuilderDevice();
-            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.FingerPrint, 1));
-            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.RFID, 1));
-            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.TimeLog, 1));
         }
 
         private void btnFaceAT_Click(object sender, EventArgs e)
         {
+            eValidation = EValidation.Face;
             ButtonFormatColor(btnFaceAT);
             ButtonFormatTransparent(btnFingerAT);
             BuilderDevice();
-            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.Face, 1));
-            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.RFID, 1));
-            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.Camera, 1));
-            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.TimeLog, 1));
         }
 
         private void btnFingerAC_Click(object sender, EventArgs e)
         {
+            eValidation = EValidation.Finger;
             ButtonFormatColor(btnFingerAC);
             ButtonFormatTransparent(btnFaceAC);
             BuilderDevice();
-            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.FingerPrint, 1));
-            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.RFID, 1));
-            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.Relay, 1));
-
         }
 
         private void btnFaceAC_Click(object sender, EventArgs e)
-        {            
+        {
+            eValidation = EValidation.Face;
             ButtonFormatColor(btnFaceAC);
             ButtonFormatTransparent(btnFingerAC);
             BuilderDevice();
-            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.Face, 1));
-            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.Camera, 1));
-            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.RFID, 1));
-            CoreSystem.DeviceAssembly.Components.Add(new Components(EComponents.Relay, 1));
         }
 
         private void ButtonFormatColor(Button button)
@@ -321,9 +252,23 @@ namespace FrmCore
                     btnAttendance.Enabled = true;
                     btnPanelAccess.Enabled = false;
                     break;
-
             }
         }
 
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+            //TODO: Faltan todas las validaciones y mensajes para continuar una vez agregada la lista.
+            Stock.DevicesStock = CoreSystem.PreviewDevices;
+            CoreSystem.PreviewDevices = null;
+            LoadListAssembly();
+            CoreSystem.SelectedOrder = null;
+            dgvOrder.DataSource = null;
+            EnableButtons();
+        }
+
+        private void btnRemoveDevice_Click(object sender, EventArgs e)
+        {
+            //TODO: Hay que remover un dispositvo creado de la lista preview.
+        }
     }
 }

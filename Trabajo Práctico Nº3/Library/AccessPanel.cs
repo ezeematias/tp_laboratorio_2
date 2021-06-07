@@ -10,9 +10,10 @@ namespace Library
     {
         int numberAccess;
 
-        public AccessPanel(ECode codeInternal, EType typeDevice, double serialNumber, int numberAccess) : base(codeInternal, typeDevice, serialNumber)
+        public AccessPanel(ECode codeInternal, EType typeDevice, double serialNumber, int numberAccess, EValidation eValidation) : base(codeInternal, typeDevice, serialNumber)
         {
-            NumberAccess = numberAccess;            
+            NumberAccess = numberAccess;
+            AddComponent(eValidation);
         }
 
         private int NumberAccess
@@ -29,24 +30,16 @@ namespace Library
             }
         }
 
-        
-        protected override void AddComponent()
+        protected override void AddComponent(EValidation eValidation)
         {
-            throw new NotImplementedException();
-        }
-        
-
-        /*
-        protected override bool Test()
-        {
-            bool output = false;
-            if(base.Test() && Components.Contains(EComponents.ModuleAccess))
+            if (eValidation == EValidation.Finger)
             {
-                
-                output = true;
+                base.Components = CoreSystem.ComponentsPnlFinger;
             }
-            return output;
+            else
+            {
+                base.Components = CoreSystem.ComponentsPnlRFID;
+            }
         }
-        */
     }
 }

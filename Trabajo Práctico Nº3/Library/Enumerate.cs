@@ -10,7 +10,7 @@ namespace Library
     {
         CNT_BioPanel_ACC,
         CNT_ReadPanel_ACC,
-        CNT_A9_CR,
+        CNT_A9_FC,
         CNT_A60_ID,
         CNT_E7_CR,
         CNT_E22_ID,
@@ -35,10 +35,6 @@ namespace Library
         Face,
         TimeLog,
         Sound,
-        Temp,
-        WiFi,
-        RS32,
-        ADMS
     }
 
     public enum EType

@@ -13,7 +13,6 @@ namespace FrmCore
 {
     public partial class FrmProduction : Form
     {
-        public static bool orderAssembly = false;
         bool aux = false;
         private Form activeForm = null;
 

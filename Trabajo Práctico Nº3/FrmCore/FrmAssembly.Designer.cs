@@ -29,27 +29,12 @@ namespace FrmCore
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAssembly));
             this.dgvOrder = new System.Windows.Forms.DataGridView();
             this.btnAccessControl = new System.Windows.Forms.Button();
             this.pnlButton = new System.Windows.Forms.Panel();
             this.btnPanelAccess = new System.Windows.Forms.Button();
             this.btnAttendance = new System.Windows.Forms.Button();
-            this.pnlAdditional = new System.Windows.Forms.Panel();
-            this.lblAdditional = new System.Windows.Forms.Label();
-            this.btnRs32 = new System.Windows.Forms.Button();
-            this.imlButtonRs32 = new System.Windows.Forms.ImageList(this.components);
-            this.btnTemperature = new System.Windows.Forms.Button();
-            this.imlButtonTemp = new System.Windows.Forms.ImageList(this.components);
-            this.btnLAdms = new System.Windows.Forms.Button();
-            this.imlButtonAdms = new System.Windows.Forms.ImageList(this.components);
-            this.btnWiFi = new System.Windows.Forms.Button();
-            this.imlButtonWiFi = new System.Windows.Forms.ImageList(this.components);
-            this.lblRs32 = new System.Windows.Forms.Label();
-            this.lblTemp = new System.Windows.Forms.Label();
-            this.lblADMS = new System.Windows.Forms.Label();
-            this.lblWiFi = new System.Windows.Forms.Label();
             this.dgvPreview = new System.Windows.Forms.DataGridView();
             this.btnAddDevice = new System.Windows.Forms.Button();
             this.btnUpload = new System.Windows.Forms.Button();
@@ -68,7 +53,6 @@ namespace FrmCore
             this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
             this.pnlButton.SuspendLayout();
-            this.pnlAdditional.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPreview)).BeginInit();
             this.pnlAC.SuspendLayout();
             this.pnlAT.SuspendLayout();
@@ -158,174 +142,6 @@ namespace FrmCore
             this.btnAttendance.UseVisualStyleBackColor = false;
             this.btnAttendance.Click += new System.EventHandler(this.btnAttendance_Click);
             // 
-            // pnlAdditional
-            // 
-            this.pnlAdditional.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlAdditional.BackColor = System.Drawing.Color.Transparent;
-            this.pnlAdditional.Controls.Add(this.lblAdditional);
-            this.pnlAdditional.Controls.Add(this.btnRs32);
-            this.pnlAdditional.Controls.Add(this.btnTemperature);
-            this.pnlAdditional.Controls.Add(this.btnLAdms);
-            this.pnlAdditional.Controls.Add(this.btnWiFi);
-            this.pnlAdditional.Controls.Add(this.lblRs32);
-            this.pnlAdditional.Controls.Add(this.lblTemp);
-            this.pnlAdditional.Controls.Add(this.lblADMS);
-            this.pnlAdditional.Controls.Add(this.lblWiFi);
-            this.pnlAdditional.Location = new System.Drawing.Point(60, 144);
-            this.pnlAdditional.Name = "pnlAdditional";
-            this.pnlAdditional.Size = new System.Drawing.Size(645, 41);
-            this.pnlAdditional.TabIndex = 7;
-            // 
-            // lblAdditional
-            // 
-            this.lblAdditional.AutoSize = true;
-            this.lblAdditional.BackColor = System.Drawing.Color.Transparent;
-            this.lblAdditional.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdditional.ForeColor = System.Drawing.Color.White;
-            this.lblAdditional.Location = new System.Drawing.Point(3, 0);
-            this.lblAdditional.Name = "lblAdditional";
-            this.lblAdditional.Size = new System.Drawing.Size(61, 15);
-            this.lblAdditional.TabIndex = 9;
-            this.lblAdditional.Text = "Additional";
-            // 
-            // btnRs32
-            // 
-            this.btnRs32.BackColor = System.Drawing.Color.Transparent;
-            this.btnRs32.FlatAppearance.BorderSize = 0;
-            this.btnRs32.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnRs32.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnRs32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRs32.ImageIndex = 0;
-            this.btnRs32.ImageList = this.imlButtonRs32;
-            this.btnRs32.Location = new System.Drawing.Point(600, 16);
-            this.btnRs32.Name = "btnRs32";
-            this.btnRs32.Size = new System.Drawing.Size(40, 28);
-            this.btnRs32.TabIndex = 1;
-            this.btnRs32.UseVisualStyleBackColor = false;
-            this.btnRs32.Click += new System.EventHandler(this.btnRs32_Click);
-            // 
-            // imlButtonRs32
-            // 
-            this.imlButtonRs32.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imlButtonRs32.ImageStream")));
-            this.imlButtonRs32.TransparentColor = System.Drawing.Color.Transparent;
-            this.imlButtonRs32.Images.SetKeyName(0, "TP3_Switch_03.png");
-            this.imlButtonRs32.Images.SetKeyName(1, "TP3_Switch_04.png");
-            // 
-            // btnTemperature
-            // 
-            this.btnTemperature.BackColor = System.Drawing.Color.Transparent;
-            this.btnTemperature.FlatAppearance.BorderSize = 0;
-            this.btnTemperature.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnTemperature.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnTemperature.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTemperature.ImageIndex = 0;
-            this.btnTemperature.ImageList = this.imlButtonTemp;
-            this.btnTemperature.Location = new System.Drawing.Point(422, 16);
-            this.btnTemperature.Name = "btnTemperature";
-            this.btnTemperature.Size = new System.Drawing.Size(41, 28);
-            this.btnTemperature.TabIndex = 1;
-            this.btnTemperature.UseVisualStyleBackColor = false;
-            this.btnTemperature.Click += new System.EventHandler(this.btnTemp_Click);
-            // 
-            // imlButtonTemp
-            // 
-            this.imlButtonTemp.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imlButtonTemp.ImageStream")));
-            this.imlButtonTemp.TransparentColor = System.Drawing.Color.Transparent;
-            this.imlButtonTemp.Images.SetKeyName(0, "TP3_Switch_03.png");
-            this.imlButtonTemp.Images.SetKeyName(1, "TP3_Switch_04.png");
-            // 
-            // btnLAdms
-            // 
-            this.btnLAdms.BackColor = System.Drawing.Color.Transparent;
-            this.btnLAdms.FlatAppearance.BorderSize = 0;
-            this.btnLAdms.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnLAdms.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnLAdms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLAdms.ImageIndex = 0;
-            this.btnLAdms.ImageList = this.imlButtonAdms;
-            this.btnLAdms.Location = new System.Drawing.Point(244, 16);
-            this.btnLAdms.Name = "btnLAdms";
-            this.btnLAdms.Size = new System.Drawing.Size(41, 28);
-            this.btnLAdms.TabIndex = 1;
-            this.btnLAdms.UseVisualStyleBackColor = false;
-            this.btnLAdms.Click += new System.EventHandler(this.btnAdms_Click);
-            // 
-            // imlButtonAdms
-            // 
-            this.imlButtonAdms.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imlButtonAdms.ImageStream")));
-            this.imlButtonAdms.TransparentColor = System.Drawing.Color.Transparent;
-            this.imlButtonAdms.Images.SetKeyName(0, "TP3_Switch_03.png");
-            this.imlButtonAdms.Images.SetKeyName(1, "TP3_Switch_04.png");
-            // 
-            // btnWiFi
-            // 
-            this.btnWiFi.BackColor = System.Drawing.Color.Transparent;
-            this.btnWiFi.FlatAppearance.BorderSize = 0;
-            this.btnWiFi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnWiFi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnWiFi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWiFi.ImageIndex = 0;
-            this.btnWiFi.ImageList = this.imlButtonWiFi;
-            this.btnWiFi.Location = new System.Drawing.Point(66, 16);
-            this.btnWiFi.Name = "btnWiFi";
-            this.btnWiFi.Size = new System.Drawing.Size(41, 28);
-            this.btnWiFi.TabIndex = 1;
-            this.btnWiFi.UseVisualStyleBackColor = false;
-            this.btnWiFi.Click += new System.EventHandler(this.btnWiFi_Click);
-            // 
-            // imlButtonWiFi
-            // 
-            this.imlButtonWiFi.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imlButtonWiFi.ImageStream")));
-            this.imlButtonWiFi.TransparentColor = System.Drawing.Color.Transparent;
-            this.imlButtonWiFi.Images.SetKeyName(0, "TP3_Switch_03.png");
-            this.imlButtonWiFi.Images.SetKeyName(1, "TP3_Switch_04.png");
-            // 
-            // lblRs32
-            // 
-            this.lblRs32.AutoSize = true;
-            this.lblRs32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRs32.ForeColor = System.Drawing.Color.White;
-            this.lblRs32.Location = new System.Drawing.Point(526, 22);
-            this.lblRs32.Name = "lblRs32";
-            this.lblRs32.Size = new System.Drawing.Size(45, 16);
-            this.lblRs32.TabIndex = 0;
-            this.lblRs32.Text = "RS32";
-            // 
-            // lblTemp
-            // 
-            this.lblTemp.AutoSize = true;
-            this.lblTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTemp.ForeColor = System.Drawing.Color.White;
-            this.lblTemp.Location = new System.Drawing.Point(350, 22);
-            this.lblTemp.Name = "lblTemp";
-            this.lblTemp.Size = new System.Drawing.Size(48, 16);
-            this.lblTemp.TabIndex = 0;
-            this.lblTemp.Text = "Temp";
-            // 
-            // lblADMS
-            // 
-            this.lblADMS.AutoSize = true;
-            this.lblADMS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblADMS.ForeColor = System.Drawing.Color.White;
-            this.lblADMS.Location = new System.Drawing.Point(173, 22);
-            this.lblADMS.Name = "lblADMS";
-            this.lblADMS.Size = new System.Drawing.Size(51, 16);
-            this.lblADMS.TabIndex = 0;
-            this.lblADMS.Text = "ADMS";
-            // 
-            // lblWiFi
-            // 
-            this.lblWiFi.AutoSize = true;
-            this.lblWiFi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWiFi.ForeColor = System.Drawing.Color.White;
-            this.lblWiFi.Location = new System.Drawing.Point(3, 22);
-            this.lblWiFi.Name = "lblWiFi";
-            this.lblWiFi.Size = new System.Drawing.Size(44, 16);
-            this.lblWiFi.TabIndex = 0;
-            this.lblWiFi.Text = "Wi-Fi";
-            // 
             // dgvPreview
             // 
             this.dgvPreview.AllowUserToAddRows = false;
@@ -376,6 +192,7 @@ namespace FrmCore
             this.btnUpload.TabIndex = 3;
             this.btnUpload.Text = "Upload List";
             this.btnUpload.UseVisualStyleBackColor = false;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // btnRemoveDevice
             // 
@@ -393,6 +210,7 @@ namespace FrmCore
             this.btnRemoveDevice.TabIndex = 3;
             this.btnRemoveDevice.Text = "Remove Device";
             this.btnRemoveDevice.UseVisualStyleBackColor = false;
+            this.btnRemoveDevice.Click += new System.EventHandler(this.btnRemoveDevice_Click);
             // 
             // pnlAC
             // 
@@ -593,7 +411,6 @@ namespace FrmCore
             this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.btnViewListDevice);
             this.Controls.Add(this.btnAddDevice);
-            this.Controls.Add(this.pnlAdditional);
             this.Controls.Add(this.pnlPA);
             this.Controls.Add(this.pnlAT);
             this.Controls.Add(this.pnlAC);
@@ -609,8 +426,6 @@ namespace FrmCore
             this.Load += new System.EventHandler(this.FrmAssembly_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
             this.pnlButton.ResumeLayout(false);
-            this.pnlAdditional.ResumeLayout(false);
-            this.pnlAdditional.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPreview)).EndInit();
             this.pnlAC.ResumeLayout(false);
             this.pnlAT.ResumeLayout(false);
@@ -626,23 +441,10 @@ namespace FrmCore
         private System.Windows.Forms.Panel pnlButton;
         private System.Windows.Forms.Button btnPanelAccess;
         private System.Windows.Forms.Button btnAttendance;
-        private System.Windows.Forms.Panel pnlAdditional;
-        private System.Windows.Forms.Button btnRs32;
-        private System.Windows.Forms.Button btnTemperature;
-        private System.Windows.Forms.Button btnLAdms;
-        private System.Windows.Forms.Button btnWiFi;
-        private System.Windows.Forms.Label lblRs32;
-        private System.Windows.Forms.Label lblTemp;
-        private System.Windows.Forms.Label lblADMS;
-        private System.Windows.Forms.Label lblWiFi;
         private System.Windows.Forms.DataGridView dgvPreview;
         private System.Windows.Forms.Button btnAddDevice;
         private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.Button btnRemoveDevice;
-        private System.Windows.Forms.ImageList imlButtonWiFi;
-        private System.Windows.Forms.ImageList imlButtonAdms;
-        private System.Windows.Forms.ImageList imlButtonTemp;
-        private System.Windows.Forms.ImageList imlButtonRs32;
         private System.Windows.Forms.Panel pnlAC;
         private System.Windows.Forms.Button btnFingerAC;
         private System.Windows.Forms.Button btnFaceAC;
@@ -652,7 +454,6 @@ namespace FrmCore
         private System.Windows.Forms.Panel pnlPA;
         private System.Windows.Forms.Button btnRFIDPA;
         private System.Windows.Forms.Button btnFingerRFIDPA;
-        private System.Windows.Forms.Label lblAdditional;
         private System.Windows.Forms.Button btnViewListDevice;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;

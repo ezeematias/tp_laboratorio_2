@@ -14,6 +14,8 @@ C:\Users\eunia\Desktop\FACULTAD\SEGUNDO CUATRIMESTRE\PROGRAMACIÓN Y LABORATORIO
 C:\Users\eunia\Desktop\FACULTAD\SEGUNDO CUATRIMESTRE\PROGRAMACIÓN Y LABORATORIO II\REPOSITORIOS\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\obj\Debug\FrmCore.csproj.CopyComplete
 C:\Users\eunia\Desktop\FACULTAD\SEGUNDO CUATRIMESTRE\PROGRAMACIÓN Y LABORATORIO II\REPOSITORIOS\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\obj\Debug\FrmCore.exe
 C:\Users\eunia\Desktop\FACULTAD\SEGUNDO CUATRIMESTRE\PROGRAMACIÓN Y LABORATORIO II\REPOSITORIOS\ezeematias\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\obj\Debug\FrmCore.pdb
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\obj\Debug\FrmCore.FrmInternalOrder.resources
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\obj\Debug\FrmCore.FrmProduction.resources
 C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\FrmCore.exe.config
 C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\FrmCore.exe
 C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\FrmCore.pdb
@@ -24,10 +26,8 @@ C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\R
 C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\obj\Debug\FrmCore.FrmAssembly.resources
 C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\obj\Debug\FrmCore.FrmComponents.resources
 C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\obj\Debug\FrmCore.FrmDevices.resources
-C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\obj\Debug\FrmCore.FrmInternalOrder.resources
 C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\obj\Debug\FrmCore.FrmLogin.resources
 C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\obj\Debug\FrmCore.FrmPreviewComponent.resources
-C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\obj\Debug\FrmCore.FrmProduction.resources
 C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\obj\Debug\FrmCore.Properties.Resources.resources
 C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\obj\Debug\FrmCore.csproj.GenerateResource.cache
 C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\obj\Debug\FrmCore.csproj.CoreCompileInputs.cache

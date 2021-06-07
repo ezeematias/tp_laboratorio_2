@@ -8,29 +8,22 @@ namespace Library
 {
     public sealed class Attendance : Device
     {
-
-        public Attendance(ECode codeInternal, EType typeDevice, double serialNumber) : base(codeInternal, typeDevice, serialNumber)
+        public Attendance(ECode codeInternal, EType typeDevice, double serialNumber, EValidation eValidation) : base(codeInternal, typeDevice, serialNumber)
         {
-
-        }
-
-        
-        protected override void AddComponent()
-        {
-            throw new NotImplementedException();
+            AddComponent(eValidation);
         }
         
-
-        /*
-        protected override bool Test()
+        protected override void AddComponent(EValidation eValidation)
         {
-            bool output = false;
-            if (base.Test() && Components.Contains(EComponents.Display) && !Components.Contains(EComponents.ModuleAccess))
+            if(eValidation == EValidation.Finger)
             {
-                output = true;
+                base.Components = CoreSystem.ComponentsAttFinger;
             }
-            return output;
-        }
-        */
+            else
+            {
+                base.Components = CoreSystem.ComponentsAttFace;
+            }            
+        }       
+
     }
 }

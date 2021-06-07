@@ -20,7 +20,7 @@ namespace FrmCore
 
         private void FrmComponents_Load(object sender, EventArgs e)
         {
-            dgvComponents.DataSource = CoreSystem.ComponentsStock;
+            dgvComponents.DataSource = Stock.ComponentsStock;
         }
     }
 }

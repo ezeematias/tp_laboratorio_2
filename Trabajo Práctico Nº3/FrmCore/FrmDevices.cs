@@ -20,7 +20,7 @@ namespace FrmCore
 
         private void FrmDevices_Load(object sender, EventArgs e)
         {
-            dgvDevices.DataSource = CoreSystem.DeviceAssembly;
+            dgvDevices.DataSource = Stock.DevicesStock;
         }
     }
 }

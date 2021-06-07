@@ -25,10 +25,25 @@ namespace FrmCore
 
         private void btnAceptOrder_Click(object sender, EventArgs e)
         {
-            CoreSystem.SelectedOrder = (InternalOrder)dgvInternalOrder.CurrentRow.DataBoundItem;
-            FrmProduction.orderAssembly = true;
-            ChangeBackColor();
+            if (CoreSystem.PreviewDevices.Count == 0)
+            {
+                CoreSystem.SelectedOrder = (InternalOrder)dgvInternalOrder.CurrentRow.DataBoundItem;
+                //FrmProduction.orderAssembly = true;
+                ChangeBackColor();
+            }
+            else if (MessageBox.Show("Unsaved devices will be lost. Do you want to change your order anyway?", "ORDER IN EXECUTION", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+            {
+                CoreSystem.PreviewDevices.Clear();
+                CoreSystem.SelectedOrder = (InternalOrder)dgvInternalOrder.CurrentRow.DataBoundItem;
+                ChangeBackColor();
+            }
+            else
+            {
+                ChangeBackColor();
+            }
+
         }
+
         private void LoadOrders()
         {
             dgvInternalOrder.DataSource = null;
