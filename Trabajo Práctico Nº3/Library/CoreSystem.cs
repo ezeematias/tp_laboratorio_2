@@ -78,11 +78,11 @@ namespace Library
 
         private static void LoadInternalOrder()
         {
-            InternalOrders.Add(new InternalOrder(4506, ECode.CNT_A60_ID, EValidation.Finger, EType.AccessControl, 2));
-            InternalOrders.Add(new InternalOrder(4507, ECode.CNT_A9_FC, EValidation.Face, EType.AccessControl, 1));
-            InternalOrders.Add(new InternalOrder(4508, ECode.CNT_BioPanel_ACC, EValidation.Finger, EType.PanelAccess, 3));
-            InternalOrders.Add(new InternalOrder(4509, ECode.CNT_FD10_FC, EValidation.Face, EType.Attendance, 2));
-            InternalOrders.Add(new InternalOrder(4510, ECode.CNT_E7_CR, EValidation.Card, EType.Attendance, 1));
+            InternalOrders.Add(new InternalOrder(4506, ECode.CNT_A60_ID, EType.AccessControl, 2));
+            InternalOrders.Add(new InternalOrder(4507, ECode.CNT_A9_FC, EType.AccessControl, 1));
+            InternalOrders.Add(new InternalOrder(4508, ECode.CNT_BioPanel_ACC, EType.PanelAccess, 3));
+            InternalOrders.Add(new InternalOrder(4509, ECode.CNT_FD10_FC, EType.Attendance, 2));
+            InternalOrders.Add(new InternalOrder(4510, ECode.CNT_E7_CR, EType.Attendance, 1));
         }
 
         private static void LoadBasicComponents(List<Components> list)
@@ -141,15 +141,15 @@ namespace Library
             switch (eType)
             {
                 case EType.AccessControl:
-                        DeviceAssembly = new AccessControl(SelectedOrder.NameDevice, EType.AccessControl, 111, eValidation);           
+                        DeviceAssembly = new AccessControl(SelectedOrder.NameDevice, EType.AccessControl, eValidation);           
                     break;
 
                 case EType.PanelAccess:
-                        DeviceAssembly = new AccessPanel(SelectedOrder.NameDevice, EType.PanelAccess, 222, 2, eValidation);
+                        DeviceAssembly = new AccessPanel(SelectedOrder.NameDevice, EType.PanelAccess, 2, eValidation);
                     break;
 
                 case EType.Attendance:
-                        DeviceAssembly = new Attendance(SelectedOrder.NameDevice, EType.Attendance, 333, eValidation);
+                        DeviceAssembly = new Attendance(SelectedOrder.NameDevice, EType.Attendance, eValidation);
                     break;
             }
         }

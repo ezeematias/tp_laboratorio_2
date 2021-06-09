@@ -10,7 +10,7 @@ namespace Library
     {
         int numberAccess;
 
-        public AccessPanel(ECode codeInternal, EType typeDevice, double serialNumber, int numberAccess, EValidation eValidation) : base(codeInternal, typeDevice, serialNumber)
+        public AccessPanel(ECode codeInternal, EType typeDevice, int numberAccess, EValidation eValidation) : base(codeInternal, typeDevice, eValidation)
         {
             NumberAccess = numberAccess;
             AddComponent(eValidation);

@@ -47,11 +47,19 @@ namespace FrmCore
             // 
             // dgvPreview
             // 
+            this.dgvPreview.AllowUserToAddRows = false;
+            this.dgvPreview.AllowUserToDeleteRows = false;
+            this.dgvPreview.AllowUserToResizeColumns = false;
+            this.dgvPreview.AllowUserToResizeRows = false;
             this.dgvPreview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvPreview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPreview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPreview.Location = new System.Drawing.Point(0, 0);
             this.dgvPreview.Name = "dgvPreview";
+            this.dgvPreview.ReadOnly = true;
+            this.dgvPreview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dgvPreview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPreview.Size = new System.Drawing.Size(277, 324);
             this.dgvPreview.TabIndex = 0;
             // 

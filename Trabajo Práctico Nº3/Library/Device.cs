@@ -10,12 +10,15 @@ namespace Library
     {
         ECode codeInternal;
         EType typeDevice;
+        EValidation eValidation;
         double serialNumber;
         List<Components> components;
 
         public ECode CodeInternal { get => codeInternal; set => codeInternal = value; }
         public EType TypeDevice { get => typeDevice; set => typeDevice = value; }
+        public EValidation EValidation { get => eValidation; set => eValidation = value; }
         public double SerialNumber { get => serialNumber; set => serialNumber = value; }
+
         public List<Components> Components
         {
             get => components;
@@ -27,12 +30,13 @@ namespace Library
                 }
             }
         }
- 
-        protected Device(ECode codeInternal, EType typeDevice, double serialNumber)
+
+        protected Device(ECode codeInternal, EType typeDevice, EValidation eValidation)
         {
             this.CodeInternal = codeInternal;
             this.TypeDevice = typeDevice;
-            this.SerialNumber = serialNumber;
+            this.eValidation = eValidation;
+            this.SerialNumber = SerialsNumbers.GetAndSetSerialNumber(typeDevice);
             this.components = new List<Components>();
         }
 

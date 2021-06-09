@@ -8,7 +8,7 @@ namespace Library
 {
     public sealed class Attendance : Device
     {
-        public Attendance(ECode codeInternal, EType typeDevice, double serialNumber, EValidation eValidation) : base(codeInternal, typeDevice, serialNumber)
+        public Attendance(ECode codeInternal, EType typeDevice, EValidation eValidation) : base(codeInternal, typeDevice, eValidation)
         {
             AddComponent(eValidation);
         }

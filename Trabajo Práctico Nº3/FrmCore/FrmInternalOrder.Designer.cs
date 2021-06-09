@@ -50,7 +50,8 @@ namespace FrmCore
             // 
             this.dgvInternalOrder.AllowUserToAddRows = false;
             this.dgvInternalOrder.AllowUserToDeleteRows = false;
-            this.dgvInternalOrder.AllowUserToOrderColumns = true;
+            this.dgvInternalOrder.AllowUserToResizeColumns = false;
+            this.dgvInternalOrder.AllowUserToResizeRows = false;
             this.dgvInternalOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -59,6 +60,7 @@ namespace FrmCore
             this.dgvInternalOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInternalOrder.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvInternalOrder.Location = new System.Drawing.Point(85, 35);
+            this.dgvInternalOrder.MultiSelect = false;
             this.dgvInternalOrder.Name = "dgvInternalOrder";
             this.dgvInternalOrder.ReadOnly = true;
             this.dgvInternalOrder.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
@@ -72,11 +74,13 @@ namespace FrmCore
             // 
             // btnAceptOrder
             // 
+            this.btnAceptOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAceptOrder.BackColor = System.Drawing.Color.AliceBlue;
             this.btnAceptOrder.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAceptOrder.FlatAppearance.BorderSize = 0;
-            this.btnAceptOrder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Thistle;
-            this.btnAceptOrder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Thistle;
+            this.btnAceptOrder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateBlue;
+            this.btnAceptOrder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush;
             this.btnAceptOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -90,6 +94,9 @@ namespace FrmCore
             // 
             // pnlOrder
             // 
+            this.pnlOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlOrder.BackColor = System.Drawing.Color.Transparent;
             this.pnlOrder.Controls.Add(this.dgvInternalOrder);
             this.pnlOrder.Controls.Add(this.btnAceptOrder);

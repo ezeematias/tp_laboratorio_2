@@ -49,8 +49,8 @@ namespace FrmCore
             this.btnRFIDPA = new System.Windows.Forms.Button();
             this.btnFingerRFIDPA = new System.Windows.Forms.Button();
             this.btnViewListDevice = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblSerialNumberText = new System.Windows.Forms.Label();
+            this.lblSerialNumber = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
             this.pnlButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPreview)).BeginInit();
@@ -68,20 +68,25 @@ namespace FrmCore
             this.dgvOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOrder.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrder.Location = new System.Drawing.Point(60, 22);
+            this.dgvOrder.Location = new System.Drawing.Point(60, 21);
+            this.dgvOrder.MultiSelect = false;
             this.dgvOrder.Name = "dgvOrder";
-            this.dgvOrder.Size = new System.Drawing.Size(647, 45);
+            this.dgvOrder.ReadOnly = true;
+            this.dgvOrder.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dgvOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvOrder.Size = new System.Drawing.Size(643, 45);
             this.dgvOrder.TabIndex = 2;
             // 
             // btnAccessControl
             // 
             this.btnAccessControl.AccessibleName = "";
+            this.btnAccessControl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAccessControl.BackColor = System.Drawing.Color.Transparent;
-            this.btnAccessControl.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnAccessControl.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAccessControl.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnAccessControl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnAccessControl.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(6)))), ((int)(((byte)(119)))));
+            this.btnAccessControl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(4)))), ((int)(((byte)(155)))));
             this.btnAccessControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccessControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccessControl.ForeColor = System.Drawing.SystemColors.Control;
@@ -95,11 +100,13 @@ namespace FrmCore
             // 
             // pnlButton
             // 
+            this.pnlButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlButton.BackColor = System.Drawing.Color.Transparent;
             this.pnlButton.Controls.Add(this.btnPanelAccess);
             this.pnlButton.Controls.Add(this.btnAttendance);
             this.pnlButton.Controls.Add(this.btnAccessControl);
-            this.pnlButton.Location = new System.Drawing.Point(60, 73);
+            this.pnlButton.Location = new System.Drawing.Point(60, 72);
             this.pnlButton.Name = "pnlButton";
             this.pnlButton.Size = new System.Drawing.Size(656, 29);
             this.pnlButton.TabIndex = 6;
@@ -107,11 +114,12 @@ namespace FrmCore
             // btnPanelAccess
             // 
             this.btnPanelAccess.AccessibleName = "";
+            this.btnPanelAccess.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPanelAccess.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnPanelAccess.BackColor = System.Drawing.Color.Transparent;
-            this.btnPanelAccess.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnPanelAccess.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnPanelAccess.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnPanelAccess.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnPanelAccess.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(6)))), ((int)(((byte)(119)))));
+            this.btnPanelAccess.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(4)))), ((int)(((byte)(155)))));
             this.btnPanelAccess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPanelAccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPanelAccess.ForeColor = System.Drawing.SystemColors.Control;
@@ -126,11 +134,12 @@ namespace FrmCore
             // btnAttendance
             // 
             this.btnAttendance.AccessibleName = "";
+            this.btnAttendance.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAttendance.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAttendance.BackColor = System.Drawing.Color.Transparent;
-            this.btnAttendance.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnAttendance.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAttendance.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnAttendance.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnAttendance.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(6)))), ((int)(((byte)(119)))));
+            this.btnAttendance.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(4)))), ((int)(((byte)(155)))));
             this.btnAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAttendance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAttendance.ForeColor = System.Drawing.SystemColors.Control;
@@ -152,25 +161,32 @@ namespace FrmCore
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPreview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvPreview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPreview.Location = new System.Drawing.Point(60, 296);
+            this.dgvPreview.Location = new System.Drawing.Point(60, 270);
+            this.dgvPreview.MultiSelect = false;
             this.dgvPreview.Name = "dgvPreview";
-            this.dgvPreview.Size = new System.Drawing.Size(647, 175);
+            this.dgvPreview.ReadOnly = true;
+            this.dgvPreview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dgvPreview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPreview.Size = new System.Drawing.Size(643, 176);
             this.dgvPreview.TabIndex = 2;
             // 
             // btnAddDevice
             // 
+            this.btnAddDevice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddDevice.BackColor = System.Drawing.Color.AliceBlue;
             this.btnAddDevice.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAddDevice.FlatAppearance.BorderSize = 0;
-            this.btnAddDevice.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Thistle;
-            this.btnAddDevice.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Thistle;
+            this.btnAddDevice.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateBlue;
+            this.btnAddDevice.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush;
             this.btnAddDevice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddDevice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddDevice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnAddDevice.Location = new System.Drawing.Point(285, 229);
+            this.btnAddDevice.Location = new System.Drawing.Point(60, 218);
             this.btnAddDevice.Name = "btnAddDevice";
-            this.btnAddDevice.Size = new System.Drawing.Size(418, 29);
+            this.btnAddDevice.Size = new System.Drawing.Size(643, 29);
             this.btnAddDevice.TabIndex = 3;
             this.btnAddDevice.Text = "Add Device";
             this.btnAddDevice.UseVisualStyleBackColor = false;
@@ -178,17 +194,19 @@ namespace FrmCore
             // 
             // btnUpload
             // 
+            this.btnUpload.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUpload.BackColor = System.Drawing.Color.AliceBlue;
             this.btnUpload.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnUpload.FlatAppearance.BorderSize = 0;
-            this.btnUpload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Thistle;
-            this.btnUpload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Thistle;
+            this.btnUpload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateBlue;
+            this.btnUpload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush;
             this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpload.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnUpload.Location = new System.Drawing.Point(60, 480);
+            this.btnUpload.Location = new System.Drawing.Point(60, 486);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(308, 29);
+            this.btnUpload.Size = new System.Drawing.Size(643, 30);
             this.btnUpload.TabIndex = 3;
             this.btnUpload.Text = "Upload List";
             this.btnUpload.UseVisualStyleBackColor = false;
@@ -196,17 +214,18 @@ namespace FrmCore
             // 
             // btnRemoveDevice
             // 
-            this.btnRemoveDevice.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnRemoveDevice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemoveDevice.BackColor = System.Drawing.Color.Transparent;
             this.btnRemoveDevice.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnRemoveDevice.FlatAppearance.BorderSize = 0;
-            this.btnRemoveDevice.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Thistle;
-            this.btnRemoveDevice.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Thistle;
+            this.btnRemoveDevice.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkOrchid;
+            this.btnRemoveDevice.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnRemoveDevice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveDevice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveDevice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnRemoveDevice.Location = new System.Drawing.Point(399, 480);
+            this.btnRemoveDevice.ForeColor = System.Drawing.Color.White;
+            this.btnRemoveDevice.Location = new System.Drawing.Point(60, 451);
             this.btnRemoveDevice.Name = "btnRemoveDevice";
-            this.btnRemoveDevice.Size = new System.Drawing.Size(308, 29);
+            this.btnRemoveDevice.Size = new System.Drawing.Size(643, 30);
             this.btnRemoveDevice.TabIndex = 3;
             this.btnRemoveDevice.Text = "Remove Device";
             this.btnRemoveDevice.UseVisualStyleBackColor = false;
@@ -214,10 +233,12 @@ namespace FrmCore
             // 
             // pnlAC
             // 
+            this.pnlAC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlAC.BackColor = System.Drawing.Color.Transparent;
             this.pnlAC.Controls.Add(this.btnFingerAC);
             this.pnlAC.Controls.Add(this.btnFaceAC);
-            this.pnlAC.Location = new System.Drawing.Point(60, 109);
+            this.pnlAC.Location = new System.Drawing.Point(60, 108);
             this.pnlAC.Name = "pnlAC";
             this.pnlAC.Size = new System.Drawing.Size(213, 29);
             this.pnlAC.TabIndex = 6;
@@ -226,10 +247,9 @@ namespace FrmCore
             // 
             this.btnFingerAC.AccessibleName = "";
             this.btnFingerAC.BackColor = System.Drawing.Color.Transparent;
-            this.btnFingerAC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnFingerAC.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnFingerAC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnFingerAC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnFingerAC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(6)))), ((int)(((byte)(119)))));
+            this.btnFingerAC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(4)))), ((int)(((byte)(155)))));
             this.btnFingerAC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFingerAC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFingerAC.ForeColor = System.Drawing.SystemColors.Control;
@@ -245,10 +265,9 @@ namespace FrmCore
             // 
             this.btnFaceAC.AccessibleName = "";
             this.btnFaceAC.BackColor = System.Drawing.Color.Transparent;
-            this.btnFaceAC.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnFaceAC.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnFaceAC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnFaceAC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnFaceAC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(6)))), ((int)(((byte)(119)))));
+            this.btnFaceAC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(4)))), ((int)(((byte)(155)))));
             this.btnFaceAC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFaceAC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFaceAC.ForeColor = System.Drawing.SystemColors.Control;
@@ -262,10 +281,12 @@ namespace FrmCore
             // 
             // pnlAT
             // 
+            this.pnlAT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlAT.BackColor = System.Drawing.Color.Transparent;
             this.pnlAT.Controls.Add(this.btnFingerAT);
             this.pnlAT.Controls.Add(this.btnFaceAT);
-            this.pnlAT.Location = new System.Drawing.Point(275, 109);
+            this.pnlAT.Location = new System.Drawing.Point(275, 108);
             this.pnlAT.Name = "pnlAT";
             this.pnlAT.Size = new System.Drawing.Size(213, 29);
             this.pnlAT.TabIndex = 6;
@@ -273,11 +294,11 @@ namespace FrmCore
             // btnFingerAT
             // 
             this.btnFingerAT.AccessibleName = "";
+            this.btnFingerAT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnFingerAT.BackColor = System.Drawing.Color.Transparent;
-            this.btnFingerAT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnFingerAT.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnFingerAT.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnFingerAT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnFingerAT.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(6)))), ((int)(((byte)(119)))));
+            this.btnFingerAT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(4)))), ((int)(((byte)(155)))));
             this.btnFingerAT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFingerAT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFingerAT.ForeColor = System.Drawing.SystemColors.Control;
@@ -292,11 +313,11 @@ namespace FrmCore
             // btnFaceAT
             // 
             this.btnFaceAT.AccessibleName = "";
+            this.btnFaceAT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnFaceAT.BackColor = System.Drawing.Color.Transparent;
-            this.btnFaceAT.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnFaceAT.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnFaceAT.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnFaceAT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnFaceAT.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(6)))), ((int)(((byte)(119)))));
+            this.btnFaceAT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(4)))), ((int)(((byte)(155)))));
             this.btnFaceAT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFaceAT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFaceAT.ForeColor = System.Drawing.SystemColors.Control;
@@ -310,10 +331,12 @@ namespace FrmCore
             // 
             // pnlPA
             // 
+            this.pnlPA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlPA.BackColor = System.Drawing.Color.Transparent;
             this.pnlPA.Controls.Add(this.btnRFIDPA);
             this.pnlPA.Controls.Add(this.btnFingerRFIDPA);
-            this.pnlPA.Location = new System.Drawing.Point(490, 109);
+            this.pnlPA.Location = new System.Drawing.Point(490, 108);
             this.pnlPA.Name = "pnlPA";
             this.pnlPA.Size = new System.Drawing.Size(213, 29);
             this.pnlPA.TabIndex = 6;
@@ -321,11 +344,11 @@ namespace FrmCore
             // btnRFIDPA
             // 
             this.btnRFIDPA.AccessibleName = "";
+            this.btnRFIDPA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRFIDPA.BackColor = System.Drawing.Color.Transparent;
-            this.btnRFIDPA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnRFIDPA.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnRFIDPA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnRFIDPA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnRFIDPA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(6)))), ((int)(((byte)(119)))));
+            this.btnRFIDPA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(4)))), ((int)(((byte)(155)))));
             this.btnRFIDPA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRFIDPA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRFIDPA.ForeColor = System.Drawing.SystemColors.Control;
@@ -340,11 +363,11 @@ namespace FrmCore
             // btnFingerRFIDPA
             // 
             this.btnFingerRFIDPA.AccessibleName = "";
+            this.btnFingerRFIDPA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFingerRFIDPA.BackColor = System.Drawing.Color.Transparent;
-            this.btnFingerRFIDPA.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnFingerRFIDPA.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnFingerRFIDPA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnFingerRFIDPA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnFingerRFIDPA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(6)))), ((int)(((byte)(119)))));
+            this.btnFingerRFIDPA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(4)))), ((int)(((byte)(155)))));
             this.btnFingerRFIDPA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFingerRFIDPA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFingerRFIDPA.ForeColor = System.Drawing.SystemColors.Control;
@@ -358,45 +381,51 @@ namespace FrmCore
             // 
             // btnViewListDevice
             // 
-            this.btnViewListDevice.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnViewListDevice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnViewListDevice.BackColor = System.Drawing.Color.Transparent;
             this.btnViewListDevice.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnViewListDevice.FlatAppearance.BorderSize = 0;
-            this.btnViewListDevice.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Thistle;
-            this.btnViewListDevice.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Thistle;
+            this.btnViewListDevice.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(6)))), ((int)(((byte)(119)))));
+            this.btnViewListDevice.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(4)))), ((int)(((byte)(155)))));
             this.btnViewListDevice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewListDevice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewListDevice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnViewListDevice.Location = new System.Drawing.Point(60, 229);
+            this.btnViewListDevice.ForeColor = System.Drawing.Color.White;
+            this.btnViewListDevice.Location = new System.Drawing.Point(60, 183);
             this.btnViewListDevice.Name = "btnViewListDevice";
-            this.btnViewListDevice.Size = new System.Drawing.Size(223, 29);
+            this.btnViewListDevice.Size = new System.Drawing.Size(643, 29);
             this.btnViewListDevice.TabIndex = 3;
             this.btnViewListDevice.Text = "View List Components";
             this.btnViewListDevice.UseVisualStyleBackColor = false;
             this.btnViewListDevice.Click += new System.EventHandler(this.btnViewListDevice_Click);
             // 
-            // label1
+            // lblSerialNumberText
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DimGray;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(231, 198);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Serial Number:";
+            this.lblSerialNumberText.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblSerialNumberText.AutoSize = true;
+            this.lblSerialNumberText.BackColor = System.Drawing.Color.DimGray;
+            this.lblSerialNumberText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSerialNumberText.ForeColor = System.Drawing.Color.White;
+            this.lblSerialNumberText.Location = new System.Drawing.Point(191, 154);
+            this.lblSerialNumberText.Name = "lblSerialNumberText";
+            this.lblSerialNumberText.Size = new System.Drawing.Size(97, 16);
+            this.lblSerialNumberText.TabIndex = 0;
+            this.lblSerialNumberText.Text = "Serial Number:";
             // 
-            // textBox1
+            // lblSerialNumber
             // 
-            this.textBox1.BackColor = System.Drawing.Color.DimGray;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(223, 195);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(335, 22);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.lblSerialNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblSerialNumber.AutoEllipsis = true;
+            this.lblSerialNumber.BackColor = System.Drawing.Color.DimGray;
+            this.lblSerialNumber.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblSerialNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSerialNumber.ForeColor = System.Drawing.Color.White;
+            this.lblSerialNumber.Location = new System.Drawing.Point(169, 151);
+            this.lblSerialNumber.Name = "lblSerialNumber";
+            this.lblSerialNumber.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.lblSerialNumber.Size = new System.Drawing.Size(428, 22);
+            this.lblSerialNumber.TabIndex = 7;
+            this.lblSerialNumber.Text = "--";
+            this.lblSerialNumber.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FrmAssembly
             // 
@@ -405,8 +434,8 @@ namespace FrmCore
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(774, 529);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblSerialNumberText);
+            this.Controls.Add(this.lblSerialNumber);
             this.Controls.Add(this.btnRemoveDevice);
             this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.btnViewListDevice);
@@ -455,7 +484,7 @@ namespace FrmCore
         private System.Windows.Forms.Button btnRFIDPA;
         private System.Windows.Forms.Button btnFingerRFIDPA;
         private System.Windows.Forms.Button btnViewListDevice;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblSerialNumberText;
+        private System.Windows.Forms.Label lblSerialNumber;
     }
 }

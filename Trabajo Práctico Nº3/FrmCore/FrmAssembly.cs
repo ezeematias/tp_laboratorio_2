@@ -115,6 +115,7 @@ namespace FrmCore
         private void btnAttendance_Click(object sender, EventArgs e)
         {
             this.eType = EType.Attendance;
+            ShowSerialNumber();
             PressButton();
             ButtonFormatColor(btnAttendance);
             ShowSubMenu(pnlAT);
@@ -123,6 +124,7 @@ namespace FrmCore
         private void btnAccessControl_Click(object sender, EventArgs e)
         {
             this.eType = EType.AccessControl;
+            ShowSerialNumber();
             PressButton();
             ButtonFormatColor(btnAccessControl);
             ShowSubMenu(pnlAC);
@@ -130,6 +132,7 @@ namespace FrmCore
         private void btnPanelAccess_Click(object sender, EventArgs e)
         {
             this.eType = EType.PanelAccess;
+            ShowSerialNumber();
             PressButton();
             ButtonFormatColor(btnPanelAccess);
             ShowSubMenu(pnlPA);
@@ -215,7 +218,7 @@ namespace FrmCore
 
         private void ButtonFormatColor(Button button)
         {
-            button.BackColor = Color.FromArgb(77, 30, 91);
+            button.BackColor = Color.FromArgb(64, 0, 64);
         }
         private void ButtonFormatTransparent(Button button)
         {
@@ -258,9 +261,10 @@ namespace FrmCore
         private void btnUpload_Click(object sender, EventArgs e)
         {
             //TODO: Faltan todas las validaciones y mensajes para continuar una vez agregada la lista.
-            Stock.DevicesStock = CoreSystem.PreviewDevices;
-            CoreSystem.PreviewDevices = null;
+            Stock.DevicesStock.AddRange(CoreSystem.PreviewDevices);
+            CoreSystem.PreviewDevices.Clear();
             LoadListAssembly();
+            CoreSystem.InternalOrders.Remove(CoreSystem.SelectedOrder);
             CoreSystem.SelectedOrder = null;
             dgvOrder.DataSource = null;
             EnableButtons();
@@ -268,7 +272,17 @@ namespace FrmCore
 
         private void btnRemoveDevice_Click(object sender, EventArgs e)
         {
-            //TODO: Hay que remover un dispositvo creado de la lista preview.
+            //TODO: Falta aghregar uan exception cuando no hay para borrar dispositivos.
+            //"No divices for delete"
+
+            Device aux = (Device)dgvPreview.CurrentRow.DataBoundItem;
+            CoreSystem.PreviewDevices.Remove(aux);
+            LoadListAssembly();
+        }
+
+        private void ShowSerialNumber()
+        {
+            this.lblSerialNumber.Text = SerialsNumbers.GetSerialNumberByType(eType).ToString();
         }
     }
 }

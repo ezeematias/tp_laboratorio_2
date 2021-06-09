@@ -36,10 +36,21 @@ namespace FrmCore
             // 
             // dgvDevices
             // 
+            this.dgvDevices.AllowUserToAddRows = false;
+            this.dgvDevices.AllowUserToDeleteRows = false;
+            this.dgvDevices.AllowUserToOrderColumns = true;
+            this.dgvDevices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDevices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDevices.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvDevices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDevices.Location = new System.Drawing.Point(57, 39);
+            this.dgvDevices.MultiSelect = false;
             this.dgvDevices.Name = "dgvDevices";
+            this.dgvDevices.ReadOnly = true;
+            this.dgvDevices.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dgvDevices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDevices.Size = new System.Drawing.Size(654, 409);
             this.dgvDevices.TabIndex = 0;
             // 

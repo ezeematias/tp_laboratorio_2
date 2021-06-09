@@ -39,20 +39,33 @@ namespace FrmCore
             // 
             // dgvComponents
             // 
+            this.dgvComponents.AllowUserToAddRows = false;
+            this.dgvComponents.AllowUserToDeleteRows = false;
+            this.dgvComponents.AllowUserToResizeColumns = false;
+            this.dgvComponents.AllowUserToResizeRows = false;
+            this.dgvComponents.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvComponents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvComponents.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvComponents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvComponents.Location = new System.Drawing.Point(201, 30);
+            this.dgvComponents.Location = new System.Drawing.Point(201, 48);
+            this.dgvComponents.MultiSelect = false;
             this.dgvComponents.Name = "dgvComponents";
-            this.dgvComponents.Size = new System.Drawing.Size(330, 369);
+            this.dgvComponents.ReadOnly = true;
+            this.dgvComponents.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dgvComponents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvComponents.Size = new System.Drawing.Size(330, 351);
             this.dgvComponents.TabIndex = 0;
             // 
             // btnAddComponents
             // 
+            this.btnAddComponents.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddComponents.BackColor = System.Drawing.Color.AliceBlue;
             this.btnAddComponents.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAddComponents.FlatAppearance.BorderSize = 0;
-            this.btnAddComponents.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Thistle;
-            this.btnAddComponents.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Thistle;
+            this.btnAddComponents.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateBlue;
+            this.btnAddComponents.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush;
             this.btnAddComponents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddComponents.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddComponents.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -65,6 +78,8 @@ namespace FrmCore
             // 
             // nudCountComponents
             // 
+            this.nudCountComponents.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.nudCountComponents.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudCountComponents.Location = new System.Drawing.Point(201, 405);
             this.nudCountComponents.Name = "nudCountComponents";

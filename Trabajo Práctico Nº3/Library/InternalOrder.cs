@@ -10,23 +10,21 @@ namespace Library
     {
         private int numberOrder;
         private ECode nameDevice;
-        private EValidation eValidation;
         private EType eTypeDevice;
         private int countDevice;
 
-        public InternalOrder(int numberOrder, ECode nameDevice,EValidation eValidation ,EType eTypeDevice, int countDevice)
+        public InternalOrder(int numberOrder, ECode nameDevice,EType eTypeDevice, int countDevice)
         {
             this.numberOrder = numberOrder;
             this.nameDevice = nameDevice;
             this.eTypeDevice = eTypeDevice;
-            this.countDevice = countDevice;
-            this.eValidation = eValidation;
+            this.countDevice = countDevice;            
         }
         public int NumberOrder { get => numberOrder; set => numberOrder = value; }
         public ECode NameDevice { get => nameDevice; set => nameDevice = value; }
         public EType ETypeDevice { get => eTypeDevice; set => eTypeDevice = value; }
         public int CountDevice { get => countDevice; set => countDevice = value; }
-        public EValidation EValidation { get => eValidation; set => eValidation = value; }
+        
 
         public static bool operator ==(List<InternalOrder> l, InternalOrder o)
         {

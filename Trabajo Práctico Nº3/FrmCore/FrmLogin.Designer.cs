@@ -58,8 +58,8 @@ namespace FrmCore
             this.btnSignIn.BackColor = System.Drawing.Color.AliceBlue;
             this.btnSignIn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnSignIn.FlatAppearance.BorderSize = 0;
-            this.btnSignIn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Thistle;
-            this.btnSignIn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Thistle;
+            this.btnSignIn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateBlue;
+            this.btnSignIn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush;
             this.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));

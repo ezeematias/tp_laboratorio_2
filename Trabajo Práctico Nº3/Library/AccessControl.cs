@@ -8,7 +8,7 @@ namespace Library
 {
     public class AccessControl : Device
     {
-        public AccessControl(ECode codeInternal, EType typeDevice, double serialNumber, EValidation eValidation) : base(codeInternal, typeDevice, serialNumber)
+        public AccessControl(ECode codeInternal, EType typeDevice, EValidation eValidation) : base(codeInternal, typeDevice, eValidation)
         {
             AddComponent(eValidation);
         }

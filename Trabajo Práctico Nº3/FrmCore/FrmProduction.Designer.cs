@@ -351,6 +351,7 @@ namespace FrmCore
             this.Controls.Add(this.pnlTitliOperator);
             this.Controls.Add(this.pnlSideMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1019, 600);
             this.Name = "FrmProduction";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CONNECTED - Production";
