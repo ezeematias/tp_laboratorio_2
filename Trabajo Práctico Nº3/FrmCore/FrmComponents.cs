@@ -22,5 +22,14 @@ namespace FrmCore
         {
             dgvComponents.DataSource = Stock.ComponentsStock;
         }
+
+        private void btnAddComponents_Click(object sender, EventArgs e)
+        {
+            if((Components)dgvComponents.CurrentRow.DataBoundItem + (int)nudCountComponents.Value)
+            {
+                dgvComponents.DataSource = null;
+                dgvComponents.DataSource = Stock.ComponentsStock;
+            }
+        }
     }
 }

@@ -292,6 +292,7 @@ namespace FrmCore
             this.pnlConnected.Name = "pnlConnected";
             this.pnlConnected.Size = new System.Drawing.Size(229, 203);
             this.pnlConnected.TabIndex = 1;
+            this.pnlConnected.Click += new System.EventHandler(this.pnlConnected_Click);
             // 
             // pnlTitliOperator
             // 

@@ -56,29 +56,23 @@ namespace Library
                 }
             }
             return false;
-        }
+        }       
         
-
-        /*
-        public static bool operator -(List<Components> l, List<Components> c)
+        public static bool operator +(Components component, int count)
         {
-            if (!(l is null && c is null))
+            if (!(component is null) && count > 0)
             {
-                foreach (Components itemL in l)
-                {
-                    foreach (Components itemC in c)
+                foreach (Components item in Stock.ComponentsStock)
+                {               
+                    if(component.NameComponent == item.NameComponent)
                     {
-                        if (itemL.NameComponent == itemC.NameComponent && itemL.CountComponent >= itemC.CountComponent)
-                        {
-                            itemL.CountComponent -= itemC.CountComponent;
-                            return true;
-                        }                    
+                        item.CountComponent += count;
+                        return true;
                     }
                 }
             }
             return false;
-        }
-        */
+        }       
 
     }
 }

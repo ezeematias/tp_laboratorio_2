@@ -104,10 +104,7 @@ namespace FrmCore
 
         private void OpenChildForm(Form childForm)
         {
-            if (activeForm != null)
-            {
-                activeForm.Close();
-            }
+            CloseChildForm();
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -191,6 +188,19 @@ namespace FrmCore
         private void FrmProduction_BackColorChanged(object sender, EventArgs e)
         {
             OpenChildForm(new FrmAssembly());
+        }
+
+        private void pnlConnected_Click(object sender, EventArgs e)
+        {
+            CloseChildForm();
+        }
+
+        private void CloseChildForm()
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
         }
     }
 }

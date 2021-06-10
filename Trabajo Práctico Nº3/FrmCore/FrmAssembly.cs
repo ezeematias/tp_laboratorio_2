@@ -50,19 +50,22 @@ namespace FrmCore
         {
             if (CoreSystem.SelectedOrder.ETypeDevice == eType && !(CoreSystem.ListAssembly is null) && pressButton == true)
             {
-                if (Stock.ThereIsStock(CoreSystem.ListAssembly, out string component))
+                if (CoreSystem.PreviewDevices.Count < CoreSystem.SelectedOrder.CountDevice || (MessageBox.Show($"The quantity requested in the order has already been reached. Do you want to assemble the device anyway?", "LIMIT DEVICES", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes))
                 {
-                    CoreSystem.LoadDevices(eType,eValidation);
-                    CoreSystem.PreviewDevices.Add(CoreSystem.DeviceAssembly);
-                    CoreSystem.DeviceAssembly = null;
-                    PressButton();
-                    LoadListAssembly();
-                    TrasparentButtonsSubPanel();
-                    HideSubMenu();
-                }
-                else
-                {
-                    MessageBox.Show($"The missing materials are:\n\n{component}", "NO STOCK!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (Stock.ThereIsStock(CoreSystem.ListAssembly, out string component))
+                    {
+                        CoreSystem.LoadDevices(eType, eValidation);
+                        CoreSystem.PreviewDevices.Add(CoreSystem.DeviceAssembly);
+                        CoreSystem.DeviceAssembly = null;
+                        PressButton();
+                        LoadListAssembly();
+                        TrasparentButtonsSubPanel();
+                        HideSubMenu();
+                    }
+                    else
+                    {
+                        MessageBox.Show($"The missing materials are:\n\n{component}", "NO STOCK COMPONENTS!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             else
@@ -73,7 +76,7 @@ namespace FrmCore
         private void BuilderDevice()
         {
             CoreSystem.ListAssembly = null;
-            CoreSystem.LoadListAssembly(eType, eValidation);            
+            CoreSystem.LoadListAssembly(eType, eValidation);
         }
 
         private void HideSubMenu()
@@ -261,23 +264,46 @@ namespace FrmCore
         private void btnUpload_Click(object sender, EventArgs e)
         {
             //TODO: Faltan todas las validaciones y mensajes para continuar una vez agregada la lista.
-            Stock.DevicesStock.AddRange(CoreSystem.PreviewDevices);
-            CoreSystem.PreviewDevices.Clear();
-            LoadListAssembly();
-            CoreSystem.InternalOrders.Remove(CoreSystem.SelectedOrder);
-            CoreSystem.SelectedOrder = null;
-            dgvOrder.DataSource = null;
-            EnableButtons();
+            if (CoreSystem.PreviewDevices.Count == CoreSystem.SelectedOrder.CountDevice ||
+                (CoreSystem.PreviewDevices.Count > CoreSystem.SelectedOrder.CountDevice) &&
+                (MessageBox.Show($"The limit of devices requested in the order is exceeded.Do you want to load it into stock anyway?", "EXCEED THE LIMIT", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes) ||
+                (CoreSystem.PreviewDevices.Count < CoreSystem.SelectedOrder.CountDevice && CoreSystem.PreviewDevices.Count > 0) &&
+                (MessageBox.Show($"It remains to create devices to fulfill the order. Do you want to load without finishing the order?", "DOES NOT COMPLY WITH REQUESTS", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes))
+            {
+                Stock.DevicesStock.AddRange(CoreSystem.PreviewDevices);
+                CoreSystem.PreviewDevices.Clear();
+                LoadListAssembly();
+                CoreSystem.InternalOrders.Remove(CoreSystem.SelectedOrder);
+                CoreSystem.SelectedOrder = null;
+                dgvOrder.DataSource = null;
+                HideSubMenu();
+                EnableButtons();
+            }
+            else
+            {
+                MessageBox.Show("No devices to add to stock", "NO DATA DEVICES!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnRemoveDevice_Click(object sender, EventArgs e)
         {
-            //TODO: Falta aghregar uan exception cuando no hay para borrar dispositivos.
-            //"No divices for delete"
-
-            Device aux = (Device)dgvPreview.CurrentRow.DataBoundItem;
-            CoreSystem.PreviewDevices.Remove(aux);
-            LoadListAssembly();
+            try
+            {
+                if (CoreSystem.PreviewDevices.Count > 0)
+                {
+                    Device aux = (Device)dgvPreview.CurrentRow.DataBoundItem;
+                    CoreSystem.PreviewDevices.Remove(aux);
+                    LoadListAssembly();
+                }
+                else
+                {
+                    throw new Exception("No devices to remove");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "NO DATA DEVICES!", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+            }            
         }
 
         private void ShowSerialNumber()

@@ -75,6 +75,7 @@ namespace FrmCore
             this.btnAddComponents.TabIndex = 3;
             this.btnAddComponents.Text = "Request components";
             this.btnAddComponents.UseVisualStyleBackColor = false;
+            this.btnAddComponents.Click += new System.EventHandler(this.btnAddComponents_Click);
             // 
             // nudCountComponents
             // 
