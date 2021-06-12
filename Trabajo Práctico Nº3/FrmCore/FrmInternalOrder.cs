@@ -27,14 +27,14 @@ namespace FrmCore
         {
             if (CoreSystem.PreviewDevices.Count == 0)
             {
-                CoreSystem.SelectedOrder = (InternalOrder)dgvInternalOrder.CurrentRow.DataBoundItem;
+                CoreSystem.SelectedOrder = (InternalOrder)this.dgvInternalOrder.CurrentRow.DataBoundItem;
                 //FrmProduction.orderAssembly = true;
                 ChangeBackColor();
             }
             else if (MessageBox.Show("Unsaved devices will be lost. Do you want to change your order anyway?", "ORDER IN EXECUTION", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
                 CoreSystem.PreviewDevices.Clear();
-                CoreSystem.SelectedOrder = (InternalOrder)dgvInternalOrder.CurrentRow.DataBoundItem;
+                CoreSystem.SelectedOrder = (InternalOrder)this.dgvInternalOrder.CurrentRow.DataBoundItem;
                 ChangeBackColor();
             }
             else
@@ -46,8 +46,8 @@ namespace FrmCore
 
         private void LoadOrders()
         {
-            dgvInternalOrder.DataSource = null;
-            dgvInternalOrder.DataSource = CoreSystem.InternalOrders;
+            this.dgvInternalOrder.DataSource = null;
+            this.dgvInternalOrder.DataSource = CoreSystem.InternalOrders;
         }
 
         private void FrmInternalOrder_FormClosing(object sender, FormClosingEventArgs e)

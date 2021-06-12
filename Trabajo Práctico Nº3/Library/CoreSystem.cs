@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Library
 {
+    [Serializable]
     public static class CoreSystem
-    {
-        static List<Operator> operators;
+    {      
         static List<InternalOrder> internalOrders;
         static InternalOrder selectedOrder;
         static List<Device> previewDevices;
@@ -22,8 +22,6 @@ namespace Library
         static Device deviceAssembly;
         static List<Components> listAssembly;
 
-
-        public static List<Operator> Operators { get => operators; }
         public static List<InternalOrder> InternalOrders { get => internalOrders; set => internalOrders = value; }
         public static InternalOrder SelectedOrder { get => selectedOrder; set => selectedOrder = value; }
         public static List<Device> PreviewDevices { get => previewDevices; set => previewDevices = value; }
@@ -37,8 +35,7 @@ namespace Library
         public static List<Components> ListAssembly { get => listAssembly; set => listAssembly = value; }
 
         static CoreSystem()
-        {
-            operators = new List<Operator>();
+        { 
             internalOrders = new List<InternalOrder>();
             previewDevices = new List<Device>();
             componentsAccFace = new List<Components>();
@@ -49,7 +46,6 @@ namespace Library
             componentsPnlFinger = new List<Components>();
             listAssembly = new List<Components>();
 
-            LoadOperators();
             LoadInternalOrder();
             LoadBasicComponents(componentsAccFace);
             LoadBasicComponents(componentsAccFinger);
@@ -63,17 +59,6 @@ namespace Library
             LoadAttFingerComponents();
             LoadPnlFingerComponents();
             LoadPnlRFIDComponents();
-        }
-
-        private static void LoadOperators()
-        {
-            Operators.Add(new Operator("Ezequiel", "Unía", 6666, 9999));
-            Operators.Add(new Operator("Federico", "Dávila", 8080, 7845));
-            Operators.Add(new Operator("Mauricio", "Cerizza", 7894, 5020));
-            Operators.Add(new Operator("Ezequiel", "Oggioni", 4747, 3030));
-            Operators.Add(new Operator("Esteban", "Prieto", 9595, 1331));
-            Operators.Add(new Operator("Lautaro", "Galarza", 4747, 3030));
-            Operators.Add(new Operator("Lucas", "Rodríguez", 1010, 2020));
         }
 
         private static void LoadInternalOrder()
@@ -191,5 +176,9 @@ namespace Library
                     break;
             }
         }
+
+
+
+
     }
 }

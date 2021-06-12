@@ -10,14 +10,20 @@ namespace Library
     {
         int numberAccess;
 
+        public AccessPanel()
+        {
+
+        }
+
         public AccessPanel(ECode codeInternal, EType typeDevice, int numberAccess, EValidation eValidation) : base(codeInternal, typeDevice, eValidation)
         {
             NumberAccess = numberAccess;
             AddComponent(eValidation);
         }
 
-        private int NumberAccess
+        public int NumberAccess
         {
+            get => this.numberAccess;
             set
             {
                 if(value > 0 && value < 4)

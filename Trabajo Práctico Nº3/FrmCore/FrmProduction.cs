@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Library;
+using LoginOperators;
 
 namespace FrmCore
 {
@@ -24,19 +25,19 @@ namespace FrmCore
 
         private void CustomizeDesing()
         {
-            pnlSubMenuOptions.Visible = false;
-            pnlSubMenuStock.Visible = false;
+            this.pnlSubMenuOptions.Visible = false;
+            this.pnlSubMenuStock.Visible = false;
         }
 
         private void HideSubMenu()
         {
-            if (pnlSubMenuOptions.Visible)
+            if (this.pnlSubMenuOptions.Visible)
             {
-                pnlSubMenuOptions.Visible = false;
+                this.pnlSubMenuOptions.Visible = false;
             }
-            if (pnlSubMenuStock.Visible)
+            if (this.pnlSubMenuStock.Visible)
             {
-                pnlSubMenuStock.Visible = false;
+                this.pnlSubMenuStock.Visible = false;
             }
         }
 
@@ -55,7 +56,7 @@ namespace FrmCore
 
         private void FrmProduction_Load(object sender, EventArgs e)
         {
-            // lblTitleOperator.Text = FrmLogin.operatorLog.ToString();
+            lblTitleOperator.Text = Login.OperatorLog.ToString();
         }
 
         private void btnOrder_MouseMove(object sender, MouseEventArgs e)
@@ -91,7 +92,7 @@ namespace FrmCore
 
         private void btnOptionSignOff_Click(object sender, EventArgs e)
         {
-            aux = true;
+            this.aux = true;
             this.Close();
             HideSubMenu();
         }
@@ -105,12 +106,12 @@ namespace FrmCore
         private void OpenChildForm(Form childForm)
         {
             CloseChildForm();
-            activeForm = childForm;
+            this.activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            pnlCenter.Controls.Add(childForm);
-            pnlCenter.Tag = childForm;
+            this.pnlCenter.Controls.Add(childForm);
+            this.pnlCenter.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
@@ -118,11 +119,11 @@ namespace FrmCore
         private void FrmProduction_FormClosing(object sender, FormClosingEventArgs e)
         {
 
-            if (aux)
+            if (this.aux)
             {
                 if (MessageBox.Show("Do you want to log out?", "LOGOUT", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 {
-                    aux = false;
+                    this.aux = false;
                     e.Cancel = true;
                 }
                 else
@@ -152,7 +153,7 @@ namespace FrmCore
 
         private void btnOptions_Click(object sender, EventArgs e)
         {
-            ShowSubMenu(pnlSubMenuOptions);
+            ShowSubMenu(this.pnlSubMenuOptions);
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
@@ -167,7 +168,7 @@ namespace FrmCore
 
         private void btnStock_Click(object sender, EventArgs e)
         {
-            ShowSubMenu(pnlSubMenuStock);
+            ShowSubMenu(this.pnlSubMenuStock);
         }
 
         private void btnComponents_Click(object sender, EventArgs e)
@@ -197,9 +198,9 @@ namespace FrmCore
 
         private void CloseChildForm()
         {
-            if (activeForm != null)
+            if (this.activeForm != null)
             {
-                activeForm.Close();
+                this.activeForm.Close();
             }
         }
     }

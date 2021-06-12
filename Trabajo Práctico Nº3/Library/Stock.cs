@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Files;
 
 namespace Library
 {
@@ -18,27 +19,9 @@ namespace Library
         {
             devicesStock = new List<Device>();
             componentsStock = new List<Components>();
-            LoadComponentsStock();
-        }
-
-        private static void LoadComponentsStock()
-        {
-            ComponentsStock.Add(new Components(EComponents.Mother, 100));
-            ComponentsStock.Add(new Components(EComponents.Core, 100));
-            ComponentsStock.Add(new Components(EComponents.Package, 100));
-            ComponentsStock.Add(new Components(EComponents.Case, 100));
-            ComponentsStock.Add(new Components(EComponents.Display, 100));
-            ComponentsStock.Add(new Components(EComponents.Touch, 100));
-            ComponentsStock.Add(new Components(EComponents.Keyboard, 100));
-            ComponentsStock.Add(new Components(EComponents.Led, 100));
-            ComponentsStock.Add(new Components(EComponents.FingerPrint, 100));
-            ComponentsStock.Add(new Components(EComponents.Camera, 100));
-            ComponentsStock.Add(new Components(EComponents.RFID, 100));
-            ComponentsStock.Add(new Components(EComponents.Relay, 100));
-            ComponentsStock.Add(new Components(EComponents.Face, 100));
-            ComponentsStock.Add(new Components(EComponents.TimeLog, 100));
-            ComponentsStock.Add(new Components(EComponents.Sound, 100));
-        }
+            ReadComponents();
+            ReadDevices();            
+        }       
 
         public static bool ThereIsStock(List<Components> components, out string eComponents)
         {
@@ -83,5 +66,71 @@ namespace Library
             }
             return output;
         }
+
+        public static void ReadDevices()
+        {
+            try
+            {
+                List<Device> aux = new List<Device>();
+                if (new Xml<List<Device>>().Read("DevicesStock.xml", out aux))
+                {
+                    devicesStock = aux;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static bool SaveDevices()
+        {
+            try
+            {
+                if (new Xml<List<Device>>().Save("DevicesStock.xml", devicesStock))
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static void ReadComponents()
+        {
+            try
+            {
+                List<Components> aux = new List<Components>();
+                if (new Xml<List<Components>>().Read("ComponentsStock.xml", out aux))
+                {
+                    componentsStock = aux;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static bool SaveComponents()
+        {
+            try
+            {
+                if (new Xml<List<Components>>().Save("ComponentsStock.xml", componentsStock))
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
     }
 }

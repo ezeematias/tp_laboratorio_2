@@ -8,6 +8,11 @@ namespace Library
 {
     public sealed class Attendance : Device
     {
+        public Attendance()
+        {
+
+        }
+
         public Attendance(ECode codeInternal, EType typeDevice, EValidation eValidation) : base(codeInternal, typeDevice, eValidation)
         {
             AddComponent(eValidation);
@@ -23,7 +28,6 @@ namespace Library
             {
                 base.Components = CoreSystem.ComponentsAttFace;
             }            
-        }       
-
+        }   
     }
 }

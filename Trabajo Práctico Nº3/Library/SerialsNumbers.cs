@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Files;
 
 namespace Library
 {
@@ -14,9 +15,6 @@ namespace Library
 
         static SerialsNumbers()
         {
-            accessControl = 4000015970;
-            attendance = 5000055137;
-            panelAccess = 6000027917;
         }
 
         public static double AccessControl { get => accessControl; set => accessControl = value; }
@@ -29,16 +27,16 @@ namespace Library
             switch (eType)
             {
                 case EType.AccessControl:
-                    accessControl++;
-                    output = accessControl;
+                    output = AccessControl;
+                    AccessControl++;
                     break;
                 case EType.PanelAccess:
-                    PanelAccess++;
                     output = PanelAccess;
+                    PanelAccess++;
                     break;
                 case EType.Attendance:
-                    Attendance++;
                     output = Attendance;
+                    Attendance++;
                     break;
             }
             return output;
@@ -50,7 +48,7 @@ namespace Library
             switch (eType)
             {
                 case EType.AccessControl:                    
-                    output = accessControl;
+                    output = AccessControl;
                     break;
                 case EType.PanelAccess:                    
                     output = PanelAccess;
@@ -60,6 +58,44 @@ namespace Library
                     break;
             }
             return output;
+        }
+
+        public static void ReadSerialsNumbers()
+        {
+            try
+            {
+                SerializeSN aux = new SerializeSN();
+                if (new Xml<SerializeSN>().Read("SerialsNumbers.xml", out aux))
+                {
+                    AccessControl = aux.AccessControl;
+                    Attendance = aux.Attendance;
+                    PanelAccess = aux.PanelAccess;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static bool SaveSerialsNumbers()
+        {
+            try
+            {
+                SerializeSN aux = new SerializeSN();
+                aux.AccessControl = AccessControl;
+                aux.Attendance = Attendance;
+                aux.PanelAccess = PanelAccess;
+                if (new Xml<SerializeSN>().Save("SerialsNumbers.xml", aux))
+                {                    
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
 

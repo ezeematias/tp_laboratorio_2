@@ -147,6 +147,10 @@
       <Project>{25f09e6e-9600-4fdb-bc2d-9ea954b7274b}</Project>
       <Name>Library</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LoginOperators\LoginOperators.csproj">
+      <Project>{70d13d2a-5fa7-4095-a1fa-cb667641154d}</Project>
+      <Name>LoginOperators</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

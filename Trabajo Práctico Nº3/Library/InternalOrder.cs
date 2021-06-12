@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library
 {
+    [Serializable]
     public class InternalOrder
     {
         private int numberOrder;
@@ -20,10 +21,11 @@ namespace Library
             this.eTypeDevice = eTypeDevice;
             this.countDevice = countDevice;            
         }
-        public int NumberOrder { get => numberOrder; set => numberOrder = value; }
-        public ECode NameDevice { get => nameDevice; set => nameDevice = value; }
-        public EType ETypeDevice { get => eTypeDevice; set => eTypeDevice = value; }
-        public int CountDevice { get => countDevice; set => countDevice = value; }
+
+        public int NumberOrder { get => this.numberOrder; set => this.numberOrder = value; }
+        public ECode NameDevice { get => this.nameDevice; set => this.nameDevice = value; }
+        public EType ETypeDevice { get => this.eTypeDevice; set => this.eTypeDevice = value; }
+        public int CountDevice { get => this.countDevice; set => this.countDevice = value; }
         
 
         public static bool operator ==(List<InternalOrder> l, InternalOrder o)

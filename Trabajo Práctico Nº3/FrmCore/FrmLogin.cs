@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Library;
+using System.IO;
+using LoginOperators;
 
 namespace FrmCore
 {
     public partial class FrmLogin : Form
-    {
-        public static Operator operatorLog;
+    {     
+
         public FrmLogin()
         {
             InitializeComponent();
@@ -36,6 +38,19 @@ namespace FrmCore
         private void FrmLogin_Load(object sender, EventArgs e)
         {
             SetTextBox();
+            try
+            {
+                Operator.ReadOperator();
+            }
+            catch (FileNotFoundException)
+            {
+                
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Operator database not found. You must be logged in as an administrator", "ADMIN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Login.LoadAdministrator();
+            }
         }
 
         private void SetTextBox()
@@ -47,17 +62,19 @@ namespace FrmCore
             this.tbxPass.Text = "Password";
         }
 
+        //TODO: Pensar si está bien guardar los operadores en XML!!
         private void ValidateUser()
         {
             bool invalidUser = true;
             if (int.TryParse(tbxUser.Text, out int user) && int.TryParse(tbxPass.Text, out int pass))
             {
-                foreach (Operator op in CoreSystem.Operators)
+                foreach (Operator op in Login.Operators)
                 {
                     if (op.UserID == user && op.Pass == pass)
-                    {
+                    {                        
                         invalidUser = false;
-                        operatorLog = op;
+                        Login.OperatorLog = op;
+                        //Operator.SaveOperator();
                         FrmProduction production = new FrmProduction();
                         this.Hide();
                         SetTextBox();
@@ -75,7 +92,7 @@ namespace FrmCore
                     }
                 }
             }
-            if(invalidUser)
+            if (invalidUser)
             {
                 MessageBox.Show("Incorrect operator number or password", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -110,6 +127,11 @@ namespace FrmCore
         {
             this.tbxPass.UseSystemPasswordChar = true;
             this.tbxPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75f, System.Drawing.FontStyle.Regular);
+        }
+
+        private void llbPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show(Login.View(), "USER INFO", MessageBoxButtons.OK);            
         }
     }
 }

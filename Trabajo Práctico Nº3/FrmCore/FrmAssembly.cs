@@ -27,28 +27,31 @@ namespace FrmCore
             LoadOrderSelected();
             HideSubMenu();
             EnableButtons();
+            SerialsNumbers.ReadSerialsNumbers();
+
+
             CoreSystem.ListAssembly = null;
             if (!(CoreSystem.SelectedOrder is null) && !(CoreSystem.PreviewDevices is null))
             {
                 ButtonForType(CoreSystem.SelectedOrder.ETypeDevice);
-                dgvPreview.DataSource = new BindingList<Device>(CoreSystem.PreviewDevices);
+                this.dgvPreview.DataSource = new BindingList<Device>(CoreSystem.PreviewDevices);
             }
         }
 
         private void LoadOrderSelected()
         {
-            dgvOrder.DataSource = null;
-            dgvOrder.DataSource = new List<InternalOrder> { CoreSystem.SelectedOrder };
+            this.dgvOrder.DataSource = null;
+            this.dgvOrder.DataSource = new List<InternalOrder> { CoreSystem.SelectedOrder };
         }
         private void LoadListAssembly()
         {
-            dgvPreview.DataSource = null;
-            dgvPreview.DataSource = CoreSystem.PreviewDevices;
+            this.dgvPreview.DataSource = null;
+            this.dgvPreview.DataSource = CoreSystem.PreviewDevices;
         }
 
         private void btnAddDevice_Click(object sender, EventArgs e)
         {
-            if (CoreSystem.SelectedOrder.ETypeDevice == eType && !(CoreSystem.ListAssembly is null) && pressButton == true)
+            if (CoreSystem.SelectedOrder.ETypeDevice == eType && !(CoreSystem.ListAssembly is null) && this.pressButton == true)
             {
                 if (CoreSystem.PreviewDevices.Count < CoreSystem.SelectedOrder.CountDevice || (MessageBox.Show($"The quantity requested in the order has already been reached. Do you want to assemble the device anyway?", "LIMIT DEVICES", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes))
                 {
@@ -56,11 +59,13 @@ namespace FrmCore
                     {
                         CoreSystem.LoadDevices(eType, eValidation);
                         CoreSystem.PreviewDevices.Add(CoreSystem.DeviceAssembly);
+                        Device.SaveLogDevices(CoreSystem.DeviceAssembly,"Assembly");
                         CoreSystem.DeviceAssembly = null;
                         PressButton();
                         LoadListAssembly();
                         TrasparentButtonsSubPanel();
                         HideSubMenu();
+                        this.lblSerialNumber.Text = "--";
                     }
                     else
                     {
@@ -81,20 +86,20 @@ namespace FrmCore
 
         private void HideSubMenu()
         {
-            if (pnlAC.Visible)
+            if (this.pnlAC.Visible)
             {
-                pnlAC.Visible = false;
-                ButtonFormatTransparent(btnAccessControl);
+                this.pnlAC.Visible = false;
+                ButtonFormatTransparent(this.btnAccessControl);
             }
-            if (pnlAT.Visible)
+            if (this.pnlAT.Visible)
             {
-                pnlAT.Visible = false;
-                ButtonFormatTransparent(btnAttendance);
+                this.pnlAT.Visible = false;
+                ButtonFormatTransparent(this.btnAttendance);
             }
-            if (pnlPA.Visible)
+            if (this.pnlPA.Visible)
             {
-                pnlPA.Visible = false;
-                ButtonFormatTransparent(btnPanelAccess);
+                this.pnlPA.Visible = false;
+                ButtonFormatTransparent(this.btnPanelAccess);
             }
         }
 
@@ -109,9 +114,9 @@ namespace FrmCore
             else
             {
                 subMenu.Visible = false;
-                ButtonFormatTransparent(btnPanelAccess);
-                ButtonFormatTransparent(btnAttendance);
-                ButtonFormatTransparent(btnAccessControl);
+                ButtonFormatTransparent(this.btnPanelAccess);
+                ButtonFormatTransparent(this.btnAttendance);
+                ButtonFormatTransparent(this.btnAccessControl);
             }
         }
 
@@ -119,26 +124,29 @@ namespace FrmCore
         {
             this.eType = EType.Attendance;
             ShowSerialNumber();
+            SerialsNumbers.SaveSerialsNumbers();
             PressButton();
-            ButtonFormatColor(btnAttendance);
-            ShowSubMenu(pnlAT);
+            ButtonFormatColor(this.btnAttendance);
+            ShowSubMenu(this.pnlAT);
         }
 
         private void btnAccessControl_Click(object sender, EventArgs e)
         {
             this.eType = EType.AccessControl;
             ShowSerialNumber();
+            SerialsNumbers.SaveSerialsNumbers();
             PressButton();
-            ButtonFormatColor(btnAccessControl);
-            ShowSubMenu(pnlAC);
+            ButtonFormatColor(this.btnAccessControl);
+            ShowSubMenu(this.pnlAC);
         }
         private void btnPanelAccess_Click(object sender, EventArgs e)
         {
             this.eType = EType.PanelAccess;
             ShowSerialNumber();
+            SerialsNumbers.SaveSerialsNumbers();
             PressButton();
-            ButtonFormatColor(btnPanelAccess);
-            ShowSubMenu(pnlPA);
+            ButtonFormatColor(this.btnPanelAccess);
+            ShowSubMenu(this.pnlPA);
         }
 
         private void EnableButtons()
@@ -151,8 +159,8 @@ namespace FrmCore
 
         private void PressButton()
         {
-            pressButton = !pressButton;
-            if (pressButton == false)
+            this.pressButton = !pressButton;
+            if (this.pressButton == false)
             {
                 CoreSystem.ListAssembly = null;
             }
@@ -173,49 +181,49 @@ namespace FrmCore
 
         private void btnFingerRFIDPA_Click(object sender, EventArgs e)
         {
-            eValidation = EValidation.Finger;
-            ButtonFormatColor(btnFingerRFIDPA);
-            ButtonFormatTransparent(btnRFIDPA);
+            this.eValidation = EValidation.Finger;
+            ButtonFormatColor(this.btnFingerRFIDPA);
+            ButtonFormatTransparent(this.btnRFIDPA);
             BuilderDevice();
         }
 
         private void btnRFIDPA_Click(object sender, EventArgs e)
         {
-            eValidation = EValidation.Card;
-            ButtonFormatColor(btnRFIDPA);
-            ButtonFormatTransparent(btnFingerRFIDPA);
+            this.eValidation = EValidation.Card;
+            ButtonFormatColor(this.btnRFIDPA);
+            ButtonFormatTransparent(this.btnFingerRFIDPA);
             BuilderDevice();
         }
 
         private void btnFingerAT_Click(object sender, EventArgs e)
         {
-            eValidation = EValidation.Finger;
-            ButtonFormatColor(btnFingerAT);
-            ButtonFormatTransparent(btnFaceAT);
+            this.eValidation = EValidation.Finger;
+            ButtonFormatColor(this.btnFingerAT);
+            ButtonFormatTransparent(this.btnFaceAT);
             BuilderDevice();
         }
 
         private void btnFaceAT_Click(object sender, EventArgs e)
         {
-            eValidation = EValidation.Face;
-            ButtonFormatColor(btnFaceAT);
-            ButtonFormatTransparent(btnFingerAT);
+            this.eValidation = EValidation.Face;
+            ButtonFormatColor(this.btnFaceAT);
+            ButtonFormatTransparent(this.btnFingerAT);
             BuilderDevice();
         }
 
         private void btnFingerAC_Click(object sender, EventArgs e)
         {
-            eValidation = EValidation.Finger;
-            ButtonFormatColor(btnFingerAC);
-            ButtonFormatTransparent(btnFaceAC);
+            this.eValidation = EValidation.Finger;
+            ButtonFormatColor(this.btnFingerAC);
+            ButtonFormatTransparent(this.btnFaceAC);
             BuilderDevice();
         }
 
         private void btnFaceAC_Click(object sender, EventArgs e)
         {
-            eValidation = EValidation.Face;
-            ButtonFormatColor(btnFaceAC);
-            ButtonFormatTransparent(btnFingerAC);
+            this.eValidation = EValidation.Face;
+            ButtonFormatColor(this.btnFaceAC);
+            ButtonFormatTransparent(this.btnFingerAC);
             BuilderDevice();
         }
 
@@ -230,12 +238,12 @@ namespace FrmCore
 
         private void TrasparentButtonsSubPanel()
         {
-            ButtonFormatTransparent(btnFingerAC);
-            ButtonFormatTransparent(btnFaceAC);
-            ButtonFormatTransparent(btnRFIDPA);
-            ButtonFormatTransparent(btnFingerRFIDPA);
-            ButtonFormatTransparent(btnFingerAT);
-            ButtonFormatTransparent(btnFaceAT);
+            ButtonFormatTransparent(this.btnFingerAC);
+            ButtonFormatTransparent(this.btnFaceAC);
+            ButtonFormatTransparent(this.btnRFIDPA);
+            ButtonFormatTransparent(this.btnFingerRFIDPA);
+            ButtonFormatTransparent(this.btnFingerAT);
+            ButtonFormatTransparent(this.btnFaceAT);
         }
 
         private void ButtonForType(EType type)
@@ -243,20 +251,20 @@ namespace FrmCore
             switch (type)
             {
                 case EType.AccessControl:
-                    btnAccessControl.Enabled = true;
-                    btnAttendance.Enabled = false;
-                    btnPanelAccess.Enabled = false;
+                    this.btnAccessControl.Enabled = true;
+                    this.btnAttendance.Enabled = false;
+                    this.btnPanelAccess.Enabled = false;
                     break;
                 case EType.PanelAccess:
-                    btnAccessControl.Enabled = false;
-                    btnAttendance.Enabled = false;
-                    btnPanelAccess.Enabled = true;
+                    this.btnAccessControl.Enabled = false;
+                    this.btnAttendance.Enabled = false;
+                    this.btnPanelAccess.Enabled = true;
                     break;
 
                 case EType.Attendance:
-                    btnAccessControl.Enabled = false;
-                    btnAttendance.Enabled = true;
-                    btnPanelAccess.Enabled = false;
+                    this.btnAccessControl.Enabled = false;
+                    this.btnAttendance.Enabled = true;
+                    this.btnPanelAccess.Enabled = false;
                     break;
             }
         }
@@ -275,9 +283,10 @@ namespace FrmCore
                 LoadListAssembly();
                 CoreSystem.InternalOrders.Remove(CoreSystem.SelectedOrder);
                 CoreSystem.SelectedOrder = null;
-                dgvOrder.DataSource = null;
+                this.dgvOrder.DataSource = null;
                 HideSubMenu();
                 EnableButtons();
+                Stock.SaveDevices();
             }
             else
             {
@@ -291,7 +300,8 @@ namespace FrmCore
             {
                 if (CoreSystem.PreviewDevices.Count > 0)
                 {
-                    Device aux = (Device)dgvPreview.CurrentRow.DataBoundItem;
+                    Device aux = (Device)this.dgvPreview.CurrentRow.DataBoundItem;
+                    Device.SaveLogDevices(aux, "Remove");
                     CoreSystem.PreviewDevices.Remove(aux);
                     LoadListAssembly();
                 }
@@ -308,7 +318,7 @@ namespace FrmCore
 
         private void ShowSerialNumber()
         {
-            this.lblSerialNumber.Text = SerialsNumbers.GetSerialNumberByType(eType).ToString();
+            this.lblSerialNumber.Text = SerialsNumbers.GetSerialNumberByType(eType).ToString();            
         }
     }
 }

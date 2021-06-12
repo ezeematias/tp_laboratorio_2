@@ -8,6 +8,11 @@ namespace Library
 {
     public class AccessControl : Device
     {
+        public AccessControl()
+        {
+
+        }
+
         public AccessControl(ECode codeInternal, EType typeDevice, EValidation eValidation) : base(codeInternal, typeDevice, eValidation)
         {
             AddComponent(eValidation);

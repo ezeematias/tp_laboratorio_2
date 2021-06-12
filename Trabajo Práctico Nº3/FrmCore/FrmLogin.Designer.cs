@@ -37,6 +37,7 @@ namespace FrmCore
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.tbxUser = new System.Windows.Forms.TextBox();
             this.tbxPass = new System.Windows.Forms.TextBox();
+            this.llbPass = new System.Windows.Forms.LinkLabel();
             this.pnlBack.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -138,6 +139,20 @@ namespace FrmCore
             this.tbxPass.Click += new System.EventHandler(this.tbxPass_Click);
             this.tbxPass.TextChanged += new System.EventHandler(this.tbxPass_TextChanged);
             // 
+            // llbPass
+            // 
+            this.llbPass.AutoSize = true;
+            this.llbPass.BackColor = System.Drawing.Color.Transparent;
+            this.llbPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llbPass.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.llbPass.Location = new System.Drawing.Point(348, 240);
+            this.llbPass.Name = "llbPass";
+            this.llbPass.Size = new System.Drawing.Size(150, 13);
+            this.llbPass.TabIndex = 8;
+            this.llbPass.TabStop = true;
+            this.llbPass.Text = "Did you forget your password?";
+            this.llbPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbPass_LinkClicked);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,6 +161,7 @@ namespace FrmCore
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(689, 330);
+            this.Controls.Add(this.llbPass);
             this.Controls.Add(this.tbxPass);
             this.Controls.Add(this.pnlBack);
             this.Controls.Add(this.btnExit);
@@ -176,6 +192,7 @@ namespace FrmCore
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.TextBox tbxUser;
         private System.Windows.Forms.TextBox tbxPass;
+        private System.Windows.Forms.LinkLabel llbPass;
     }
 }
 

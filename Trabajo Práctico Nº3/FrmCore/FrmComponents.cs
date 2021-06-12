@@ -20,15 +20,16 @@ namespace FrmCore
 
         private void FrmComponents_Load(object sender, EventArgs e)
         {
-            dgvComponents.DataSource = Stock.ComponentsStock;
+            this.dgvComponents.DataSource = Stock.ComponentsStock;
         }
 
         private void btnAddComponents_Click(object sender, EventArgs e)
         {
-            if((Components)dgvComponents.CurrentRow.DataBoundItem + (int)nudCountComponents.Value)
+            if((Components)this.dgvComponents.CurrentRow.DataBoundItem + (int)this.nudCountComponents.Value)
             {
-                dgvComponents.DataSource = null;
-                dgvComponents.DataSource = Stock.ComponentsStock;
+                this.dgvComponents.DataSource = null;
+                this.dgvComponents.DataSource = Stock.ComponentsStock;
+                Stock.SaveComponents();
             }
         }
     }

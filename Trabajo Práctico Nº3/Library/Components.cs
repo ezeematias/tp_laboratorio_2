@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace Library
 {
+    [Serializable]
     public class Components
     {
         EComponents nameComponent;
         int countComponent;
+
+        public Components()
+        {
+
+        }
 
         public Components(EComponents nameComponent, int countComponent)
         {

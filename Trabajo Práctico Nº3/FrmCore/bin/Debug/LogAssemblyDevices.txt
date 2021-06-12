@@ -1,0 +1,91 @@
+Operator: Ezequiel Unía Assembly the device CNT_A9_FC S/N: 4000015971 12/06/2021 2:32:11
+
+Operator: Ezequiel Unía Assembly the device CNT_A9_FC S/N: 4000015972 12/06/2021 2:32:14
+
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055138 12/06/2021 2:32:21
+
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055139 12/06/2021 2:32:24
+
+Operator: Ezequiel Unía Assembly the device CNT_BioPanel_ACC S/N: 6000027918 12/06/2021 2:32:33
+
+Operator: Ezequiel Unía Assembly the device CNT_FD10_FC S/N: 5000055138 12/06/2021 2:34:09
+
+Operator: Ezequiel Unía Remove the device CNT_FD10_FC S/N: 5000055138 12/06/2021 2:34:14
+
+Operator: Ezequiel Unía Assembly the device CNT_FD10_FC S/N: 5000055139 12/06/2021 2:34:15
+
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055140 12/06/2021 2:34:24
+
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055141 12/06/2021 2:34:30
+
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055142 12/06/2021 2:34:33
+
+Operator: Ezequiel Unía Remove the device CNT_E7_CR S/N: 5000055142 12/06/2021 2:34:34
+
+Operator: Ezequiel Unía Remove the device CNT_E7_CR S/N: 5000055140 12/06/2021 2:34:35
+
+Operator: Ezequiel Unía Remove the device CNT_E7_CR S/N: 5000055141 12/06/2021 2:34:35
+
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055143 12/06/2021 2:34:38
+
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055144 12/06/2021 2:34:42
+
+Operator: Ezequiel Unía Assembly the device CNT_BioPanel_ACC S/N: 6000027918 12/06/2021 2:34:51
+
+Operator: Ezequiel Unía Assembly the device CNT_BioPanel_ACC S/N: 6000027919 12/06/2021 2:34:54
+
+Operator: Ezequiel Unía Remove the device CNT_BioPanel_ACC S/N: 6000027918 12/06/2021 2:34:56
+
+Operator: Ezequiel Unía Assembly the device CNT_BioPanel_ACC S/N: 6000027920 12/06/2021 2:34:59
+
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055138 12/06/2021 2:37:38
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055139 12/06/2021 2:37:48
+Operator: Ezequiel Unía Remove the device CNT_E7_CR S/N: 5000055139 12/06/2021 2:37:52
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055140 12/06/2021 2:37:59
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055141 12/06/2021 2:38:02
+Operator: Ezequiel Unía Assembly the device CNT_BioPanel_ACC S/N: 6000027918 12/06/2021 2:38:09
+Operator: Ezequiel Unía Remove the device CNT_BioPanel_ACC S/N: 6000027918 12/06/2021 2:38:12
+Operator: Ezequiel Unía Assembly the device CNT_BioPanel_ACC S/N: 6000027919 12/06/2021 2:38:14
+Operator: Ezequiel Unía Assembly the device CNT_BioPanel_ACC S/N: 6000027920 12/06/2021 2:38:17
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055142 12/06/2021 2:38:25
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055143 12/06/2021 2:38:29
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055144 12/06/2021 2:38:31
+Operator: Ezequiel Unía Assembly the device CNT_FD10_FC S/N: 5000055138 12/06/2021 3:22:26
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055138 12/06/2021 3:25:26
+Operator: Ezequiel Unía Assembly the device CNT_BioPanel_ACC S/N: 6000027918 12/06/2021 3:25:32
+Operator: Ezequiel Unía Assembly the device CNT_BioPanel_ACC S/N: 6000027919 12/06/2021 3:25:35
+Operator: Ezequiel Unía Assembly the device CNT_BioPanel_ACC S/N: 6000027920 12/06/2021 3:25:36
+Operator: Ezequiel Unía Assembly the device CNT_A60_ID S/N: 4000015971 12/06/2021 3:29:08
+Operator: Ezequiel Unía Assembly the device CNT_A60_ID S/N: 4000015972 12/06/2021 3:29:10
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055138 12/06/2021 3:29:23
+Operator: Ezequiel Unía Assembly the device CNT_BioPanel_ACC S/N: 6000027918 12/06/2021 3:29:39
+Operator: Ezequiel Unía Assembly the device CNT_BioPanel_ACC S/N: 6000027919 12/06/2021 3:29:42
+Operator: Ezequiel Unía Assembly the device CNT_BioPanel_ACC S/N: 6000027920 12/06/2021 3:29:44
+Operator: Ezequiel Unía Assembly the device CNT_A9_FC S/N: 4000015973 12/06/2021 3:29:57
+Operator: Ezequiel Unía Assembly the device CNT_FD10_FC S/N: 5000055139 12/06/2021 3:30:03
+Operator: Ezequiel Unía Assembly the device CNT_FD10_FC S/N: 5000055140 12/06/2021 3:30:05
+Operator: Ezequiel Unía Assembly the device CNT_FD10_FC S/N: 5000055141 12/06/2021 3:30:07
+Operator: Ezequiel Unía Assembly the device CNT_FD10_FC S/N: 5000055138 12/06/2021 3:38:36
+Operator: Ezequiel Unía Assembly the device CNT_A9_FC S/N: 4000015971 12/06/2021 3:39:04
+Operator: Ezequiel Unía Assembly the device CNT_A60_ID S/N: 4000015971 12/06/2021 4:05:39
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055138 12/06/2021 4:07:41
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055139 12/06/2021 4:08:04
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055140 12/06/2021 4:08:13
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055141 12/06/2021 4:08:20
+Operator: Ezequiel Unía Assembly the device CNT_FD10_FC S/N: 5000055138 12/06/2021 4:09:09
+Operator: Ezequiel Unía Assembly the device CNT_FD10_FC S/N: 5000055139 12/06/2021 4:09:12
+Operator: Ezequiel Unía Assembly the device CNT_FD10_FC S/N: 5000055140 12/06/2021 4:09:19
+Operator: Ezequiel Unía Assembly the device CNT_FD10_FC S/N: 5000055141 12/06/2021 4:09:26
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055138 12/06/2021 4:20:36
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055138 12/06/2021 4:23:41
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055139 12/06/2021 4:23:45
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055140 12/06/2021 4:23:51
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055141 12/06/2021 4:23:55
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055142 12/06/2021 4:24:32
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055143 12/06/2021 4:25:16
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055145 12/06/2021 4:25:24
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055147 12/06/2021 4:25:31
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055146 12/06/2021 4:26:24
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055147 12/06/2021 4:26:30
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055148 12/06/2021 4:26:39
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055148 12/06/2021 4:28:20
