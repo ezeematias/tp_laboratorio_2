@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Library
 {
+    /// <summary>
+    /// Enumerate Code device
+    /// </summary>
     public enum ECode
     {
         CNT_BioPanel_ACC,
@@ -18,6 +21,9 @@ namespace Library
         CNT_FD10_FC,
     }
 
+    /// <summary>
+    /// Enumerate Component
+    /// </summary>
     public enum EComponents
     {
         Mother,
@@ -37,6 +43,9 @@ namespace Library
         Sound,
     }
 
+    /// <summary>
+    /// Enumerate Type
+    /// </summary>
     public enum EType
     {
         AccessControl,
@@ -44,6 +53,9 @@ namespace Library
         Attendance,
     }
 
+    /// <summary>
+    /// Enumerate Validation
+    /// </summary>
     public enum EValidation
     {
         Finger,

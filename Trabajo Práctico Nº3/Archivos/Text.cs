@@ -9,6 +9,13 @@ namespace Files
 {
     public class Text : IFiles<string>
     {
+        string folder;
+
+        public Text()
+        {
+            folder = string.Format("{0}{1}", AppDomain.CurrentDomain.BaseDirectory, "\\LogsTxt");
+        }
+
         /// <summary>
         /// Saves the data it receives as a parameter in a file
         /// </summary>
@@ -19,8 +26,12 @@ namespace Files
         {
             try
             {
-                string fileName = string.Format("{0}{1}", AppDomain.CurrentDomain.BaseDirectory, file);
-                using (StreamWriter sw = new StreamWriter(fileName, true))
+                if (!Directory.Exists(folder))
+                {
+                    Directory.CreateDirectory(folder);
+                }
+                file = folder + file;
+                using (StreamWriter sw = new StreamWriter(file, true))
                 {
                     sw.Write(data);
                     return true;
@@ -42,8 +53,12 @@ namespace Files
         {
             try
             {
-                string fileName = string.Format("{0}{1}", AppDomain.CurrentDomain.BaseDirectory, file);
-                using (StreamReader sr = new StreamReader(fileName))
+                if (!Directory.Exists(folder))
+                {
+                    Directory.CreateDirectory(folder);
+                }
+                file = folder + file;
+                using (StreamReader sr = new StreamReader(file))
                 {
                     data = sr.ReadToEnd();
                     return true;

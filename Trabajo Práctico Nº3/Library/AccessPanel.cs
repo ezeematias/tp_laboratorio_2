@@ -10,17 +10,28 @@ namespace Library
     {
         int numberAccess;
 
-        public AccessPanel()
-        {
+        /// <summary>
+        /// Default builder to serialize
+        /// </summary>
+        public AccessPanel() { }
 
-        }
 
+        /// <summary>
+        /// AccessPanel builder.
+        /// </summary>
+        /// <param name="codeInternal">Code internal for the device</param>
+        /// <param name="typeDevice">Type for the device</param>
+        /// <param name="numberAccess">Number the access for device</param>
+        /// <param name="eValidation">Validation for the device</param>
         public AccessPanel(ECode codeInternal, EType typeDevice, int numberAccess, EValidation eValidation) : base(codeInternal, typeDevice, eValidation)
         {
             NumberAccess = numberAccess;
             AddComponent(eValidation);
         }
 
+        /// <summary>
+        /// Get and Sett Number Access
+        /// </summary>
         public int NumberAccess
         {
             get => this.numberAccess;
@@ -36,6 +47,10 @@ namespace Library
             }
         }
 
+        /// <summary>
+        /// Add a list of components depending on their validation type.
+        /// </summary>
+        /// <param name="eValidation">Validation for the device</param>
         protected override void AddComponent(EValidation eValidation)
         {
             if (eValidation == EValidation.Finger)

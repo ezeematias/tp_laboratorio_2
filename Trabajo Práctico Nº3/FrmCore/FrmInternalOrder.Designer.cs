@@ -31,6 +31,7 @@ namespace FrmCore
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInternalOrder));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.iltSwitch01 = new System.Windows.Forms.ImageList(this.components);
             this.dgvInternalOrder = new System.Windows.Forms.DataGridView();
             this.btnAceptOrder = new System.Windows.Forms.Button();
@@ -58,6 +59,14 @@ namespace FrmCore
             this.dgvInternalOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInternalOrder.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvInternalOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInternalOrder.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInternalOrder.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvInternalOrder.Location = new System.Drawing.Point(85, 35);
             this.dgvInternalOrder.MultiSelect = false;

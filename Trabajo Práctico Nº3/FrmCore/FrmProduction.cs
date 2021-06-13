@@ -17,18 +17,37 @@ namespace FrmCore
         bool aux = false;
         private Form activeForm = null;
 
+        /// <summary>
+        /// Builder default.
+        /// </summary>
         public FrmProduction()
         {
             InitializeComponent();
             CustomizeDesing();
         }
 
+        /// <summary>
+        /// Load form default.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FrmProduction_Load(object sender, EventArgs e)
+        {
+            lblTitleOperator.Text = Login.OperatorLog.ToString();
+        }
+
+        /// <summary>
+        /// Hide the sub panels.
+        /// </summary>
         private void CustomizeDesing()
         {
             this.pnlSubMenuOptions.Visible = false;
             this.pnlSubMenuStock.Visible = false;
         }
 
+        /// <summary>
+        /// If the panel is active it hides it.
+        /// </summary>
         private void HideSubMenu()
         {
             if (this.pnlSubMenuOptions.Visible)
@@ -41,6 +60,10 @@ namespace FrmCore
             }
         }
 
+        /// <summary>
+        /// Depending on the state of the panel, it shows or hides it.
+        /// </summary>
+        /// <param name="subMenu"></param>
         private void ShowSubMenu(Panel subMenu)
         {
             if (!subMenu.Visible)
@@ -54,42 +77,111 @@ namespace FrmCore
             }
         }
 
-        private void FrmProduction_Load(object sender, EventArgs e)
+        /// <summary>
+        /// Button color format move.
+        /// </summary>
+        /// <param name="button">Button for format</param>
+        private void ButtonFormatColorMove(Button button)
         {
-            lblTitleOperator.Text = Login.OperatorLog.ToString();
+            button.ForeColor = Color.MediumVioletRed;
         }
 
+        /// <summary>
+        /// Button color format leave.
+        /// </summary>
+        /// <param name="button">Button for format</param>
+        private void ButtonFormatColorLeave(Button button)
+        {
+            button.ForeColor = Color.Gray;
+        }
+
+
+        /// <summary>
+        /// Button text design when hovering.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOrder_MouseMove(object sender, MouseEventArgs e)
         {
-            this.btnOrder.ForeColor = Color.MediumVioletRed;
+            ButtonFormatColorMove(this.btnOrder);
         }
 
+        /// <summary>
+        /// Button text design when hovering.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOrder_MouseLeave(object sender, EventArgs e)
         {
-            this.btnOrder.ForeColor = Color.Gray;
+            ButtonFormatColorLeave(this.btnOrder);
         }
 
+        /// <summary>
+        /// Button text design when hovering.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAssembly_MouseLeave(object sender, EventArgs e)
         {
-            this.btnAssembly.ForeColor = Color.Gray;
+            ButtonFormatColorLeave(this.btnAssembly);
         }
 
+        /// <summary>
+        /// Button text design when hovering.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAssembly_MouseMove(object sender, MouseEventArgs e)
         {
-            this.btnAssembly.ForeColor = Color.MediumVioletRed;
+            ButtonFormatColorMove(this.btnAssembly);
         }
 
+        /// <summary>
+        /// Button text design when hovering.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOptions_MouseLeave(object sender, EventArgs e)
         {
-            this.btnOptions.ForeColor = Color.Gray;
+            ButtonFormatColorLeave(this.btnOptions);
 
         }
 
+        /// <summary>
+        /// Button text design when hovering.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOptions_MouseMove(object sender, MouseEventArgs e)
         {
-            this.btnOptions.ForeColor = Color.MediumVioletRed;
+            ButtonFormatColorMove(this.btnOptions);
         }
 
+        /// <summary>
+        /// Button text design when hovering.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnStock_MouseLeave(object sender, EventArgs e)
+        {
+            ButtonFormatColorLeave(this.btnStock);
+        }
+
+        /// <summary>
+        /// Button text design when hovering.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnStock_MouseMove(object sender, MouseEventArgs e)
+        {
+            ButtonFormatColorMove(this.btnStock);
+        }
+
+        /// <summary>
+        /// Log out the operator.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOptionSignOff_Click(object sender, EventArgs e)
         {
             this.aux = true;
@@ -97,12 +189,21 @@ namespace FrmCore
             HideSubMenu();
         }
 
+        /// <summary>
+        /// Close program.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOptionExit_Click(object sender, EventArgs e)
         {
             this.Close();
             HideSubMenu();
         }
 
+        /// <summary>
+        /// Merge the forms into controllers. Allowing them to be added in the central panel.
+        /// </summary>
+        /// <param name="childForm"></param>
         private void OpenChildForm(Form childForm)
         {
             CloseChildForm();
@@ -116,6 +217,11 @@ namespace FrmCore
             childForm.Show();
         }
 
+        /// <summary>
+        /// Form close defautl.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmProduction_FormClosing(object sender, FormClosingEventArgs e)
         {
 
@@ -141,61 +247,99 @@ namespace FrmCore
             }
         }
 
-        private void btnStock_MouseLeave(object sender, EventArgs e)
-        {
-            this.btnStock.ForeColor = Color.Gray;
-        }
-
-        private void btnStock_MouseMove(object sender, MouseEventArgs e)
-        {
-            this.btnStock.ForeColor = Color.MediumVioletRed;
-        }
-
+        /// <summary>
+        /// Open the button's sub menu.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOptions_Click(object sender, EventArgs e)
         {
             ShowSubMenu(this.pnlSubMenuOptions);
         }
 
-        private void btnOrder_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FrmInternalOrder());               
-        }
-
-        private void btnAssembly_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FrmAssembly());
-        }
-
+        /// <summary>
+        /// Open the button's sub menu.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnStock_Click(object sender, EventArgs e)
         {
             ShowSubMenu(this.pnlSubMenuStock);
         }
 
+        /// <summary>
+        /// Open the form inside this.form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmInternalOrder());               
+        }
+
+        /// <summary>
+        /// Open the form inside this.form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAssembly_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmAssembly());
+        }
+
+
+        /// <summary>
+        /// Open the form inside this.form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnComponents_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmComponents());
         }
 
+        /// <summary>
+        /// Open the form inside this.form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDevices_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmDevices());
         }
 
+        /// <summary>
+        /// Open the form inside this.form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmAbout());
         }
-
+        /// <summary>
+        /// Open the form inside this.form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmProduction_BackColorChanged(object sender, EventArgs e)
         {
             OpenChildForm(new FrmAssembly());
         }
 
+        /// <summary>
+        /// Close the active form within the central panel.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pnlConnected_Click(object sender, EventArgs e)
         {
             CloseChildForm();
         }
 
+        /// <summary>
+        /// Close the active form.
+        /// </summary>
         private void CloseChildForm()
         {
             if (this.activeForm != null)

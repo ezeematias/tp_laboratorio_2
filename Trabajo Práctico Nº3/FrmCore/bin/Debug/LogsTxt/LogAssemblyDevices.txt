@@ -1,0 +1,5 @@
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055155 13/06/2021 18:01:30
+Operator: Ezequiel Unía Remove the device CNT_E7_CR S/N: 5000055155 13/06/2021 18:01:39
+Operator: Ezequiel Unía Assembly the device CNT_A60_ID S/N: 0 13/06/2021 18:56:04
+Operator: Ezequiel Unía Assembly the device CNT_A60_ID S/N: 1 13/06/2021 18:56:07
+Operator: Ezequiel Unía Assembly the device CNT_A60_ID S/N: 0 13/06/2021 18:57:02

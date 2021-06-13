@@ -17,73 +17,123 @@ namespace FrmCore
         private EValidation eValidation;
         private bool pressButton = false;
 
+        /// <summary>
+        /// Builder default
+        /// </summary>
         public FrmAssembly()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Load Form Default
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmAssembly_Load(object sender, EventArgs e)
         {
-            LoadOrderSelected();
-            HideSubMenu();
-            EnableButtons();
-            SerialsNumbers.ReadSerialsNumbers();
-
-
-            CoreSystem.ListAssembly = null;
-            if (!(CoreSystem.SelectedOrder is null) && !(CoreSystem.PreviewDevices is null))
+            try
             {
-                ButtonForType(CoreSystem.SelectedOrder.ETypeDevice);
-                this.dgvPreview.DataSource = new BindingList<Device>(CoreSystem.PreviewDevices);
+                this.lblErrorList.Visible = false;
+                LoadOrderSelected();
+                HideSubMenu();
+                EnableButtons();
+                Stock.ReadComponents();
+                SerialsNumbers.ReadSerialsNumbers();
+                CoreSystem.ListAssembly = null;
+                if (!(CoreSystem.SelectedOrder is null) && !(CoreSystem.PreviewDevices is null))
+                {
+                    ButtonForType(CoreSystem.SelectedOrder.ETypeDevice);
+                    this.dgvPreview.DataSource = new BindingList<Device>(CoreSystem.PreviewDevices);
+                }
+            }
+            catch (Exception ex)
+            {
+                this.Enabled = false;                
+                MessageBox.Show(ex.Message, "NO DATA DEVICES!", MessageBoxButtons.OK, MessageBoxIcon.Error);             
+                //MessageBox.Show("A new list was created because a loaded one was not found. \nGo to Stock> Components to initialize the components.", "NO DATA DEVICES!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        /// <summary>
+        /// Loading the selected order list.
+        /// </summary>
         private void LoadOrderSelected()
         {
             this.dgvOrder.DataSource = null;
             this.dgvOrder.DataSource = new List<InternalOrder> { CoreSystem.SelectedOrder };
         }
+
+        /// <summary>
+        /// Loading the list of previous devices.
+        /// </summary>
         private void LoadListAssembly()
         {
             this.dgvPreview.DataSource = null;
             this.dgvPreview.DataSource = CoreSystem.PreviewDevices;
         }
 
+        /// <summary>
+        /// Add a device.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAddDevice_Click(object sender, EventArgs e)
         {
-            if (CoreSystem.SelectedOrder.ETypeDevice == eType && !(CoreSystem.ListAssembly is null) && this.pressButton == true)
+            try
             {
-                if (CoreSystem.PreviewDevices.Count < CoreSystem.SelectedOrder.CountDevice || (MessageBox.Show($"The quantity requested in the order has already been reached. Do you want to assemble the device anyway?", "LIMIT DEVICES", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes))
+                if (CoreSystem.SelectedOrder.ETypeDevice == eType && !(CoreSystem.ListAssembly is null) && this.pressButton == true)
                 {
-                    if (Stock.ThereIsStock(CoreSystem.ListAssembly, out string component))
-                    {
-                        CoreSystem.LoadDevices(eType, eValidation);
-                        CoreSystem.PreviewDevices.Add(CoreSystem.DeviceAssembly);
-                        Device.SaveLogDevices(CoreSystem.DeviceAssembly,"Assembly");
-                        CoreSystem.DeviceAssembly = null;
-                        PressButton();
-                        LoadListAssembly();
-                        TrasparentButtonsSubPanel();
-                        HideSubMenu();
-                        this.lblSerialNumber.Text = "--";
-                    }
-                    else
-                    {
-                        MessageBox.Show($"The missing materials are:\n\n{component}", "NO STOCK COMPONENTS!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (CoreSystem.PreviewDevices.Count < CoreSystem.SelectedOrder.CountDevice || MessageBox.Show($"The quantity requested in the order has already been reached. Do you want to assemble the device anyway?", "LIMIT DEVICES", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+                    {       
+                        if (Stock.ThereIsStock(CoreSystem.ListAssembly, out string component))
+                        {
+                            CoreSystem.LoadDevices(eType, eValidation);
+                            CoreSystem.PreviewDevices.Add(CoreSystem.DeviceAssembly);
+                            Device.SaveLogDevices(CoreSystem.DeviceAssembly, "Assembly");
+                            CoreSystem.DeviceAssembly = null;
+                            PressButton();
+                            LoadListAssembly();
+                            TrasparentButtonsSubPanel();
+                            HideSubMenu();
+                            this.lblSerialNumber.Text = "--";
+                        }
+                        else
+                        {
+                            MessageBox.Show($"The missing materials are:\n\n{component}", "NO STOCK COMPONENTS!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
+                else
+                {
+                    MessageBox.Show("The device to be assembled must be of the same type as the order", "TYPE ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("The device to be assembled must be of the same type as the order", "TYPE ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "NO ADD DEVICE!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-        private void BuilderDevice()
-        {
-            CoreSystem.ListAssembly = null;
-            CoreSystem.LoadListAssembly(eType, eValidation);
         }
 
+        /// <summary>
+        /// Build a device.
+        /// </summary>
+        private void BuilderDevice()
+        {
+            try
+            {
+                CoreSystem.ListAssembly = null;
+                CoreSystem.LoadListAssembly(eType, eValidation);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "NO BUILDER DEVICES!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Hide the buttons of the sub menu of the devices
+        /// </summary>
         private void HideSubMenu()
         {
             if (this.pnlAC.Visible)
@@ -103,6 +153,10 @@ namespace FrmCore
             }
         }
 
+        /// <summary>
+        /// Show the sub menu buttons of the selected panel.
+        /// </summary>
+        /// <param name="subMenu">Panel to be displayed</param>
         private void ShowSubMenu(Panel subMenu)
         {
             if (!subMenu.Visible)
@@ -120,6 +174,11 @@ namespace FrmCore
             }
         }
 
+        /// <summary>
+        /// Button for attendance equipment, enables the options for this model.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAttendance_Click(object sender, EventArgs e)
         {
             this.eType = EType.Attendance;
@@ -130,6 +189,11 @@ namespace FrmCore
             ShowSubMenu(this.pnlAT);
         }
 
+        /// <summary>
+        /// Button for access control equipment, enables the options for this model.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAccessControl_Click(object sender, EventArgs e)
         {
             this.eType = EType.AccessControl;
@@ -139,6 +203,12 @@ namespace FrmCore
             ButtonFormatColor(this.btnAccessControl);
             ShowSubMenu(this.pnlAC);
         }
+
+        /// <summary>
+        /// Button for panel access equipment, enables the options for this model.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnPanelAccess_Click(object sender, EventArgs e)
         {
             this.eType = EType.PanelAccess;
@@ -149,6 +219,9 @@ namespace FrmCore
             ShowSubMenu(this.pnlPA);
         }
 
+        /// <summary>
+        /// Lock the form.
+        /// </summary>
         private void EnableButtons()
         {
             if (CoreSystem.SelectedOrder is null)
@@ -157,6 +230,9 @@ namespace FrmCore
             }
         }
 
+        /// <summary>
+        /// Options to handle states of pressed buttons.
+        /// </summary>
         private void PressButton()
         {
             this.pressButton = !pressButton;
@@ -166,8 +242,14 @@ namespace FrmCore
             }
         }
 
+        /// <summary>
+        /// Displays a new form with the components of the selected team.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnViewListDevice_Click(object sender, EventArgs e)
         {
+
             if (!(CoreSystem.ListAssembly is null))
             {
                 FrmPreviewComponent preview = new FrmPreviewComponent();
@@ -179,6 +261,11 @@ namespace FrmCore
             }
         }
 
+        /// <summary>
+        /// Fingerprint and card button option.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnFingerRFIDPA_Click(object sender, EventArgs e)
         {
             this.eValidation = EValidation.Finger;
@@ -187,6 +274,11 @@ namespace FrmCore
             BuilderDevice();
         }
 
+        /// <summary>
+        /// Card button option.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRFIDPA_Click(object sender, EventArgs e)
         {
             this.eValidation = EValidation.Card;
@@ -195,6 +287,11 @@ namespace FrmCore
             BuilderDevice();
         }
 
+        /// <summary>
+        /// Fingerprint button option
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnFingerAT_Click(object sender, EventArgs e)
         {
             this.eValidation = EValidation.Finger;
@@ -203,6 +300,11 @@ namespace FrmCore
             BuilderDevice();
         }
 
+        /// <summary>
+        /// Face button option.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnFaceAT_Click(object sender, EventArgs e)
         {
             this.eValidation = EValidation.Face;
@@ -211,6 +313,11 @@ namespace FrmCore
             BuilderDevice();
         }
 
+        /// <summary>
+        /// Fingerprint button option.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnFingerAC_Click(object sender, EventArgs e)
         {
             this.eValidation = EValidation.Finger;
@@ -219,6 +326,11 @@ namespace FrmCore
             BuilderDevice();
         }
 
+        /// <summary>
+        /// Face button option.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnFaceAC_Click(object sender, EventArgs e)
         {
             this.eValidation = EValidation.Face;
@@ -227,15 +339,27 @@ namespace FrmCore
             BuilderDevice();
         }
 
+        /// <summary>
+        /// Button color format.
+        /// </summary>
+        /// <param name="button">Button for format</param>
         private void ButtonFormatColor(Button button)
         {
             button.BackColor = Color.FromArgb(64, 0, 64);
         }
+
+        /// <summary>
+        /// Button trasparent format.
+        /// </summary>
+        /// <param name="button">Button for format</param>
         private void ButtonFormatTransparent(Button button)
         {
             button.BackColor = Color.Transparent;
         }
 
+        /// <summary>
+        /// Format all buttons.
+        /// </summary>
         private void TrasparentButtonsSubPanel()
         {
             ButtonFormatTransparent(this.btnFingerAC);
@@ -246,6 +370,10 @@ namespace FrmCore
             ButtonFormatTransparent(this.btnFaceAT);
         }
 
+        /// <summary>
+        /// It depends on the device to create, enable the buttons.
+        /// </summary>
+        /// <param name="type"></param>
         private void ButtonForType(EType type)
         {
             switch (type)
@@ -269,17 +397,21 @@ namespace FrmCore
             }
         }
 
+        /// <summary>
+        /// Upload the previous list to the central stock.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            //TODO: Faltan todas las validaciones y mensajes para continuar una vez agregada la lista.
             if (CoreSystem.PreviewDevices.Count == CoreSystem.SelectedOrder.CountDevice ||
                 (CoreSystem.PreviewDevices.Count > CoreSystem.SelectedOrder.CountDevice) &&
                 (MessageBox.Show($"The limit of devices requested in the order is exceeded.Do you want to load it into stock anyway?", "EXCEED THE LIMIT", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes) ||
                 (CoreSystem.PreviewDevices.Count < CoreSystem.SelectedOrder.CountDevice && CoreSystem.PreviewDevices.Count > 0) &&
                 (MessageBox.Show($"It remains to create devices to fulfill the order. Do you want to load without finishing the order?", "DOES NOT COMPLY WITH REQUESTS", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes))
             {
-                Stock.DevicesStock.AddRange(CoreSystem.PreviewDevices);
-                CoreSystem.PreviewDevices.Clear();
+                Device.SaveReportsDevices(CoreSystem.PreviewDevices);
+                Stock.UpdateDevicesStock();
                 LoadListAssembly();
                 CoreSystem.InternalOrders.Remove(CoreSystem.SelectedOrder);
                 CoreSystem.SelectedOrder = null;
@@ -287,6 +419,8 @@ namespace FrmCore
                 HideSubMenu();
                 EnableButtons();
                 Stock.SaveDevices();
+                //TODO: Descomentar para salvar los cambios en la lista de ordenes.
+                //InternalOrder.SaveInternalOrder();
             }
             else
             {
@@ -294,6 +428,11 @@ namespace FrmCore
             }
         }
 
+        /// <summary>
+        /// Remove the selected device from the previous list.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRemoveDevice_Click(object sender, EventArgs e)
         {
             try
@@ -312,13 +451,16 @@ namespace FrmCore
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "NO DATA DEVICES!", MessageBoxButtons.OK, MessageBoxIcon.Error); 
-            }            
+                MessageBox.Show(ex.Message, "NO DATA DEVICES!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
+        /// <summary>
+        /// The serial number is displayed.
+        /// </summary>
         private void ShowSerialNumber()
         {
-            this.lblSerialNumber.Text = SerialsNumbers.GetSerialNumberByType(eType).ToString();            
+            this.lblSerialNumber.Text = SerialsNumbers.GetSerialNumberByType(eType).ToString();
         }
     }
 }

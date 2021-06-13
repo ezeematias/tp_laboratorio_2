@@ -13,22 +13,34 @@ namespace FrmCore
 {
     public partial class FrmInternalOrder : Form
     {
+        /// <summary>
+        /// Builder default.
+        /// </summary>
         public FrmInternalOrder()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Load form default.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmInternalOrder_Load(object sender, EventArgs e)
         {
             LoadOrders();
         }
 
+        /// <summary>
+        /// Loads the selected device in the selected order.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAceptOrder_Click(object sender, EventArgs e)
         {
             if (CoreSystem.PreviewDevices.Count == 0)
             {
                 CoreSystem.SelectedOrder = (InternalOrder)this.dgvInternalOrder.CurrentRow.DataBoundItem;
-                //FrmProduction.orderAssembly = true;
                 ChangeBackColor();
             }
             else if (MessageBox.Show("Unsaved devices will be lost. Do you want to change your order anyway?", "ORDER IN EXECUTION", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
@@ -44,17 +56,37 @@ namespace FrmCore
 
         }
 
+        /// <summary>
+        /// Load the list of pending work orders.
+        /// </summary>
         private void LoadOrders()
         {
-            this.dgvInternalOrder.DataSource = null;
-            this.dgvInternalOrder.DataSource = CoreSystem.InternalOrders;
+            try
+            {
+                InternalOrder.ReadInternalOrder();
+                this.dgvInternalOrder.DataSource = null;
+                this.dgvInternalOrder.DataSource = CoreSystem.InternalOrders; 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "NO DATA DEVICES!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.btnAceptOrder.Enabled = false;
+            }
         }
 
+        /// <summary>
+        /// Close form default.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmInternalOrder_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Dispose();
         }
 
+        /// <summary>
+        /// Event generated to change the form.
+        /// </summary>
         private void ChangeBackColor()
         {
             ActiveForm.BackColor = Color.White;

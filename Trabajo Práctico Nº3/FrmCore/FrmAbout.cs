@@ -12,6 +12,9 @@ namespace FrmCore
 {
     public partial class FrmAbout : Form
     {
+        /// <summary>
+        /// Builder default
+        /// </summary>
         public FrmAbout()
         {
             InitializeComponent();

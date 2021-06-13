@@ -8,16 +8,26 @@ namespace Library
 {
     public class AccessControl : Device
     {
-        public AccessControl()
-        {
+        /// <summary>
+        /// Default builder to serialize
+        /// </summary>
+        public AccessControl() { }
 
-        }
-
+        /// <summary>
+        /// AccessControl builder.
+        /// </summary>
+        /// <param name="codeInternal">Code internal for the device</param>
+        /// <param name="typeDevice">Type for the device</param>
+        /// <param name="eValidation">Validation for the device</param>
         public AccessControl(ECode codeInternal, EType typeDevice, EValidation eValidation) : base(codeInternal, typeDevice, eValidation)
         {
             AddComponent(eValidation);
         }
 
+        /// <summary>
+        /// Add a list of components depending on their validation type.
+        /// </summary>
+        /// <param name="eValidation">Validation for the device</param>
         protected override void AddComponent(EValidation eValidation)
         {
             if (eValidation == EValidation.Finger)

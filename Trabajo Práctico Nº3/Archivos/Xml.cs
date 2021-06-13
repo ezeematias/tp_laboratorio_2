@@ -11,6 +11,12 @@ namespace Files
 {
     public class Xml<T> : IFiles<T> 
     {
+        string folder;
+
+        public Xml()
+        {
+            folder = string.Format("{0}{1}", AppDomain.CurrentDomain.BaseDirectory, "\\SerializationXml");
+        }
         /// <summary>
         /// Saves the data it receives as a parameter in a file
         /// </summary>
@@ -21,21 +27,21 @@ namespace Files
         {
             try
             {
-                string fileName = string.Format("{0}{1}", AppDomain.CurrentDomain.BaseDirectory, file);
-                using (XmlTextWriter writer = new XmlTextWriter(fileName, Encoding.UTF8))
+                if (!Directory.Exists(folder))
+                {
+                    Directory.CreateDirectory(folder);
+                }
+                file = folder + file;
+                using (XmlTextWriter writer = new XmlTextWriter(file, Encoding.UTF8))
                 {
                     XmlSerializer serializer = new XmlSerializer(typeof(T));
                     serializer.Serialize(writer, data);
                     return true;
                 }
             }
-            catch (FileNotFoundException)
-            {
-                throw new FileNotFoundException($"Failed to save file: {file}");
-            }
             catch (Exception ex)
             {
-                throw ex;
+                throw new Exception($"Failed to save file: {file}",ex);
             }
         }
 
@@ -49,21 +55,21 @@ namespace Files
         {
             try
             {
-                string fileName = string.Format("{0}{1}", AppDomain.CurrentDomain.BaseDirectory, file);
-                using (XmlTextReader reader = new XmlTextReader(fileName))
+                if (!Directory.Exists(folder))
+                {
+                    Directory.CreateDirectory(folder);
+                }
+                file = folder + file;
+                using (XmlTextReader reader = new XmlTextReader(file))
                 {
                     XmlSerializer serializer = new XmlSerializer(typeof(T));
                     data = (T)serializer.Deserialize(reader);
                     return true;
                 }
             }
-            catch (FileNotFoundException)
-            {
-                throw new FileNotFoundException($"Failed to read file: {file}");
-            }
             catch (Exception ex)
             {
-                throw ex;
+                throw new Exception($"Failed to read file: {file}", ex);
             }
         }
     }
