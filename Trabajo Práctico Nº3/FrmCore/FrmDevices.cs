@@ -32,10 +32,13 @@ namespace FrmCore
             {
                 Stock.ReadDevices();
                 this.dgvDevices.DataSource = Stock.DevicesStock;
+                this.lblErrorList.Visible = false;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "NO DATA DEVICES!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.lblErrorList.Visible = true;
+                this.lblErrorList.Text = "There are no work orders to carry out.";
+                Device.SaveErrorLogDevices(ex.Message);    
             }
         }
     }

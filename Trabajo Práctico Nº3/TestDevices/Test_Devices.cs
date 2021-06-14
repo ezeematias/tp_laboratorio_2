@@ -27,7 +27,7 @@ namespace TestDevices
 
             //Assert           
             Assert.IsNotNull(accessPanel.Components);
-
+            Assert.IsTrue(accessPanel.Components.Count >= 1);
         }
 
         /// <summary>
@@ -50,6 +50,8 @@ namespace TestDevices
             //Assert        
             Assert.IsNotNull(Stock.DevicesStock);
             Assert.IsTrue(Stock.DevicesStock.Contains(accessPanel));
+            Assert.IsTrue(Stock.DevicesStock.Contains(attendance));
+            Assert.IsTrue(Stock.DevicesStock.Contains(accessControl));
         }
 
         /// <summary>
@@ -69,6 +71,5 @@ namespace TestDevices
             Assert.IsTrue(Login.Operators.Count > 0);
             Assert.IsTrue(Login.LogIn(operatorTest.UserID, operatorTest.Pass));
         }
-
     }
 }

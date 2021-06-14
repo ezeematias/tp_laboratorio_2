@@ -36,7 +36,7 @@ namespace FrmCore
             this.btnComponents = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
             this.pnlSubMenuOptions = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAbout = new System.Windows.Forms.Button();
             this.btnOptionSignOff = new System.Windows.Forms.Button();
             this.btnOptionExit = new System.Windows.Forms.Button();
             this.btnOptions = new System.Windows.Forms.Button();
@@ -148,7 +148,7 @@ namespace FrmCore
             // pnlSubMenuOptions
             // 
             this.pnlSubMenuOptions.BackColor = System.Drawing.Color.Transparent;
-            this.pnlSubMenuOptions.Controls.Add(this.button1);
+            this.pnlSubMenuOptions.Controls.Add(this.btnAbout);
             this.pnlSubMenuOptions.Controls.Add(this.btnOptionSignOff);
             this.pnlSubMenuOptions.Controls.Add(this.btnOptionExit);
             this.pnlSubMenuOptions.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -157,24 +157,24 @@ namespace FrmCore
             this.pnlSubMenuOptions.Size = new System.Drawing.Size(229, 107);
             this.pnlSubMenuOptions.TabIndex = 1;
             // 
-            // button1
+            // btnAbout
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Gray;
-            this.button1.Location = new System.Drawing.Point(0, 14);
-            this.button1.Margin = new System.Windows.Forms.Padding(50, 3, 3, 3);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(229, 31);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "About";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAbout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.btnAbout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnAbout.FlatAppearance.BorderSize = 0;
+            this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbout.ForeColor = System.Drawing.Color.Gray;
+            this.btnAbout.Location = new System.Drawing.Point(0, 14);
+            this.btnAbout.Margin = new System.Windows.Forms.Padding(50, 3, 3, 3);
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnAbout.Size = new System.Drawing.Size(229, 31);
+            this.btnAbout.TabIndex = 2;
+            this.btnAbout.Text = "About";
+            this.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAbout.UseVisualStyleBackColor = false;
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // btnOptionSignOff
             // 
@@ -359,6 +359,7 @@ namespace FrmCore
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmProduction_FormClosing);
             this.Load += new System.EventHandler(this.FrmProduction_Load);
             this.BackColorChanged += new System.EventHandler(this.FrmProduction_BackColorChanged);
+            this.TextChanged += new System.EventHandler(this.FrmProduction_TextChanged);
             this.pnlSideMenu.ResumeLayout(false);
             this.pnlSubMenuStock.ResumeLayout(false);
             this.pnlSubMenuOptions.ResumeLayout(false);
@@ -384,7 +385,7 @@ namespace FrmCore
         private System.Windows.Forms.Label lblTitleOperator;
         private System.Windows.Forms.Panel pnlCenter;
         private System.Windows.Forms.PictureBox ptbLogo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAbout;
         private System.Windows.Forms.Panel pnlSubMenuStock;
         private System.Windows.Forms.Button btnDevices;
         private System.Windows.Forms.Button btnComponents;

@@ -36,6 +36,7 @@ namespace FrmCore
             this.dgvInternalOrder = new System.Windows.Forms.DataGridView();
             this.btnAceptOrder = new System.Windows.Forms.Button();
             this.pnlOrder = new System.Windows.Forms.Panel();
+            this.lblErrorList = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInternalOrder)).BeginInit();
             this.pnlOrder.SuspendLayout();
             this.SuspendLayout();
@@ -68,7 +69,7 @@ namespace FrmCore
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvInternalOrder.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInternalOrder.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dgvInternalOrder.Location = new System.Drawing.Point(85, 35);
+            this.dgvInternalOrder.Location = new System.Drawing.Point(85, 52);
             this.dgvInternalOrder.MultiSelect = false;
             this.dgvInternalOrder.Name = "dgvInternalOrder";
             this.dgvInternalOrder.ReadOnly = true;
@@ -93,7 +94,7 @@ namespace FrmCore
             this.btnAceptOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnAceptOrder.Location = new System.Drawing.Point(85, 427);
+            this.btnAceptOrder.Location = new System.Drawing.Point(85, 444);
             this.btnAceptOrder.Name = "btnAceptOrder";
             this.btnAceptOrder.Size = new System.Drawing.Size(568, 38);
             this.btnAceptOrder.TabIndex = 5;
@@ -107,12 +108,24 @@ namespace FrmCore
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlOrder.BackColor = System.Drawing.Color.Transparent;
+            this.pnlOrder.Controls.Add(this.lblErrorList);
             this.pnlOrder.Controls.Add(this.dgvInternalOrder);
             this.pnlOrder.Controls.Add(this.btnAceptOrder);
             this.pnlOrder.Location = new System.Drawing.Point(0, 0);
             this.pnlOrder.Name = "pnlOrder";
             this.pnlOrder.Size = new System.Drawing.Size(774, 529);
             this.pnlOrder.TabIndex = 6;
+            // 
+            // lblErrorList
+            // 
+            this.lblErrorList.AutoSize = true;
+            this.lblErrorList.BackColor = System.Drawing.Color.Transparent;
+            this.lblErrorList.ForeColor = System.Drawing.Color.Crimson;
+            this.lblErrorList.Location = new System.Drawing.Point(82, 36);
+            this.lblErrorList.Name = "lblErrorList";
+            this.lblErrorList.Size = new System.Drawing.Size(98, 13);
+            this.lblErrorList.TabIndex = 6;
+            this.lblErrorList.Text = "Error to charged list";
             // 
             // FrmInternalOrder
             // 
@@ -131,6 +144,7 @@ namespace FrmCore
             this.Load += new System.EventHandler(this.FrmInternalOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInternalOrder)).EndInit();
             this.pnlOrder.ResumeLayout(false);
+            this.pnlOrder.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -140,5 +154,6 @@ namespace FrmCore
         private System.Windows.Forms.DataGridView dgvInternalOrder;
         private System.Windows.Forms.Button btnAceptOrder;
         private System.Windows.Forms.Panel pnlOrder;
+        private System.Windows.Forms.Label lblErrorList;
     }
 }

@@ -102,6 +102,7 @@ namespace Library
             }
             catch (Exception ex)
             {
+                SaveDevices();
                 throw ex;
             }
         }
@@ -141,7 +142,7 @@ namespace Library
             }
             catch (Exception ex)
             {
-                throw new Exception("A new list was created because a loaded one was not found.", ex);
+                throw new Exception("A new list was created because a loaded one was not found.\nGo to Stock> Components to reset the list of components.", ex);
             }
         }
 

@@ -33,7 +33,8 @@ namespace FrmCore
         /// <param name="e"></param>
         private void FrmProduction_Load(object sender, EventArgs e)
         {
-            lblTitleOperator.Text = Login.OperatorLog.ToString();
+            this.lblTitleOperator.Text = Login.OperatorLog.ToString();
+            ButtonAssemblyFalse();
         }
 
         /// <summary>
@@ -313,10 +314,11 @@ namespace FrmCore
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAbout_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmAbout());
         }
+
         /// <summary>
         /// Open the form inside this.form.
         /// </summary>
@@ -324,6 +326,8 @@ namespace FrmCore
         /// <param name="e"></param>
         private void FrmProduction_BackColorChanged(object sender, EventArgs e)
         {
+            this.btnAssembly.Enabled = true;
+            ButtonAssemblyFormat();
             OpenChildForm(new FrmAssembly());
         }
 
@@ -346,6 +350,41 @@ namespace FrmCore
             {
                 this.activeForm.Close();
             }
+        }
+
+        /// <summary>
+        /// Button assembly appearance ans status.
+        /// </summary>
+        private void ButtonAssemblyFormat()
+        {            
+            if(this.btnAssembly.Enabled == true)
+            {
+                this.btnAssembly.BackColor = Color.FromArgb(20, 20, 20);
+            }
+            else
+            {                
+                this.btnAssembly.BackColor = Color.Transparent;
+            }
+        }
+
+        /// <summary>
+        /// Config. button assembly.
+        /// </summary>
+        private void ButtonAssemblyFalse()
+        {
+            btnAssembly.Enabled = false;
+            ButtonAssemblyFormat();
+        }
+
+        /// <summary>
+        /// Open the form inside this.form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FrmProduction_TextChanged(object sender, EventArgs e)
+        {
+            CloseChildForm();
+            ButtonAssemblyFalse();
         }
     }
 }

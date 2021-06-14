@@ -28,8 +28,7 @@ namespace LoginOperators
             {
                 if (op.UserID == user && op.Pass == pass)
                 {
-                    OperatorLog = op;
-                    //Operator.SaveOperator();
+                    OperatorLog = op;                    
                     return true;
                 }
             }

@@ -90,13 +90,9 @@ namespace LoginOperators
                 }
                 return false;
             }
-            catch (FileNotFoundException ex)
-            {
-                throw ex;
-            }
             catch (Exception ex)
             {
-                throw new FileNotFoundException(ex.ToString());
+                throw ex;
             }
         }
 
@@ -109,6 +105,23 @@ namespace LoginOperators
             StringBuilder sb = new StringBuilder();
             sb.Append($"Operator: {this.Name} {this.LastName}");
             return sb.ToString();
+        }
+
+        /// <summary>
+        /// Save in a file a log with date and time.
+        /// </summary>
+        /// <param name="data">Data for log</param>
+        /// <returns></returns>
+        public static bool SaveErrorLogOperator(string data)
+        {
+            try
+            {
+                return new Text().Save(@"\LogErrorOperators.txt", data);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

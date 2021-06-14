@@ -65,12 +65,16 @@ namespace FrmCore
             {
                 InternalOrder.ReadInternalOrder();
                 this.dgvInternalOrder.DataSource = null;
-                this.dgvInternalOrder.DataSource = CoreSystem.InternalOrders; 
+                this.dgvInternalOrder.DataSource = CoreSystem.InternalOrders;
+                this.lblErrorList.Visible = false;
+
             }
             catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "NO DATA DEVICES!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            {                
                 this.btnAceptOrder.Enabled = false;
+                this.lblErrorList.Visible = true;
+                this.lblErrorList.Text = "There are no work orders to carry out.";
+                InternalOrder.SaveErrorLogOrder(ex.Message);
             }
         }
 

@@ -39,6 +39,7 @@ namespace FrmCore
                 HideSubMenu();
                 EnableButtons();
                 Stock.ReadComponents();
+                Stock.ReadDevices();
                 SerialsNumbers.ReadSerialsNumbers();
                 CoreSystem.ListAssembly = null;
                 if (!(CoreSystem.SelectedOrder is null) && !(CoreSystem.PreviewDevices is null))
@@ -49,9 +50,8 @@ namespace FrmCore
             }
             catch (Exception ex)
             {
-                this.Enabled = false;                
-                MessageBox.Show(ex.Message, "NO DATA DEVICES!", MessageBoxButtons.OK, MessageBoxIcon.Error);             
-                //MessageBox.Show("A new list was created because a loaded one was not found. \nGo to Stock> Components to initialize the components.", "NO DATA DEVICES!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Enabled = false;
+                MessageBox.Show(ex.Message, "NO DATA DEVICES!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -85,13 +85,14 @@ namespace FrmCore
                 if (CoreSystem.SelectedOrder.ETypeDevice == eType && !(CoreSystem.ListAssembly is null) && this.pressButton == true)
                 {
                     if (CoreSystem.PreviewDevices.Count < CoreSystem.SelectedOrder.CountDevice || MessageBox.Show($"The quantity requested in the order has already been reached. Do you want to assemble the device anyway?", "LIMIT DEVICES", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
-                    {       
+                    {
                         if (Stock.ThereIsStock(CoreSystem.ListAssembly, out string component))
                         {
                             CoreSystem.LoadDevices(eType, eValidation);
                             CoreSystem.PreviewDevices.Add(CoreSystem.DeviceAssembly);
                             Device.SaveLogDevices(CoreSystem.DeviceAssembly, "Assembly");
                             CoreSystem.DeviceAssembly = null;
+                            SerialsNumbers.SaveSerialsNumbers();
                             PressButton();
                             LoadListAssembly();
                             TrasparentButtonsSubPanel();
@@ -183,7 +184,6 @@ namespace FrmCore
         {
             this.eType = EType.Attendance;
             ShowSerialNumber();
-            SerialsNumbers.SaveSerialsNumbers();
             PressButton();
             ButtonFormatColor(this.btnAttendance);
             ShowSubMenu(this.pnlAT);
@@ -198,7 +198,6 @@ namespace FrmCore
         {
             this.eType = EType.AccessControl;
             ShowSerialNumber();
-            SerialsNumbers.SaveSerialsNumbers();
             PressButton();
             ButtonFormatColor(this.btnAccessControl);
             ShowSubMenu(this.pnlAC);
@@ -213,7 +212,6 @@ namespace FrmCore
         {
             this.eType = EType.PanelAccess;
             ShowSerialNumber();
-            SerialsNumbers.SaveSerialsNumbers();
             PressButton();
             ButtonFormatColor(this.btnPanelAccess);
             ShowSubMenu(this.pnlPA);
@@ -404,27 +402,36 @@ namespace FrmCore
         /// <param name="e"></param>
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            if (CoreSystem.PreviewDevices.Count == CoreSystem.SelectedOrder.CountDevice ||
-                (CoreSystem.PreviewDevices.Count > CoreSystem.SelectedOrder.CountDevice) &&
-                (MessageBox.Show($"The limit of devices requested in the order is exceeded.Do you want to load it into stock anyway?", "EXCEED THE LIMIT", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes) ||
-                (CoreSystem.PreviewDevices.Count < CoreSystem.SelectedOrder.CountDevice && CoreSystem.PreviewDevices.Count > 0) &&
-                (MessageBox.Show($"It remains to create devices to fulfill the order. Do you want to load without finishing the order?", "DOES NOT COMPLY WITH REQUESTS", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes))
+            try
             {
-                Device.SaveReportsDevices(CoreSystem.PreviewDevices);
-                Stock.UpdateDevicesStock();
-                LoadListAssembly();
-                CoreSystem.InternalOrders.Remove(CoreSystem.SelectedOrder);
-                CoreSystem.SelectedOrder = null;
-                this.dgvOrder.DataSource = null;
-                HideSubMenu();
-                EnableButtons();
-                Stock.SaveDevices();
-                //TODO: Descomentar para salvar los cambios en la lista de ordenes.
-                //InternalOrder.SaveInternalOrder();
+                if (CoreSystem.PreviewDevices.Count == CoreSystem.SelectedOrder.CountDevice ||
+                    (CoreSystem.PreviewDevices.Count > CoreSystem.SelectedOrder.CountDevice) &&
+                    (MessageBox.Show($"The limit of devices requested in the order is exceeded.Do you want to load it into stock anyway?", "EXCEED THE LIMIT", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes) ||
+                    (CoreSystem.PreviewDevices.Count < CoreSystem.SelectedOrder.CountDevice && CoreSystem.PreviewDevices.Count > 0) &&
+                    (MessageBox.Show($"It remains to create devices to fulfill the order. Do you want to load without finishing the order?", "DOES NOT COMPLY WITH REQUESTS", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes))
+                {
+                    Device.SaveReportsDevices(CoreSystem.PreviewDevices);
+                    Stock.UpdateDevicesStock();
+                    LoadListAssembly();
+                    CoreSystem.InternalOrders.Remove(CoreSystem.SelectedOrder);
+                    CoreSystem.SelectedOrder = null;
+                    this.dgvOrder.DataSource = null;
+                    HideSubMenu();
+                    EnableButtons();
+                    Stock.SaveDevices();
+                    ChangeText();
+                    this.lblErrorList.Visible = false;
+                    InternalOrder.SaveInternalOrder();
+                }
+                else
+                {
+                    this.lblErrorList.Visible = true;
+                    this.lblErrorList.Text = "No devices to add to stock";
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("No devices to add to stock", "NO DATA DEVICES!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "NO SAVE FILE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -461,6 +468,15 @@ namespace FrmCore
         private void ShowSerialNumber()
         {
             this.lblSerialNumber.Text = SerialsNumbers.GetSerialNumberByType(eType).ToString();
+        }
+
+        /// <summary>
+        /// Event generated to change the form.
+        /// </summary>
+        private void ChangeText()
+        {
+            ActiveForm.Text = "";
+            ActiveForm.Text = "CONNECTED - Production";
         }
     }
 }

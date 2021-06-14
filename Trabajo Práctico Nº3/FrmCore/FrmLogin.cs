@@ -35,14 +35,12 @@ namespace FrmCore
             {
                 Operator.ReadOperator();
             }
-            catch (FileNotFoundException)
-            {
-
-            }
-            catch (Exception)
-            {
+            catch (Exception ex)
+            {                
                 MessageBox.Show("Operator database not found. You must be logged in as an administrator", "ADMIN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Login.LoadAdministrator();
+                Operator.SaveOperator();
+                Operator.SaveErrorLogOperator(ex.Message + " " + DateTime.Now);
             }
         }
 
@@ -95,7 +93,7 @@ namespace FrmCore
                     invalidUser = false;
                     FrmProduction production = new FrmProduction();
                     this.Hide();
-                    SetTextBox();
+                    SetTextBox();                    
                     DialogResult dialogResult = production.ShowDialog();
                     if (DialogResult.Abort == dialogResult)
                     {

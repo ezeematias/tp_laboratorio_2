@@ -32,6 +32,7 @@ namespace FrmCore
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDevices));
             this.dgvDevices = new System.Windows.Forms.DataGridView();
+            this.lblErrorList = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDevices)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,12 +64,24 @@ namespace FrmCore
             this.dgvDevices.Size = new System.Drawing.Size(654, 409);
             this.dgvDevices.TabIndex = 0;
             // 
+            // lblErrorList
+            // 
+            this.lblErrorList.AutoSize = true;
+            this.lblErrorList.BackColor = System.Drawing.Color.Transparent;
+            this.lblErrorList.ForeColor = System.Drawing.Color.Crimson;
+            this.lblErrorList.Location = new System.Drawing.Point(54, 23);
+            this.lblErrorList.Name = "lblErrorList";
+            this.lblErrorList.Size = new System.Drawing.Size(98, 13);
+            this.lblErrorList.TabIndex = 7;
+            this.lblErrorList.Text = "Error to charged list";
+            // 
             // FrmDevices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(758, 490);
+            this.Controls.Add(this.lblErrorList);
             this.Controls.Add(this.dgvDevices);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmDevices";
@@ -76,11 +89,13 @@ namespace FrmCore
             this.Load += new System.EventHandler(this.FrmDevices_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDevices)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dgvDevices;
+        private System.Windows.Forms.Label lblErrorList;
     }
 }

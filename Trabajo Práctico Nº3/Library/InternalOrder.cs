@@ -85,6 +85,22 @@ namespace Library
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static bool SaveErrorLogOrder(string data)
+        {
+            try
+            {
+                return new Text().Save(@"\LogErrorInternalOrder.txt", $"{LoginOperators.Login.OperatorLog} You have no work orders to perform {DateTime.Now}\n{data}\n\n");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
         /// Saves the data Internal order in a file
         /// </summary>
         public static void ReadInternalOrder()

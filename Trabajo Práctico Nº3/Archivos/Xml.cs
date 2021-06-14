@@ -13,6 +13,9 @@ namespace Files
     {
         string folder;
 
+        /// <summary>
+        /// Builder default
+        /// </summary>
         public Xml()
         {
             folder = string.Format("{0}{1}", AppDomain.CurrentDomain.BaseDirectory, "\\SerializationXml");

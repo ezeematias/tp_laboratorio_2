@@ -108,11 +108,16 @@ namespace Library
             }
         }
 
-        public static bool SaveErrorLogDevices(Device device, string type)
-        {
+        /// <summary>
+        /// Save in a file a log with date and time.
+        /// </summary>
+        /// <param name="data">Data for log</param>
+        /// <returns></returns>
+        public static bool SaveErrorLogDevices(string data)
+        {            
             try
             {
-                return new Text().Save(@"\LogErrorDevices.txt", device.View(type));
+                return new Text().Save(@"\LogErrorDevices.txt", data);
             }
             catch (Exception ex)
             {
