@@ -21,13 +21,14 @@ namespace TestDevices
         {
             //Arrange
             AccessPanel accessPanel;
+            Stock.ReadComponents();
 
             //Act
             accessPanel = new AccessPanel(ECode.CNT_A60_ID, EType.PanelAccess, 2, EValidation.Card);
 
             //Assert           
             Assert.IsNotNull(accessPanel.Components);
-            Assert.IsTrue(accessPanel.Components.Count >= 1);
+            Assert.IsTrue(accessPanel.Components.Count > 0);
         }
 
         /// <summary>
@@ -70,6 +71,34 @@ namespace TestDevices
             //Assert
             Assert.IsTrue(Login.Operators.Count > 0);
             Assert.IsTrue(Login.LogIn(operatorTest.UserID, operatorTest.Pass));
+        }
+
+        /// <summary>
+        /// Check that the program saves the devices correctly in the XML file, then the memory 
+        /// list is cleaned and the saved files are read to verify that the devices are found.
+        /// </summary>
+        [TestMethod]
+        public void Test_Serialization_To_Device()
+        {
+            //Arrange
+            AccessControl accessControl = new AccessControl(ECode.CNT_A60_ID, EType.AccessControl, EValidation.Card);
+            Attendance attendance = new Attendance(ECode.CNT_A60_ID, EType.Attendance, EValidation.Card);
+            AccessPanel accessPanel = new AccessPanel(ECode.CNT_A60_ID, EType.PanelAccess, 2, EValidation.Card);
+            CoreSystem.PreviewDevices.Add(accessControl);
+            CoreSystem.PreviewDevices.Add(attendance);
+            CoreSystem.PreviewDevices.Add(accessPanel);
+            Stock.UpdateDevicesStock();
+            Stock.SaveDevices();
+
+            //Act
+            Stock.DevicesStock.Clear();
+            Stock.ReadDevices();
+
+            //Assert        
+            Assert.IsNotNull(Stock.DevicesStock);
+            Assert.IsTrue(Stock.DevicesStock == accessPanel);
+            Assert.IsTrue(Stock.DevicesStock == attendance);
+            Assert.IsFalse(Stock.DevicesStock != accessControl);
         }
     }
 }
