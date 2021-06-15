@@ -1220,3 +1220,90 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 14/06/2021 7:47:28
+ Work order Nº 4511
+ -- Performed by -- 
+ Operator: Ezequiel Unía
+
+****************************
+
+ Code       CNT_E7_CR           
+ Type       Attendance          
+ Validation Face                
+ S/N        5000055164          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > Face         1         
+   > RFID         1         
+   > Camera       1         
+   > TimeLog      1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 15/06/2021 15:55:05
+ Work order Nº 4513
+ -- Performed by -- 
+ Operator: Ezequiel Unía
+
+****************************
+
+ Code       CNT_FD10_FC         
+ Type       AccessControl       
+ Validation Finger              
+ S/N        4000016001          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        1         
+
+
+
+****************************
+
+ Code       CNT_FD10_FC         
+ Type       AccessControl       
+ Validation Finger              
+ S/N        4000016002          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+

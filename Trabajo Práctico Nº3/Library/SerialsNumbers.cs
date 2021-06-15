@@ -90,7 +90,7 @@ namespace Library
             try
             {
                 SerializeSN aux = new SerializeSN();
-                if (new Xml<SerializeSN>().Read(@"\SerialsNumbers.xml", out aux))
+                if (new Xml<SerializeSN>().Read("\\SerialsNumbers.xml", out aux))
                 {
                     AccessControl = aux.AccessControl;
                     Attendance = aux.Attendance;

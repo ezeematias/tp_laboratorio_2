@@ -179,6 +179,38 @@ namespace Library
             }
             sb.AppendLine("XXXXXXXXXXXXXXXXXXXXXXXXXXXX\n");
             return sb.ToString();
-        }        
+        }
+
+        /// <summary>
+        /// Operator overload == to find out if the device is found in the list.
+        /// </summary>
+        /// <param name="listDevices">List Devices</param>
+        /// <param name="device">Devices</param>
+        /// <returns>True or False</returns>
+        public static bool operator ==(List<Device> listDevices, Device device)
+        {
+            if (!(listDevices is null && device is null))
+            {
+                foreach (Device item in listDevices)
+                {
+                    if (item.SerialNumber == device.SerialNumber)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Operator overload != to find out if it doesn't find the device in the list.
+        /// </summary>
+        /// <param name="listDevices">List Devices</param>
+        /// <param name="device">Devices</param>
+        /// <returns>True or False</returns>
+        public static bool operator !=(List<Device> listDevices, Device device)
+        {
+            return !(listDevices == device);
+        }
     }
 }

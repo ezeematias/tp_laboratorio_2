@@ -18,7 +18,7 @@ namespace Files
         /// </summary>
         public Xml()
         {
-            folder = string.Format("{0}{1}", AppDomain.CurrentDomain.BaseDirectory, "\\SerializationXml");
+            folder = string.Format("{0}{1}", AppDomain.CurrentDomain.BaseDirectory, @"\SerializationXml");
         }
         /// <summary>
         /// Saves the data it receives as a parameter in a file

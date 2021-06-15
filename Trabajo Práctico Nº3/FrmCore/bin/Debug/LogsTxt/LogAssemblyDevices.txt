@@ -56,3 +56,8 @@ Operator: Ezequiel Unía Assembly the device CNT_FD10_FC S/N: 4000015998 14/06/2
 Operator: Ezequiel Unía Remove the device CNT_FD10_FC S/N: 4000015998 14/06/2021 4:44:21
 Operator: Ezequiel Unía Assembly the device CNT_FD10_FC S/N: 4000015999 14/06/2021 4:44:23
 Operator: Ezequiel Unía Assembly the device CNT_A60_ID S/N: 4000016000 14/06/2021 6:08:07
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055163 14/06/2021 7:47:15
+Operator: Ezequiel Unía Remove the device CNT_E7_CR S/N: 5000055163 14/06/2021 7:47:24
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055164 14/06/2021 7:47:27
+Operator: Ezequiel Unía Assembly the device CNT_FD10_FC S/N: 4000016001 15/06/2021 15:55:02
+Operator: Ezequiel Unía Assembly the device CNT_FD10_FC S/N: 4000016002 15/06/2021 15:55:04
