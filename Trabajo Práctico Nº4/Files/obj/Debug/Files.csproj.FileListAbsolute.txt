@@ -1,0 +1,5 @@
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº4\Files\bin\Debug\Files.dll
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº4\Files\bin\Debug\Files.pdb
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº4\Files\obj\Debug\Files.csproj.CoreCompileInputs.cache
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº4\Files\obj\Debug\Files.dll
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº4\Files\obj\Debug\Files.pdb

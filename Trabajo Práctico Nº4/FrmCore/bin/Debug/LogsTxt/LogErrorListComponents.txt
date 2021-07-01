@@ -1,0 +1,6 @@
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\ComponentsStock.xml 13/06/2021 18:36:58
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\ComponentsStock.xml 13/06/2021 18:37:18
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\ComponentsStock.xml 13/06/2021 18:59:47
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\ComponentsStock.xml 13/06/2021 19:25:26
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\ComponentsStock.xml 13/06/2021 19:27:41
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\ComponentsStock.xml 13/06/2021 19:32:24

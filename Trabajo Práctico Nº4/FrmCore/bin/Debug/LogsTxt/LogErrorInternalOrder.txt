@@ -1,0 +1,78 @@
+Operator: Admin  You have no work orders to perform 13/06/2021 19:44:57
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 19:45:01
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:08:08
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:08:35
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:10:22
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:10:46
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:11:07
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:18:22
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:20:14
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:20:20
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:20:27
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:20:27
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:20:29
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:21:30
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:21:31
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:22:22
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:22:23
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:22:28
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:22:29
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:22:30
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:22:40
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:22:41
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:22:42
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:22:44
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:22:45
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+
+Operator: Admin  You have no work orders to perform 13/06/2021 20:22:47
+Failed to read file: C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\FrmCore\bin\Debug\\SerializationXml\InternalOrders.xml
+

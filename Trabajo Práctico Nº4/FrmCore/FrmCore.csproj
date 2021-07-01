@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8CD89F28-22D3-4185-A7B0-CB178AF5D26C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FrmCore</RootNamespace>
+    <AssemblyName>FrmCore</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAssembly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAssembly.Designer.cs">
+      <DependentUpon>FrmAssembly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmComponents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmComponents.Designer.cs">
+      <DependentUpon>FrmComponents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDevices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDevices.Designer.cs">
+      <DependentUpon>FrmDevices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInternalOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInternalOrder.Designer.cs">
+      <DependentUpon>FrmInternalOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPreviewComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPreviewComponent.Designer.cs">
+      <DependentUpon>FrmPreviewComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProduction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProduction.Designer.cs">
+      <DependentUpon>FrmProduction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAssembly.resx">
+      <DependentUpon>FrmAssembly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmComponents.resx">
+      <DependentUpon>FrmComponents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDevices.resx">
+      <DependentUpon>FrmDevices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInternalOrder.resx">
+      <DependentUpon>FrmInternalOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPreviewComponent.resx">
+      <DependentUpon>FrmPreviewComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProduction.resx">
+      <DependentUpon>FrmProduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Files\Files.csproj">
+      <Project>{bb2ab11e-cdc1-408d-ac49-e60a20888c37}</Project>
+      <Name>Files</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Library.csproj">
+      <Project>{25f09e6e-9600-4fdb-bc2d-9ea954b7274b}</Project>
+      <Name>Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LoginOperators\LoginOperators.csproj">
+      <Project>{70d13d2a-5fa7-4095-a1fa-cb667641154d}</Project>
+      <Name>LoginOperators</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TP4_LOGO_Hilos_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TP4_LOGO_Hilos_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TP4_LOGO_Hilos_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TP4_LOGO_Hilos_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TP4_LOGO_Hilos_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TP4_LOGO_Hilos_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TP4_LOGO_Hilos_07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TP4_LOGO_Hilos_08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TP4_LOGO_Hilos_09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TP4_LOGO_Hilos_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TP4_LOGO_Hilos_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TP4_LOGO_Hilos_12.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
