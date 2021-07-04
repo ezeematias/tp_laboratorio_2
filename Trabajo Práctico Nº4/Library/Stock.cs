@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Files;
 
+
 namespace Library
 {
     public static class Stock
@@ -76,7 +77,7 @@ namespace Library
                 if (ComponentsStock - item)
                 {
                     output = true;
-                    SaveComponents();
+                    SaveComponents();                    
                 }
                 else
                 {

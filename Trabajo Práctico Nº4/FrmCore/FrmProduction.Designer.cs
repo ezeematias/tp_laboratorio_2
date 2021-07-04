@@ -119,7 +119,7 @@ namespace FrmCore
             this.btnDevices.Name = "btnDevices";
             this.btnDevices.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnDevices.Size = new System.Drawing.Size(229, 31);
-            this.btnDevices.TabIndex = 4;
+            this.btnDevices.TabIndex = 6;
             this.btnDevices.Text = "Devices";
             this.btnDevices.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDevices.UseVisualStyleBackColor = false;
@@ -138,7 +138,7 @@ namespace FrmCore
             this.btnComponents.Name = "btnComponents";
             this.btnComponents.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnComponents.Size = new System.Drawing.Size(229, 31);
-            this.btnComponents.TabIndex = 3;
+            this.btnComponents.TabIndex = 5;
             this.btnComponents.Text = "Components";
             this.btnComponents.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnComponents.UseVisualStyleBackColor = false;
@@ -159,7 +159,7 @@ namespace FrmCore
             this.btnStock.Name = "btnStock";
             this.btnStock.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnStock.Size = new System.Drawing.Size(229, 43);
-            this.btnStock.TabIndex = 5;
+            this.btnStock.TabIndex = 4;
             this.btnStock.Text = "Stock";
             this.btnStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStock.UseVisualStyleBackColor = false;
@@ -191,7 +191,7 @@ namespace FrmCore
             this.btnOptionSignOff.Name = "btnOptionSignOff";
             this.btnOptionSignOff.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnOptionSignOff.Size = new System.Drawing.Size(229, 31);
-            this.btnOptionSignOff.TabIndex = 1;
+            this.btnOptionSignOff.TabIndex = 9;
             this.btnOptionSignOff.Text = "Sign Off";
             this.btnOptionSignOff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOptionSignOff.UseVisualStyleBackColor = false;
@@ -210,7 +210,7 @@ namespace FrmCore
             this.btnOptionExit.Name = "btnOptionExit";
             this.btnOptionExit.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnOptionExit.Size = new System.Drawing.Size(229, 31);
-            this.btnOptionExit.TabIndex = 0;
+            this.btnOptionExit.TabIndex = 10;
             this.btnOptionExit.Text = "Exit";
             this.btnOptionExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOptionExit.UseVisualStyleBackColor = false;
@@ -231,7 +231,7 @@ namespace FrmCore
             this.btnOptions.Name = "btnOptions";
             this.btnOptions.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnOptions.Size = new System.Drawing.Size(229, 43);
-            this.btnOptions.TabIndex = 4;
+            this.btnOptions.TabIndex = 8;
             this.btnOptions.Text = "Exit";
             this.btnOptions.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOptions.UseVisualStyleBackColor = false;
@@ -304,7 +304,7 @@ namespace FrmCore
             this.pnlTitliOperator.Location = new System.Drawing.Point(229, 0);
             this.pnlTitliOperator.Name = "pnlTitliOperator";
             this.pnlTitliOperator.Size = new System.Drawing.Size(774, 32);
-            this.pnlTitliOperator.TabIndex = 1;
+            this.pnlTitliOperator.TabIndex = 11;
             // 
             // lblTitleOperator
             // 
@@ -317,7 +317,7 @@ namespace FrmCore
             this.lblTitleOperator.Name = "lblTitleOperator";
             this.lblTitleOperator.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblTitleOperator.Size = new System.Drawing.Size(380, 16);
-            this.lblTitleOperator.TabIndex = 0;
+            this.lblTitleOperator.TabIndex = 12;
             this.lblTitleOperator.Text = "Name Operador";
             this.lblTitleOperator.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -385,10 +385,10 @@ namespace FrmCore
         private System.Windows.Forms.Panel pnlTitliOperator;
         private System.Windows.Forms.Label lblTitleOperator;
         private System.Windows.Forms.Panel pnlCenter;
-        private System.Windows.Forms.PictureBox ptbLogo;
         private System.Windows.Forms.Panel pnlSubMenuStock;
         private System.Windows.Forms.Button btnDevices;
         private System.Windows.Forms.Button btnComponents;
         private System.Windows.Forms.Button btnAbout;
+        private System.Windows.Forms.PictureBox ptbLogo;
     }
 }

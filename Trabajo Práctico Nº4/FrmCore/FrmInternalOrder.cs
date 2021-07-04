@@ -11,8 +11,12 @@ using Library;
 
 namespace FrmCore
 {
+    public delegate void CallBackOrder(int type);
+
     public partial class FrmInternalOrder : Form
     {
+        public event CallBackOrder ChangeForm;
+
         /// <summary>
         /// Builder default.
         /// </summary>
@@ -28,7 +32,14 @@ namespace FrmCore
         /// <param name="e"></param>
         private void FrmInternalOrder_Load(object sender, EventArgs e)
         {
-            LoadOrders();
+            try
+            {
+                LoadOrders();
+            }
+            catch (Exception ex)
+            {
+                this.lblErrorList.Text = ex.Message;
+            }
         }
 
         /// <summary>
@@ -38,22 +49,34 @@ namespace FrmCore
         /// <param name="e"></param>
         private void btnAceptOrder_Click(object sender, EventArgs e)
         {
-            if (CoreSystem.PreviewDevices.Count == 0)
+            try
             {
-                CoreSystem.SelectedOrder = (InternalOrder)this.dgvInternalOrder.CurrentRow.DataBoundItem;
-                ChangeBackColor();
-            }
-            else if (MessageBox.Show("Unsaved devices will be lost. Do you want to change your order anyway?", "ORDER IN EXECUTION", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
-            {
-                CoreSystem.PreviewDevices.Clear();
-                CoreSystem.SelectedOrder = (InternalOrder)this.dgvInternalOrder.CurrentRow.DataBoundItem;
-                ChangeBackColor();
-            }
-            else
-            {
-                ChangeBackColor();
-            }
+                if (CoreSystem.InternalOrders is null)
+                {
+                    this.lblErrorList.Visible = true;
+                    throw new Exception("There are no work orders to perform");
+                }
+                else if (CoreSystem.PreviewDevices.Count == 0)
+                {
+                    CoreSystem.SelectedOrder = (InternalOrder)this.dgvInternalOrder.CurrentRow.DataBoundItem;
+                    ChangeInternalOrder();
+                }
+                else if (MessageBox.Show("Unsaved devices will be lost. Do you want to change your order anyway?", "ORDER IN EXECUTION", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+                {
+                    CoreSystem.PreviewDevices.Clear();
+                    CoreSystem.SelectedOrder = (InternalOrder)this.dgvInternalOrder.CurrentRow.DataBoundItem;
+                    ChangeInternalOrder();
+                }
+                else
+                {
+                    ChangeInternalOrder();
+                }
 
+            }
+            catch (Exception ex)
+            {
+                this.lblErrorList.Text = ex.Message;
+            }
         }
 
         /// <summary>
@@ -70,7 +93,7 @@ namespace FrmCore
 
             }
             catch (Exception ex)
-            {                
+            {
                 this.btnAceptOrder.Enabled = false;
                 this.lblErrorList.Visible = true;
                 this.lblErrorList.Text = "There are no work orders to carry out.";
@@ -91,10 +114,12 @@ namespace FrmCore
         /// <summary>
         /// Event generated to change the form.
         /// </summary>
-        private void ChangeBackColor()
+        private void ChangeInternalOrder()
         {
-            ActiveForm.BackColor = Color.White;
-            ActiveForm.BackColor = Color.FromArgb(20, 20, 20);
+            if (!(this.ChangeForm is null))
+            {
+                this.ChangeForm.Invoke(1);
+            }
         }
     }
 }

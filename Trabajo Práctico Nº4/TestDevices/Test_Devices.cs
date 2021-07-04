@@ -24,7 +24,7 @@ namespace TestDevices
             Stock.ReadComponents();
 
             //Act
-            accessPanel = new AccessPanel(ECode.CNT_A60_ID, EType.PanelAccess, 2, EValidation.Card);
+            accessPanel = new AccessPanel(ECode.CNT_A60_ID, EType.PanelAccess, EValidation.Card);
 
             //Assert           
             Assert.IsNotNull(accessPanel.Components);
@@ -40,7 +40,7 @@ namespace TestDevices
             //Arrange
             AccessControl accessControl = new AccessControl(ECode.CNT_A60_ID, EType.AccessControl, EValidation.Card);
             Attendance attendance = new Attendance(ECode.CNT_A60_ID, EType.Attendance, EValidation.Card);
-            AccessPanel accessPanel = new AccessPanel(ECode.CNT_A60_ID, EType.PanelAccess, 2, EValidation.Card);
+            AccessPanel accessPanel = new AccessPanel(ECode.CNT_A60_ID, EType.PanelAccess, EValidation.Card);
 
             //Act
             CoreSystem.PreviewDevices.Add(accessControl);
@@ -83,7 +83,7 @@ namespace TestDevices
             //Arrange
             AccessControl accessControl = new AccessControl(ECode.CNT_A60_ID, EType.AccessControl, EValidation.Card);
             Attendance attendance = new Attendance(ECode.CNT_A60_ID, EType.Attendance, EValidation.Card);
-            AccessPanel accessPanel = new AccessPanel(ECode.CNT_A60_ID, EType.PanelAccess, 2, EValidation.Card);
+            AccessPanel accessPanel = new AccessPanel(ECode.CNT_A60_ID, EType.PanelAccess, EValidation.Card);
             CoreSystem.PreviewDevices.Add(accessControl);
             CoreSystem.PreviewDevices.Add(attendance);
             CoreSystem.PreviewDevices.Add(accessPanel);

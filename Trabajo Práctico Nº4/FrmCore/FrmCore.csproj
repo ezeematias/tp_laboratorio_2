@@ -156,33 +156,37 @@
       <Project>{70d13d2a-5fa7-4095-a1fa-cb667641154d}</Project>
       <Name>LoginOperators</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SQL\SQL.csproj">
+      <Project>{8d91754d-dc14-4fbe-9df9-8c19a8e4a5c3}</Project>
+      <Name>SQL</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TP4_LOGO_Hilos_01.png" />
+    <None Include="Resources\TP4_LOGO_Hilos_1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TP4_LOGO_Hilos_02.png" />
+    <None Include="Resources\TP4_LOGO_Hilos_2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TP4_LOGO_Hilos_03.png" />
+    <None Include="Resources\TP4_LOGO_Hilos_3.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TP4_LOGO_Hilos_04.png" />
+    <None Include="Resources\TP4_LOGO_Hilos_4.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TP4_LOGO_Hilos_05.png" />
+    <None Include="Resources\TP4_LOGO_Hilos_5.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TP4_LOGO_Hilos_06.png" />
+    <None Include="Resources\TP4_LOGO_Hilos_6.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TP4_LOGO_Hilos_07.png" />
+    <None Include="Resources\TP4_LOGO_Hilos_7.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TP4_LOGO_Hilos_08.png" />
+    <None Include="Resources\TP4_LOGO_Hilos_8.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TP4_LOGO_Hilos_09.png" />
+    <None Include="Resources\TP4_LOGO_Hilos_9.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TP4_LOGO_Hilos_10.png" />

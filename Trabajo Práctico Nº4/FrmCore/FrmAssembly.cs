@@ -8,11 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Library;
+using SQL;
 
 namespace FrmCore
 {
+    public delegate void CallBackAssembly(int type);
+
     public partial class FrmAssembly : Form
     {
+        public event CallBackAssembly ChangeForm;
+
         private EType eType;
         private EValidation eValidation;
         private bool pressButton = false;
@@ -38,8 +43,6 @@ namespace FrmCore
                 LoadOrderSelected();
                 HideSubMenu();
                 EnableButtons();
-                Stock.ReadComponents();
-                Stock.ReadDevices();
                 SerialsNumbers.ReadSerialsNumbers();
                 CoreSystem.ListAssembly = null;
                 if (!(CoreSystem.SelectedOrder is null) && !(CoreSystem.PreviewDevices is null))
@@ -93,6 +96,7 @@ namespace FrmCore
                             Device.SaveLogDevices(CoreSystem.DeviceAssembly, "Assembly");
                             CoreSystem.DeviceAssembly = null;
                             SerialsNumbers.SaveSerialsNumbers();
+                            DAO.ModifyListComponents(Stock.ComponentsStock);
                             PressButton();
                             LoadListAssembly();
                             TrasparentButtonsSubPanel();
@@ -411,6 +415,7 @@ namespace FrmCore
                     (MessageBox.Show($"It remains to create devices to fulfill the order. Do you want to load without finishing the order?", "DOES NOT COMPLY WITH REQUESTS", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes))
                 {
                     Device.SaveReportsDevices(CoreSystem.PreviewDevices);
+                    DAO.SaveDevice(CoreSystem.PreviewDevices);
                     Stock.UpdateDevicesStock();
                     LoadListAssembly();
                     CoreSystem.InternalOrders.Remove(CoreSystem.SelectedOrder);
@@ -418,10 +423,9 @@ namespace FrmCore
                     this.dgvOrder.DataSource = null;
                     HideSubMenu();
                     EnableButtons();
-                    Stock.SaveDevices();
-                    ChangeText();
                     this.lblErrorList.Visible = false;
                     InternalOrder.SaveInternalOrder();
+                    ChangeAssembly();
                 }
                 else
                 {
@@ -473,10 +477,12 @@ namespace FrmCore
         /// <summary>
         /// Event generated to change the form.
         /// </summary>
-        private void ChangeText()
+        private void ChangeAssembly()
         {
-            ActiveForm.Text = "";
-            ActiveForm.Text = "CONNECTED - Production";
+            if (!(this.ChangeForm is null))
+            {
+                this.ChangeForm.Invoke(2);
+            }
         }
     }
 }

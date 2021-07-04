@@ -73,6 +73,22 @@ namespace Library
         }
 
         /// <summary>
+        /// Device builder.
+        /// </summary>
+        /// <param name="codeInternal">Code internal for the device</param>
+        /// <param name="typeDevice">Type for the device</param>
+        /// <param name="eValidation">Validation for the device</param>
+        /// <param name="serialNumber">Serial Number</param>
+        protected Device(double serialNumber, ECode codeInternal, EType typeDevice, EValidation eValidation)
+        {
+            this.CodeInternal = codeInternal;
+            this.TypeDevice = typeDevice;
+            this.EValidation = eValidation;
+            this.SerialNumber = serialNumber;
+            this.components = new List<Components>();
+        }
+
+        /// <summary>
         /// Add a list of components depending on their validation type.
         /// </summary>
         /// <param name="eValidation">Validation for the device</param>

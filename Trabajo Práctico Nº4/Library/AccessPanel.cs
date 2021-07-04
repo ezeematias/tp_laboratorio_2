@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace Library
 {
     public class AccessPanel : Device
-    {
-        int numberAccess;
+    {      
 
         /// <summary>
         /// Default builder to serialize
@@ -20,31 +19,24 @@ namespace Library
         /// AccessPanel builder.
         /// </summary>
         /// <param name="codeInternal">Code internal for the device</param>
-        /// <param name="typeDevice">Type for the device</param>
-        /// <param name="numberAccess">Number the access for device</param>
+        /// <param name="typeDevice">Type for the device</param> 
         /// <param name="eValidation">Validation for the device</param>
-        public AccessPanel(ECode codeInternal, EType typeDevice, int numberAccess, EValidation eValidation) : base(codeInternal, typeDevice, eValidation)
-        {
-            NumberAccess = numberAccess;
+        public AccessPanel(ECode codeInternal, EType typeDevice, EValidation eValidation) : base(codeInternal, typeDevice, eValidation)
+        {            
             AddComponent(eValidation);
         }
 
+
         /// <summary>
-        /// Get and Sett Number Access
+        /// AccessPanel builder.
         /// </summary>
-        public int NumberAccess
-        {
-            get => this.numberAccess;
-            set
-            {
-                if(value > 0 && value < 4)
-                {
-                    this.numberAccess = value;
-                }else
-                {
-                    this.numberAccess = 1;
-                }
-            }
+        /// <param name="serialNumber">Serial Number</param>
+        /// <param name="codeInternal">Code internal for the device</param>
+        /// <param name="typeDevice">Type for the device</param>
+        /// <param name="eValidation">Validation for the device</param>
+        public AccessPanel(double serialNumber, ECode codeInternal, EType typeDevice, EValidation eValidation) : base(serialNumber, codeInternal, typeDevice, eValidation)
+        {           
+            AddComponent(eValidation);
         }
 
         /// <summary>

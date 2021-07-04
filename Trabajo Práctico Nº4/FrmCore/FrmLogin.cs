@@ -15,6 +15,9 @@ namespace FrmCore
 {
     public partial class FrmLogin : Form
     {
+        //TODO: Meter los operadores en la DB y armar bien el login. 
+        //TODO: Ver si armo un Register de operadores.
+
         /// <summary>
         /// Builder default.
         /// </summary>

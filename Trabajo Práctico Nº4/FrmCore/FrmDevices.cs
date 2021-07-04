@@ -30,7 +30,6 @@ namespace FrmCore
         {
             try
             {
-                Stock.ReadDevices();
                 this.dgvDevices.DataSource = Stock.DevicesStock;
                 this.lblErrorList.Visible = false;
             }

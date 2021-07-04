@@ -63,89 +63,9 @@ namespace FrmCore.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap TP4_LOGO_Hilos_01 {
+        internal static System.Drawing.Bitmap TP4_LOGO_Hilos_1 {
             get {
-                object obj = ResourceManager.GetObject("TP4_LOGO_Hilos_01", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TP4_LOGO_Hilos_02 {
-            get {
-                object obj = ResourceManager.GetObject("TP4_LOGO_Hilos_02", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TP4_LOGO_Hilos_03 {
-            get {
-                object obj = ResourceManager.GetObject("TP4_LOGO_Hilos_03", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TP4_LOGO_Hilos_04 {
-            get {
-                object obj = ResourceManager.GetObject("TP4_LOGO_Hilos_04", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TP4_LOGO_Hilos_05 {
-            get {
-                object obj = ResourceManager.GetObject("TP4_LOGO_Hilos_05", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TP4_LOGO_Hilos_06 {
-            get {
-                object obj = ResourceManager.GetObject("TP4_LOGO_Hilos_06", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TP4_LOGO_Hilos_07 {
-            get {
-                object obj = ResourceManager.GetObject("TP4_LOGO_Hilos_07", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TP4_LOGO_Hilos_08 {
-            get {
-                object obj = ResourceManager.GetObject("TP4_LOGO_Hilos_08", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TP4_LOGO_Hilos_09 {
-            get {
-                object obj = ResourceManager.GetObject("TP4_LOGO_Hilos_09", resourceCulture);
+                object obj = ResourceManager.GetObject("TP4_LOGO_Hilos_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +96,86 @@ namespace FrmCore.Properties {
         internal static System.Drawing.Bitmap TP4_LOGO_Hilos_12 {
             get {
                 object obj = ResourceManager.GetObject("TP4_LOGO_Hilos_12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TP4_LOGO_Hilos_2 {
+            get {
+                object obj = ResourceManager.GetObject("TP4_LOGO_Hilos_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TP4_LOGO_Hilos_3 {
+            get {
+                object obj = ResourceManager.GetObject("TP4_LOGO_Hilos_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TP4_LOGO_Hilos_4 {
+            get {
+                object obj = ResourceManager.GetObject("TP4_LOGO_Hilos_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TP4_LOGO_Hilos_5 {
+            get {
+                object obj = ResourceManager.GetObject("TP4_LOGO_Hilos_5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TP4_LOGO_Hilos_6 {
+            get {
+                object obj = ResourceManager.GetObject("TP4_LOGO_Hilos_6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TP4_LOGO_Hilos_7 {
+            get {
+                object obj = ResourceManager.GetObject("TP4_LOGO_Hilos_7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TP4_LOGO_Hilos_8 {
+            get {
+                object obj = ResourceManager.GetObject("TP4_LOGO_Hilos_8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TP4_LOGO_Hilos_9 {
+            get {
+                object obj = ResourceManager.GetObject("TP4_LOGO_Hilos_9", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

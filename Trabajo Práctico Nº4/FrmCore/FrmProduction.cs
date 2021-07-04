@@ -9,14 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Library;
 using LoginOperators;
+using SQL;
+using System.Threading;
 
 namespace FrmCore
 {
     public partial class FrmProduction : Form
     {
+        Thread thread;
         bool aux = false;
         private Form activeForm = null;
-        int index = 1;
 
         /// <summary>
         /// Builder default.
@@ -34,12 +36,13 @@ namespace FrmCore
         /// <param name="e"></param>
         private void FrmProduction_Load(object sender, EventArgs e)
         {
-            this.lblTitleOperator.Text = Login.OperatorLog.ToString();
+            //TODO: Descomentar para mostrar el nombre del operador
+            //this.lblTitleOperator.Text = Login.OperatorLog.ToString();
             ButtonAssemblyFalse();
-
-
-
-
+            Stock.DevicesStock = DAO.LoadDevice();
+            Stock.ComponentsStock = DAO.LoadComponent();
+            thread = new Thread(ThreadLogo);
+            thread.Start();
         }
 
         /// <summary>
@@ -241,6 +244,7 @@ namespace FrmCore
                 else
                 {
                     DialogResult = DialogResult.Cancel;
+                    ThreadAbort();
                 }
             }
             else if (MessageBox.Show("Are you sure you want to go out?", "EXIT!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
@@ -250,6 +254,18 @@ namespace FrmCore
             else
             {
                 DialogResult = DialogResult.Abort;
+                ThreadAbort();
+            }
+        }
+
+        /// <summary>
+        /// Thread abort
+        /// </summary>
+        private void ThreadAbort()
+        {
+            if (!(thread is null) && this.thread.IsAlive)
+            {
+                this.thread.Abort();
             }
         }
 
@@ -280,7 +296,10 @@ namespace FrmCore
         /// <param name="e"></param>
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FrmInternalOrder());
+            FrmInternalOrder internalOrder = new FrmInternalOrder();
+            internalOrder.ChangeForm += this.ChangeChild;
+            OpenChildForm(internalOrder);
+            //internalOrder.ChangeForm -= this.ChangeChild;
         }
 
         /// <summary>
@@ -290,7 +309,9 @@ namespace FrmCore
         /// <param name="e"></param>
         private void btnAssembly_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FrmAssembly());
+            FrmAssembly assembly = new FrmAssembly();
+            assembly.ChangeForm += this.ChangeChildAssemble;
+            OpenChildForm(assembly);
         }
 
 
@@ -324,17 +345,6 @@ namespace FrmCore
             OpenChildForm(new FrmAbout());
         }
 
-        /// <summary>
-        /// Open the form inside this.form.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void FrmProduction_BackColorChanged(object sender, EventArgs e)
-        {
-            this.btnAssembly.Enabled = true;
-            ButtonAssemblyFormat();
-            OpenChildForm(new FrmAssembly());
-        }
 
         /// <summary>
         /// Close the active form within the central panel.
@@ -386,10 +396,61 @@ namespace FrmCore
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
+        private void FrmProduction_BackColorChanged(object sender, EventArgs e)
+        {
+            this.btnAssembly.Enabled = true;
+            ButtonAssemblyFormat();
+            OpenChildForm(new FrmAssembly());
+        }
+
+        /// <summary>
+        /// Open the form inside this.form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmProduction_TextChanged(object sender, EventArgs e)
         {
             CloseChildForm();
             ButtonAssemblyFalse();
         }
+
+        /// <summary>
+        /// Changes the active child form.
+        /// </summary>
+        /// <param name="type"></param>
+        public void ChangeChild(int type)
+        {
+            this.btnAssembly.Enabled = true;
+            ButtonAssemblyFormat();
+            FrmAssembly assembly = new FrmAssembly();
+            assembly.ChangeForm += this.ChangeChildAssemble;
+            OpenChildForm(assembly);
+        }
+
+        /// <summary>
+        /// Changes the active child form.
+        /// </summary>
+        /// <param name="type"></param>
+        public void ChangeChildAssemble(int type)
+        {
+            CloseChildForm();
+            ButtonAssemblyFalse();
+        }
+
+        /// <summary>
+        /// Play logo.
+        /// </summary>
+        public void ThreadLogo()
+        {            
+            do
+            {
+                for (int i = 1; i < 13; i++)
+                {
+                    this.pnlConnected.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject($"TP4_LOGO_Hilos_{i}");
+                    System.Threading.Thread.Sleep(100);                    
+                }
+            } while (true);
+        }
+
     }
 }

@@ -30,7 +30,7 @@ namespace TestConsola
 
                 // Manual addition of device                
                 CoreSystem.PreviewDevices.Add(new AccessControl(ECode.CNT_A60_ID, EType.AccessControl, EValidation.Finger));
-                CoreSystem.PreviewDevices.Add(new AccessPanel(ECode.CNT_BioPanel_ACC, EType.PanelAccess, 2, EValidation.Finger));
+                CoreSystem.PreviewDevices.Add(new AccessPanel(ECode.CNT_BioPanel_ACC, EType.PanelAccess, EValidation.Finger));
                 CoreSystem.PreviewDevices.Add(new Attendance(ECode.CNT_E7_CR, EType.Attendance, EValidation.Finger));
                 
                 // All data in the list is printed

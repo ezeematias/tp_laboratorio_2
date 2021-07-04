@@ -25,6 +25,18 @@ namespace Library
         }
 
         /// <summary>
+        /// AccessControl builder.
+        /// </summary>
+        /// <param name="serialNumber">Serial Number</param>
+        /// <param name="codeInternal">Code internal for the device</param>
+        /// <param name="typeDevice">Type for the device</param>
+        /// <param name="eValidation">Validation for the device</param>
+        public AccessControl(double serialNumber, ECode codeInternal, EType typeDevice, EValidation eValidation) : base(serialNumber, codeInternal, typeDevice, eValidation)
+        {
+            AddComponent(eValidation);
+        }
+
+        /// <summary>
         /// Add a list of components depending on their validation type.
         /// </summary>
         /// <param name="eValidation">Validation for the device</param>

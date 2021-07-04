@@ -93,7 +93,8 @@ namespace Library
             LoadAttFaceComponents();
             LoadAttFingerComponents();
             LoadPnlFingerComponents();
-            LoadPnlRFIDComponents();
+            LoadPnlRFIDComponents();  
+
         }
 
         /// <summary>
@@ -188,7 +189,7 @@ namespace Library
                         break;
 
                     case EType.PanelAccess:
-                        DeviceAssembly = new AccessPanel(SelectedOrder.NameDevice, EType.PanelAccess, 2, eValidation);
+                        DeviceAssembly = new AccessPanel(SelectedOrder.NameDevice, EType.PanelAccess, eValidation);
                         break;
 
                     case EType.Attendance:

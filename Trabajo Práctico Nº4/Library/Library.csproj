@@ -45,11 +45,11 @@
     <Compile Include="AccessPanel.cs" />
     <Compile Include="Attendance.cs" />
     <Compile Include="Components.cs" />
+    <Compile Include="ComponentsExtension.cs" />
     <Compile Include="CoreSystem.cs" />
     <Compile Include="Device.cs" />
     <Compile Include="Enumerate.cs" />
     <Compile Include="InternalOrder.cs" />
-    <Compile Include="Logo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SerializeSN.cs" />
     <Compile Include="SerialsNumbers.cs" />

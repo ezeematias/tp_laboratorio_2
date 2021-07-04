@@ -61,3 +61,55 @@ Operator: Ezequiel Unía Remove the device CNT_E7_CR S/N: 5000055163 14/06/2021 
 Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055164 14/06/2021 7:47:27
 Operator: Ezequiel Unía Assembly the device CNT_FD10_FC S/N: 4000016001 15/06/2021 15:55:02
 Operator: Ezequiel Unía Assembly the device CNT_FD10_FC S/N: 4000016002 15/06/2021 15:55:04
+Operator: Ezequiel Unía Assembly the device CNT_A60_ID S/N: 4000016003 02/07/2021 23:01:38
+Operator: Ezequiel Unía Assembly the device CNT_BioPanel_ACC S/N: 6000027924 02/07/2021 23:13:43
+Operator: Ezequiel Unía Assembly the device CNT_BioPanel_ACC S/N: 6000027925 02/07/2021 23:13:45
+Operator: Ezequiel Unía Assembly the device CNT_BioPanel_ACC S/N: 6000027926 02/07/2021 23:13:47
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055165 02/07/2021 23:30:15
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055166 02/07/2021 23:30:17
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055167 02/07/2021 23:30:21
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055168 02/07/2021 23:30:23
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055169 03/07/2021 0:13:59
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055170 03/07/2021 0:14:16
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055171 03/07/2021 0:26:13
+Operator: Ezequiel Unía Assembly the device CNT_E7_CR S/N: 5000055172 03/07/2021 0:26:15
+Operator: Ezequiel Unía Assembly the device CNT_A60_ID S/N: 4000016004 03/07/2021 1:39:29
+Operator: Ezequiel Unía Assembly the device CNT_A60_ID S/N: 4000016005 03/07/2021 1:39:39
+ Assembly the device CNT_A60_ID S/N: 4000016006 03/07/2021 3:32:09
+ Assembly the device CNT_A60_ID S/N: 4000016007 03/07/2021 3:32:12
+ Assembly the device CNT_A60_ID S/N: 4000016008 03/07/2021 3:32:49
+ Assembly the device CNT_A60_ID S/N: 4000016009 03/07/2021 3:32:53
+ Assembly the device CNT_E22_ID S/N: 5000055173 03/07/2021 3:36:25
+ Assembly the device CNT_E22_ID S/N: 5000055174 03/07/2021 3:41:05
+ Assembly the device CNT_A9_FC S/N: 4000016010 03/07/2021 3:44:05
+ Assembly the device CNT_FD5_FD S/N: 5000055175 03/07/2021 4:04:40
+ Assembly the device CNT_FD5_FD S/N: 5000055176 03/07/2021 4:04:43
+ Assembly the device CNT_FD5_FD S/N: 5000055177 03/07/2021 4:04:46
+ Assembly the device CNT_FD5_FD S/N: 5000055178 03/07/2021 4:04:49
+ Assembly the device CNT_A9_FC S/N: 4000016011 03/07/2021 4:06:31
+ Assembly the device CNT_A9_FC S/N: 4000016012 03/07/2021 4:06:34
+ Assembly the device CNT_A9_FC S/N: 4000016013 03/07/2021 4:06:36
+ Assembly the device CNT_A9_FC S/N: 4000016014 03/07/2021 4:06:39
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027927 03/07/2021 4:07:32
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027928 03/07/2021 4:07:34
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027929 03/07/2021 4:07:35
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027930 03/07/2021 4:07:36
+ Assembly the device CNT_A60_ID S/N: 4000016015 03/07/2021 4:27:40
+ Assembly the device CNT_E22_ID S/N: 5000055179 03/07/2021 5:01:32
+ Assembly the device CNT_A9_FC S/N: 4000016016 03/07/2021 20:40:54
+ Assembly the device CNT_FD10_FC S/N: 4000016017 03/07/2021 20:41:39
+ Assembly the device CNT_A9_FC S/N: 4000016018 03/07/2021 20:44:35
+ Assembly the device CNT_FD5_FD S/N: 5000055180 03/07/2021 20:46:49
+ Assembly the device CNT_E22_ID S/N: 5000055181 03/07/2021 20:47:32
+ Assembly the device CNT_FD10_FC S/N: 4000016019 03/07/2021 20:48:08
+ Assembly the device CNT_BioPanel_ACC S/N: 6000027931 03/07/2021 20:50:25
+ Assembly the device CNT_BioPanel_ACC S/N: 6000027932 03/07/2021 20:50:27
+ Assembly the device CNT_E7_CR S/N: 5000055182 03/07/2021 20:51:22
+ Assembly the device CNT_BioPanel_ACC S/N: 6000027933 03/07/2021 20:56:18
+ Assembly the device CNT_A60_ID S/N: 4000016020 03/07/2021 21:07:07
+ Assembly the device CNT_A60_ID S/N: 4000016021 03/07/2021 21:07:10
+ Assembly the device CNT_FD10_FC S/N: 5000055183 03/07/2021 21:43:16
+ Assembly the device CNT_BioPanel_ACC S/N: 6000027934 03/07/2021 21:43:33
+ Assembly the device CNT_BioPanel_ACC S/N: 6000027935 03/07/2021 23:31:38
+ Assembly the device CNT_BioPanel_ACC S/N: 6000027936 03/07/2021 23:31:39
+ Assembly the device CNT_BioPanel_ACC S/N: 6000027937 03/07/2021 23:31:41

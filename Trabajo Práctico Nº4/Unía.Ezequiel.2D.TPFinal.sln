@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginOperators", "LoginOper
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Files", "Files\Files.csproj", "{BB2AB11E-CDC1-408D-AC49-E60A20888C37}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQL", "SQL\SQL.csproj", "{8D91754D-DC14-4FBE-9DF9-8C19A8E4A5C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{BB2AB11E-CDC1-408D-AC49-E60A20888C37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB2AB11E-CDC1-408D-AC49-E60A20888C37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB2AB11E-CDC1-408D-AC49-E60A20888C37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D91754D-DC14-4FBE-9DF9-8C19A8E4A5C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D91754D-DC14-4FBE-9DF9-8C19A8E4A5C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D91754D-DC14-4FBE-9DF9-8C19A8E4A5C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D91754D-DC14-4FBE-9DF9-8C19A8E4A5C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

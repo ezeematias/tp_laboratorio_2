@@ -1307,3 +1307,1384 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 02/07/2021 23:13:48
+ Work order Nº 4508
+ -- Performed by -- 
+ Operator: Ezequiel Unía
+
+****************************
+
+ Code       CNT_BioPanel_ACC    
+ Type       PanelAccess         
+ Validation Finger              
+ S/N        6000027924          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        2         
+   > RFID         1         
+
+
+
+****************************
+
+ Code       CNT_BioPanel_ACC    
+ Type       PanelAccess         
+ Validation Finger              
+ S/N        6000027925          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        2         
+   > RFID         1         
+
+
+
+****************************
+
+ Code       CNT_BioPanel_ACC    
+ Type       PanelAccess         
+ Validation Card                
+ S/N        6000027926          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > RFID         1         
+   > Relay        2         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 02/07/2021 23:30:29
+ Work order Nº 4518
+ -- Performed by -- 
+ Operator: Ezequiel Unía
+
+****************************
+
+ Code       CNT_E7_CR           
+ Type       Attendance          
+ Validation Face                
+ S/N        5000055165          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > Face         1         
+   > RFID         1         
+   > Camera       1         
+   > TimeLog      1         
+
+
+
+****************************
+
+ Code       CNT_E7_CR           
+ Type       Attendance          
+ Validation Finger              
+ S/N        5000055166          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > RFID         1         
+   > TimeLog      1         
+
+
+
+****************************
+
+ Code       CNT_E7_CR           
+ Type       Attendance          
+ Validation Face                
+ S/N        5000055167          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > Face         1         
+   > RFID         1         
+   > Camera       1         
+   > TimeLog      1         
+
+
+
+****************************
+
+ Code       CNT_E7_CR           
+ Type       Attendance          
+ Validation Finger              
+ S/N        5000055168          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > RFID         1         
+   > TimeLog      1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 0:14:18
+ Work order Nº 4518
+ -- Performed by -- 
+ Operator: Ezequiel Unía
+
+****************************
+
+ Code       CNT_E7_CR           
+ Type       Attendance          
+ Validation Face                
+ S/N        5000055169          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > Face         1         
+   > RFID         1         
+   > Camera       1         
+   > TimeLog      1         
+
+
+
+****************************
+
+ Code       CNT_E7_CR           
+ Type       Attendance          
+ Validation Face                
+ S/N        5000055170          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > Face         1         
+   > RFID         1         
+   > Camera       1         
+   > TimeLog      1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 0:26:18
+ Work order Nº 4518
+ -- Performed by -- 
+ Operator: Ezequiel Unía
+
+****************************
+
+ Code       CNT_E7_CR           
+ Type       Attendance          
+ Validation Face                
+ S/N        5000055171          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > Face         1         
+   > RFID         1         
+   > Camera       1         
+   > TimeLog      1         
+
+
+
+****************************
+
+ Code       CNT_E7_CR           
+ Type       Attendance          
+ Validation Finger              
+ S/N        5000055172          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > RFID         1         
+   > TimeLog      1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 3:33:12
+ Work order Nº 4515
+ -- Performed by -- 
+ 
+
+****************************
+
+ Code       CNT_A60_ID          
+ Type       AccessControl       
+ Validation Finger              
+ S/N        4000016006          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        1         
+
+
+
+****************************
+
+ Code       CNT_A60_ID          
+ Type       AccessControl       
+ Validation Finger              
+ S/N        4000016007          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        1         
+
+
+
+****************************
+
+ Code       CNT_A60_ID          
+ Type       AccessControl       
+ Validation Finger              
+ S/N        4000016008          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        1         
+
+
+
+****************************
+
+ Code       CNT_A60_ID          
+ Type       AccessControl       
+ Validation Finger              
+ S/N        4000016009          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 3:36:27
+ Work order Nº 4512
+ -- Performed by -- 
+ 
+
+****************************
+
+ Code       CNT_E22_ID          
+ Type       Attendance          
+ Validation Face                
+ S/N        5000055173          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > Face         1         
+   > RFID         1         
+   > Camera       1         
+   > TimeLog      1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 3:42:26
+ Work order Nº 4519
+ -- Performed by -- 
+ 
+
+****************************
+
+ Code       CNT_E22_ID          
+ Type       Attendance          
+ Validation Face                
+ S/N        5000055174          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > Face         1         
+   > RFID         1         
+   > Camera       1         
+   > TimeLog      1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 3:54:03
+ Work order Nº 4517
+ -- Performed by -- 
+ 
+
+****************************
+
+ Code       CNT_A9_FC           
+ Type       AccessControl       
+ Validation Finger              
+ S/N        4000016010          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 4:04:51
+ Work order Nº 4514
+ -- Performed by -- 
+ 
+
+****************************
+
+ Code       CNT_FD5_FD          
+ Type       Attendance          
+ Validation Face                
+ S/N        5000055175          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > Face         1         
+   > RFID         1         
+   > Camera       1         
+   > TimeLog      1         
+
+
+
+****************************
+
+ Code       CNT_FD5_FD          
+ Type       Attendance          
+ Validation Finger              
+ S/N        5000055176          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > RFID         1         
+   > TimeLog      1         
+
+
+
+****************************
+
+ Code       CNT_FD5_FD          
+ Type       Attendance          
+ Validation Face                
+ S/N        5000055177          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > Face         1         
+   > RFID         1         
+   > Camera       1         
+   > TimeLog      1         
+
+
+
+****************************
+
+ Code       CNT_FD5_FD          
+ Type       Attendance          
+ Validation Face                
+ S/N        5000055178          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > Face         1         
+   > RFID         1         
+   > Camera       1         
+   > TimeLog      1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 4:06:41
+ Work order Nº 4507
+ -- Performed by -- 
+ 
+
+****************************
+
+ Code       CNT_A9_FC           
+ Type       AccessControl       
+ Validation Finger              
+ S/N        4000016011          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        1         
+
+
+
+****************************
+
+ Code       CNT_A9_FC           
+ Type       AccessControl       
+ Validation Face                
+ S/N        4000016012          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > Face         1         
+   > Camera       1         
+   > Relay        1         
+
+
+
+****************************
+
+ Code       CNT_A9_FC           
+ Type       AccessControl       
+ Validation Face                
+ S/N        4000016013          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > Face         1         
+   > Camera       1         
+   > Relay        1         
+
+
+
+****************************
+
+ Code       CNT_A9_FC           
+ Type       AccessControl       
+ Validation Finger              
+ S/N        4000016014          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 4:07:39
+ Work order Nº 4522
+ -- Performed by -- 
+ 
+
+****************************
+
+ Code       CNT_ReadPanel_ACC   
+ Type       PanelAccess         
+ Validation Finger              
+ S/N        6000027927          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        2         
+   > RFID         1         
+
+
+
+****************************
+
+ Code       CNT_ReadPanel_ACC   
+ Type       PanelAccess         
+ Validation Card                
+ S/N        6000027928          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > RFID         1         
+   > Relay        2         
+
+
+
+****************************
+
+ Code       CNT_ReadPanel_ACC   
+ Type       PanelAccess         
+ Validation Finger              
+ S/N        6000027929          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        2         
+   > RFID         1         
+
+
+
+****************************
+
+ Code       CNT_ReadPanel_ACC   
+ Type       PanelAccess         
+ Validation Card                
+ S/N        6000027930          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > RFID         1         
+   > Relay        2         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 4:27:41
+ Work order Nº 4515
+ -- Performed by -- 
+ 
+
+****************************
+
+ Code       CNT_A60_ID          
+ Type       AccessControl       
+ Validation Finger              
+ S/N        4000016015          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 5:01:33
+ Work order Nº 4519
+ -- Performed by -- 
+ 
+
+****************************
+
+ Code       CNT_E22_ID          
+ Type       Attendance          
+ Validation Face                
+ S/N        5000055179          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > Face         1         
+   > RFID         1         
+   > Camera       1         
+   > TimeLog      1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 20:40:56
+ Work order Nº 4520
+ -- Performed by -- 
+ 
+
+****************************
+
+ Code       CNT_A9_FC           
+ Type       AccessControl       
+ Validation Finger              
+ S/N        4000016016          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 20:41:40
+ Work order Nº 4521
+ -- Performed by -- 
+ 
+
+****************************
+
+ Code       CNT_FD10_FC         
+ Type       AccessControl       
+ Validation Finger              
+ S/N        4000016017          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 20:44:36
+ Work order Nº 4517
+ -- Performed by -- 
+ 
+
+****************************
+
+ Code       CNT_A9_FC           
+ Type       AccessControl       
+ Validation Finger              
+ S/N        4000016018          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 20:46:50
+ Work order Nº 4514
+ -- Performed by -- 
+ 
+
+****************************
+
+ Code       CNT_FD5_FD          
+ Type       Attendance          
+ Validation Face                
+ S/N        5000055180          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > Face         1         
+   > RFID         1         
+   > Camera       1         
+   > TimeLog      1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 20:47:34
+ Work order Nº 4512
+ -- Performed by -- 
+ 
+
+****************************
+
+ Code       CNT_E22_ID          
+ Type       Attendance          
+ Validation Face                
+ S/N        5000055181          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > Face         1         
+   > RFID         1         
+   > Camera       1         
+   > TimeLog      1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 20:48:13
+ Work order Nº 4509
+ -- Performed by -- 
+ 
+
+****************************
+
+ Code       CNT_FD10_FC         
+ Type       AccessControl       
+ Validation Finger              
+ S/N        4000016019          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 20:50:29
+ Work order Nº 4516
+ -- Performed by -- 
+ 
+
+****************************
+
+ Code       CNT_BioPanel_ACC    
+ Type       PanelAccess         
+ Validation Finger              
+ S/N        6000027931          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        2         
+   > RFID         1         
+
+
+
+****************************
+
+ Code       CNT_BioPanel_ACC    
+ Type       PanelAccess         
+ Validation Finger              
+ S/N        6000027932          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        2         
+   > RFID         1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 20:51:26
+ Work order Nº 4518
+ -- Performed by -- 
+ 
+
+****************************
+
+ Code       CNT_E7_CR           
+ Type       Attendance          
+ Validation Face                
+ S/N        5000055182          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > Face         1         
+   > RFID         1         
+   > Camera       1         
+   > TimeLog      1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 20:56:38
+ Work order Nº 4516
+ -- Performed by -- 
+ 
+
+****************************
+
+ Code       CNT_BioPanel_ACC    
+ Type       PanelAccess         
+ Validation Finger              
+ S/N        6000027933          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        2         
+   > RFID         1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 21:07:13
+ Work order Nº 4506
+ -- Performed by -- 
+ 
+
+****************************
+
+ Code       CNT_A60_ID          
+ Type       AccessControl       
+ Validation Finger              
+ S/N        4000016020          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        1         
+
+
+
+****************************
+
+ Code       CNT_A60_ID          
+ Type       AccessControl       
+ Validation Finger              
+ S/N        4000016021          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 21:43:21
+ Work order Nº 5162
+ -- Performed by -- 
+ 
+
+****************************
+
+ Code       CNT_FD10_FC         
+ Type       Attendance          
+ Validation Face                
+ S/N        5000055183          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > Face         1         
+   > RFID         1         
+   > Camera       1         
+   > TimeLog      1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 21:43:37
+ Work order Nº 5157
+ -- Performed by -- 
+ 
+
+****************************
+
+ Code       CNT_BioPanel_ACC    
+ Type       PanelAccess         
+ Validation Finger              
+ S/N        6000027934          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        2         
+   > RFID         1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 03/07/2021 23:31:42
+ Work order Nº 5168
+ -- Performed by -- 
+ 
+
+****************************
+
+ Code       CNT_BioPanel_ACC    
+ Type       PanelAccess         
+ Validation Finger              
+ S/N        6000027935          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        2         
+   > RFID         1         
+
+
+
+****************************
+
+ Code       CNT_BioPanel_ACC    
+ Type       PanelAccess         
+ Validation Finger              
+ S/N        6000027936          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        2         
+   > RFID         1         
+
+
+
+****************************
+
+ Code       CNT_BioPanel_ACC    
+ Type       PanelAccess         
+ Validation Card                
+ S/N        6000027937          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > RFID         1         
+   > Relay        2         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+

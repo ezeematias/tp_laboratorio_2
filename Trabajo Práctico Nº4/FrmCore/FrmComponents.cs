@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Library;
+using SQL;
 
 namespace FrmCore
 {
@@ -30,8 +31,7 @@ namespace FrmCore
         {
             try
             {
-                this.lblErrorList.Visible = false;
-                Stock.ReadComponents();
+                this.lblErrorList.Visible = false;                              
                 this.dgvComponents.DataSource = Stock.ComponentsStock;
             }
             catch (Exception ex)
@@ -53,11 +53,13 @@ namespace FrmCore
         {
             try
             {
-                if ((Components)this.dgvComponents.CurrentRow.DataBoundItem + (int)this.nudCountComponents.Value)
+                Components components = (Components)this.dgvComponents.CurrentRow.DataBoundItem;
+                int newCount = (int)this.nudCountComponents.Value;
+                if (components + newCount)
                 {
                     this.dgvComponents.DataSource = null;
                     this.dgvComponents.DataSource = Stock.ComponentsStock;
-                    Stock.SaveComponents();
+                    DAO.ModifyComponent(Stock.ComponentsStock.DataExtension(components.NameComponent.ToString()));                    
                 }
             }
             catch (Exception ex)
