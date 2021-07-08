@@ -54,6 +54,7 @@ namespace FrmCore
             this.lblSerialNumberText = new System.Windows.Forms.Label();
             this.lblSerialNumber = new System.Windows.Forms.Label();
             this.lblErrorList = new System.Windows.Forms.Label();
+            this.pgbStatusOrder = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
             this.pnlButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPreview)).BeginInit();
@@ -182,13 +183,13 @@ namespace FrmCore
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPreview.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvPreview.Location = new System.Drawing.Point(60, 270);
+            this.dgvPreview.Location = new System.Drawing.Point(60, 297);
             this.dgvPreview.MultiSelect = false;
             this.dgvPreview.Name = "dgvPreview";
             this.dgvPreview.ReadOnly = true;
             this.dgvPreview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgvPreview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPreview.Size = new System.Drawing.Size(643, 176);
+            this.dgvPreview.Size = new System.Drawing.Size(643, 149);
             this.dgvPreview.TabIndex = 2;
             // 
             // btnAddDevice
@@ -457,6 +458,15 @@ namespace FrmCore
             this.lblErrorList.TabIndex = 8;
             this.lblErrorList.Text = "Error to charged list";
             // 
+            // pgbStatusOrder
+            // 
+            this.pgbStatusOrder.BackColor = System.Drawing.Color.DimGray;
+            this.pgbStatusOrder.ForeColor = System.Drawing.Color.Indigo;
+            this.pgbStatusOrder.Location = new System.Drawing.Point(60, 268);
+            this.pgbStatusOrder.Name = "pgbStatusOrder";
+            this.pgbStatusOrder.Size = new System.Drawing.Size(643, 23);
+            this.pgbStatusOrder.TabIndex = 9;
+            // 
             // FrmAssembly
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -464,6 +474,7 @@ namespace FrmCore
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(774, 529);
+            this.Controls.Add(this.pgbStatusOrder);
             this.Controls.Add(this.lblErrorList);
             this.Controls.Add(this.lblSerialNumberText);
             this.Controls.Add(this.lblSerialNumber);
@@ -518,5 +529,6 @@ namespace FrmCore
         private System.Windows.Forms.Label lblSerialNumberText;
         private System.Windows.Forms.Label lblSerialNumber;
         private System.Windows.Forms.Label lblErrorList;
+        private System.Windows.Forms.ProgressBar pgbStatusOrder;
     }
 }

@@ -113,3 +113,27 @@ Operator: Ezequiel Unía Assembly the device CNT_A60_ID S/N: 4000016005 03/07/20
  Assembly the device CNT_BioPanel_ACC S/N: 6000027935 03/07/2021 23:31:38
  Assembly the device CNT_BioPanel_ACC S/N: 6000027936 03/07/2021 23:31:39
  Assembly the device CNT_BioPanel_ACC S/N: 6000027937 03/07/2021 23:31:41
+ Assembly the device CNT_A9_FC S/N: 4000016022 04/07/2021 1:47:57
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027938 04/07/2021 2:08:21
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027939 04/07/2021 2:08:26
+ Assembly the device CNT_A9_FC S/N: 4000016023 04/07/2021 2:09:38
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027940 04/07/2021 2:10:20
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027941 04/07/2021 2:12:07
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027942 04/07/2021 2:13:38
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027943 04/07/2021 2:14:32
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027944 04/07/2021 2:14:59
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027945 04/07/2021 2:16:00
+ Assembly the device CNT_E7_CR S/N: 5000055184 04/07/2021 2:16:41
+ Assembly the device CNT_E7_CR S/N: 5000055185 04/07/2021 2:17:08
+ Assembly the device CNT_FD10_FC S/N: 5000055186 04/07/2021 2:19:01
+ Assembly the device CNT_FD10_FC S/N: 5000055187 04/07/2021 2:20:51
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027946 04/07/2021 2:21:50
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027947 04/07/2021 2:22:46
+ Assembly the device CNT_E22_ID S/N: 5000055188 04/07/2021 2:25:39
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027948 04/07/2021 2:28:07
+ Assembly the device CNT_FD10_FC S/N: 5000055189 04/07/2021 2:49:51
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027949 04/07/2021 2:50:50
+ Assembly the device CNT_E7_CR S/N: 5000055190 04/07/2021 2:51:52
+ Assembly the device CNT_E22_ID S/N: 5000055191 04/07/2021 2:55:26
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027950 04/07/2021 3:03:57
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027951 04/07/2021 3:11:49

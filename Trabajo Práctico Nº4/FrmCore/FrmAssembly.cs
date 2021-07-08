@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Library;
 using SQL;
+using System.Threading;
 
 namespace FrmCore
 {
@@ -16,7 +17,7 @@ namespace FrmCore
 
     public partial class FrmAssembly : Form
     {
-        public event CallBackAssembly ChangeForm;
+        public event CallBackAssembly ChangeForm;  
 
         private EType eType;
         private EValidation eValidation;

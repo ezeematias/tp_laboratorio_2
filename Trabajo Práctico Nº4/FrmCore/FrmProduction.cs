@@ -298,8 +298,7 @@ namespace FrmCore
         {
             FrmInternalOrder internalOrder = new FrmInternalOrder();
             internalOrder.ChangeForm += this.ChangeChild;
-            OpenChildForm(internalOrder);
-            //internalOrder.ChangeForm -= this.ChangeChild;
+            OpenChildForm(internalOrder);            
         }
 
         /// <summary>
@@ -451,6 +450,5 @@ namespace FrmCore
                 }
             } while (true);
         }
-
     }
 }

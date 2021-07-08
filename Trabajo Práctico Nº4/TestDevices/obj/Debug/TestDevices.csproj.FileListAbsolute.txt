@@ -11,3 +11,16 @@ C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\R
 C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\TestDevices\obj\Debug\TestDevices.csproj.CopyComplete
 C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\TestDevices\obj\Debug\TestDevices.dll
 C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº3\TestDevices\obj\Debug\TestDevices.pdb
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº4\TestDevices\bin\Debug\TestDevices.dll
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº4\TestDevices\bin\Debug\TestDevices.pdb
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº4\TestDevices\bin\Debug\Library.dll
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº4\TestDevices\bin\Debug\LoginOperators.dll
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº4\TestDevices\bin\Debug\Files.dll
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº4\TestDevices\bin\Debug\Library.pdb
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº4\TestDevices\bin\Debug\LoginOperators.pdb
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº4\TestDevices\bin\Debug\Files.pdb
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº4\TestDevices\obj\Debug\TestDevices.csprojAssemblyReference.cache
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº4\TestDevices\obj\Debug\TestDevices.csproj.CoreCompileInputs.cache
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº4\TestDevices\obj\Debug\TestDevices.csproj.CopyComplete
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº4\TestDevices\obj\Debug\TestDevices.dll
+C:\Users\peque\Desktop\UTN\SEGUNDO CUATRIMESTRE\LABORATORIO Y PROGRAMACIÓN II\REPOSITORIOS\tp_laboratorio_2\Trabajo Práctico Nº4\TestDevices\obj\Debug\TestDevices.pdb
