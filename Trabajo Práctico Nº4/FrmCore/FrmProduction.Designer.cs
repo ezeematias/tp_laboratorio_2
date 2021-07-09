@@ -83,7 +83,7 @@ namespace FrmCore
             this.btnAbout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(44)))), ((int)(((byte)(71)))));
             this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAbout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbout.ForeColor = System.Drawing.Color.Silver;
+            this.btnAbout.ForeColor = System.Drawing.Color.Gray;
             this.btnAbout.Location = new System.Drawing.Point(0, 406);
             this.btnAbout.Margin = new System.Windows.Forms.Padding(1, 3, 3, 3);
             this.btnAbout.Name = "btnAbout";
@@ -94,6 +94,8 @@ namespace FrmCore
             this.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAbout.UseVisualStyleBackColor = false;
             this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
+            this.btnAbout.MouseLeave += new System.EventHandler(this.btnAbout_MouseLeave);
+            this.btnAbout.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnAbout_MouseMove);
             // 
             // pnlSubMenuStock
             // 
@@ -153,7 +155,7 @@ namespace FrmCore
             this.btnStock.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(44)))), ((int)(((byte)(71)))));
             this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStock.ForeColor = System.Drawing.Color.Silver;
+            this.btnStock.ForeColor = System.Drawing.Color.Gray;
             this.btnStock.Location = new System.Drawing.Point(0, 283);
             this.btnStock.Margin = new System.Windows.Forms.Padding(1, 3, 3, 3);
             this.btnStock.Name = "btnStock";
@@ -225,7 +227,7 @@ namespace FrmCore
             this.btnOptions.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(44)))), ((int)(((byte)(71)))));
             this.btnOptions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOptions.ForeColor = System.Drawing.Color.Silver;
+            this.btnOptions.ForeColor = System.Drawing.Color.Gray;
             this.btnOptions.Location = new System.Drawing.Point(0, 518);
             this.btnOptions.Margin = new System.Windows.Forms.Padding(1, 3, 3, 3);
             this.btnOptions.Name = "btnOptions";
@@ -248,7 +250,7 @@ namespace FrmCore
             this.btnAssembly.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(44)))), ((int)(((byte)(71)))));
             this.btnAssembly.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAssembly.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAssembly.ForeColor = System.Drawing.Color.Silver;
+            this.btnAssembly.ForeColor = System.Drawing.Color.Gray;
             this.btnAssembly.Location = new System.Drawing.Point(0, 240);
             this.btnAssembly.Margin = new System.Windows.Forms.Padding(1, 3, 3, 3);
             this.btnAssembly.Name = "btnAssembly";
@@ -271,7 +273,7 @@ namespace FrmCore
             this.btnOrder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(44)))), ((int)(((byte)(71)))));
             this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrder.ForeColor = System.Drawing.Color.Silver;
+            this.btnOrder.ForeColor = System.Drawing.Color.Gray;
             this.btnOrder.Location = new System.Drawing.Point(0, 197);
             this.btnOrder.Margin = new System.Windows.Forms.Padding(1, 3, 3, 3);
             this.btnOrder.Name = "btnOrder";
@@ -359,8 +361,6 @@ namespace FrmCore
             this.Text = "CONNECTED - Production";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmProduction_FormClosing);
             this.Load += new System.EventHandler(this.FrmProduction_Load);
-            this.BackColorChanged += new System.EventHandler(this.FrmProduction_BackColorChanged);
-            this.TextChanged += new System.EventHandler(this.FrmProduction_TextChanged);
             this.pnlSideMenu.ResumeLayout(false);
             this.pnlSubMenuStock.ResumeLayout(false);
             this.pnlSubMenuOptions.ResumeLayout(false);

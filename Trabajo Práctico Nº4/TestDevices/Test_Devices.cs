@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using Library;
 using LoginOperators;
+using SQL;
 
 namespace TestDevices
 {
@@ -94,11 +95,22 @@ namespace TestDevices
             Stock.DevicesStock.Clear();
             Stock.ReadDevices();
 
-            //Assert        
+            //Assert
             Assert.IsNotNull(Stock.DevicesStock);
             Assert.IsTrue(Stock.DevicesStock == accessPanel);
             Assert.IsTrue(Stock.DevicesStock == attendance);
             Assert.IsFalse(Stock.DevicesStock != accessControl);
+        }
+
+        /// <summary>
+        /// It is verified that if the user does not exist in the database, 
+        /// the error exception is activated in the login
+        /// </summary>
+        [TestMethod]
+        [ExpectedException(typeof(LoginErrorException))]
+        public void Test_LoginErrorException()
+        {       
+            DAO.LoginOprator("0000", "0000");
         }
     }
 }

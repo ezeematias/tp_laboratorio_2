@@ -45,7 +45,7 @@
     <Compile Include="AccessPanel.cs" />
     <Compile Include="Attendance.cs" />
     <Compile Include="Components.cs" />
-    <Compile Include="ComponentsExtension.cs" />
+    <Compile Include="ExtensionMethods.cs" />
     <Compile Include="CoreSystem.cs" />
     <Compile Include="Device.cs" />
     <Compile Include="Enumerate.cs" />

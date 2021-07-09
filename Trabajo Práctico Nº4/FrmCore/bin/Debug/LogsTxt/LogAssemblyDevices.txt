@@ -137,3 +137,31 @@ Operator: Ezequiel Unía Assembly the device CNT_A60_ID S/N: 4000016005 03/07/20
  Assembly the device CNT_E22_ID S/N: 5000055191 04/07/2021 2:55:26
  Assembly the device CNT_ReadPanel_ACC S/N: 6000027950 04/07/2021 3:03:57
  Assembly the device CNT_ReadPanel_ACC S/N: 6000027951 04/07/2021 3:11:49
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027952 08/07/2021 21:29:44
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027953 08/07/2021 22:08:55
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027954 08/07/2021 22:08:57
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027955 08/07/2021 22:09:00
+ Assembly the device CNT_E7_CR S/N: 5000055192 08/07/2021 22:10:23
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027956 08/07/2021 22:10:40
+ Assembly the device CNT_E7_CR S/N: 5000055193 08/07/2021 22:11:43
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027957 08/07/2021 22:11:57
+ Assembly the device CNT_A9_FC S/N: 4000016024 08/07/2021 22:14:48
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027958 08/07/2021 22:15:23
+ Assembly the device CNT_E22_ID S/N: 5000055194 08/07/2021 22:16:25
+ Assembly the device CNT_E22_ID S/N: 5000055195 08/07/2021 22:16:33
+ Assembly the device CNT_FD10_FC S/N: 5000055196 08/07/2021 22:17:02
+ Assembly the device CNT_FD10_FC S/N: 5000055197 08/07/2021 22:17:05
+ Assembly the device CNT_FD10_FC S/N: 5000055198 08/07/2021 22:17:06
+ Assembly the device CNT_A60_ID S/N: 4000016025 08/07/2021 22:21:19
+ Assembly the device CNT_A9_FC S/N: 4000016026 08/07/2021 22:23:32
+ Assembly the device CNT_A9_FC S/N: 4000016027 08/07/2021 22:28:11
+ Assembly the device CNT_A9_FC S/N: 4000016028 08/07/2021 22:28:15
+ Assembly the device CNT_E7_CR S/N: 5000055199 08/07/2021 22:29:03
+ Assembly the device CNT_E7_CR S/N: 5000055200 08/07/2021 22:29:05
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027959 08/07/2021 22:32:32
+ Assembly the device CNT_ReadPanel_ACC S/N: 6000027960 08/07/2021 22:32:36
+Operator: Federico Dávila Assembly the device CNT_A9_FC S/N: 4000016029 09/07/2021 12:05:36
+Operator: Federico Dávila Assembly the device CNT_ReadPanel_ACC S/N: 6000027961 09/07/2021 13:12:56
+Operator: Federico Dávila Assembly the device CNT_BioPanel_ACC S/N: 6000027962 09/07/2021 13:23:43
+Operator: Federico Dávila Assembly the device CNT_A60_ID S/N: 4000016030 09/07/2021 13:24:01
+Operator: Ezequiel Unía Assembly the device CNT_A60_ID S/N: 4000016031 09/07/2021 14:23:23

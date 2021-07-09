@@ -57,6 +57,10 @@
       <Project>{70d13d2a-5fa7-4095-a1fa-cb667641154d}</Project>
       <Name>LoginOperators</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SQL\SQL.csproj">
+      <Project>{8d91754d-dc14-4fbe-9df9-8c19a8e4a5c3}</Project>
+      <Name>SQL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

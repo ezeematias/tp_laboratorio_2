@@ -465,6 +465,7 @@ namespace FrmCore
             this.pgbStatusOrder.Location = new System.Drawing.Point(60, 268);
             this.pgbStatusOrder.Name = "pgbStatusOrder";
             this.pgbStatusOrder.Size = new System.Drawing.Size(643, 23);
+            this.pgbStatusOrder.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.pgbStatusOrder.TabIndex = 9;
             // 
             // FrmAssembly

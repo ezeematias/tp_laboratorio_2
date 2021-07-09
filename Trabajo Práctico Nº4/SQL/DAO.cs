@@ -5,13 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Library;
+using LoginOperators;
 
 namespace SQL
 {
     public static class DAO
     {
         static string connectionStr = "Server = .; Database = Connected_db; Trusted_Connection = true;";
-        //TODO: Comentar todos los métodos - DAO
+
+        /// <summary>
+        /// Save the list of devices in the database.
+        /// </summary>
+        /// <param name="devices">List devices</param>
         public static void SaveDevice(List<Device> devices)
         {
             try
@@ -40,6 +45,10 @@ namespace SQL
             }
         }
 
+        /// <summary>
+        /// Load the list of devices in the database.
+        /// </summary>
+        /// <returns>List devices</returns>
         public static List<Device> LoadDevice()
         {
             List<Device> devices = new List<Device>();
@@ -82,6 +91,10 @@ namespace SQL
             }
         }
 
+        /// <summary>
+        /// Save the list of components in the database.
+        /// </summary>
+        /// <param name="devices">List devices</param>
         public static void SaveComponents(List<Components> components)
         {
             try
@@ -108,6 +121,10 @@ namespace SQL
             }
         }
 
+        /// <summary>
+        /// Load the list of components in the database.
+        /// </summary>
+        /// <returns>List components</returns>
         public static List<Components> LoadComponent()
         {
             List<Components> components = new List<Components>();
@@ -137,6 +154,11 @@ namespace SQL
             }
         }
 
+        /// <summary>
+        /// Updates the component information in the database.
+        /// </summary>
+        /// <param name="components">Components</param>
+        /// <returns>True or False</returns>
         public static bool ModifyComponent(Components components)
         {
             try
@@ -161,6 +183,11 @@ namespace SQL
             }
         }
 
+        /// <summary>
+        /// Updates the information in the list of components in the database.
+        /// </summary>
+        /// <param name="components">List components</param>
+        /// <returns>True or False</returns>
         public static bool ModifyListComponents(List<Components> components)
         {
             try
@@ -178,11 +205,53 @@ namespace SQL
             }
         }
 
-        //TODO: Armar login
-
-
-
-
-
+        /// <summary>
+        /// Login the user to the program.
+        /// </summary>
+        /// <param name="user">ID User</param>
+        /// <param name="pass">Password</param>
+        /// <returns>True or False</returns>
+        public static bool LoginOprator(string user, string pass)
+        {
+            try
+            {
+                bool output = false;
+                using (SqlConnection connection = new SqlConnection(connectionStr))
+                {
+                    connection.Open();
+                    SqlCommand sqlCommand = new SqlCommand();
+                    sqlCommand.CommandType = System.Data.CommandType.Text;
+                    sqlCommand.Connection = connection;
+                    sqlCommand.CommandText = $"SELECT * FROM operator WHERE id = @id AND pass = @pass";
+                    sqlCommand.Parameters.AddWithValue("@id", user);
+                    sqlCommand.Parameters.AddWithValue("@pass", pass);
+                    using (SqlDataReader dataReader = sqlCommand.ExecuteReader())
+                    {
+                        if (dataReader.Read() != false)
+                        {                           
+                            Login.OperatorLog = new Operator(dataReader["name"].ToString(), dataReader["lastName"].ToString(), Convert.ToInt32(dataReader["id"]), Convert.ToInt32(dataReader["pass"])); ;
+                            output = true;
+                        }
+                        else
+                        {
+                            throw new Exception("No read data");
+                        }
+                    }
+                    sqlCommand.Parameters.Clear();
+                    return output;
+                }                
+            }
+            catch (SqlException)
+            {
+                throw new Exception("Database must be loaded before logging in");
+            }
+            catch (Exception)
+            {
+                throw new LoginErrorException();
+            }              
+        }
     }
 }
+
+
+

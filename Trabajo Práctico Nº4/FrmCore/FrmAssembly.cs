@@ -13,11 +13,10 @@ using System.Threading;
 
 namespace FrmCore
 {
-    public delegate void CallBackAssembly(int type);
-
+    public delegate void CallBackAssembly();
     public partial class FrmAssembly : Form
     {
-        public event CallBackAssembly ChangeForm;  
+        public event CallBackAssembly ChangeForm;
 
         private EType eType;
         private EValidation eValidation;
@@ -39,8 +38,8 @@ namespace FrmCore
         private void FrmAssembly_Load(object sender, EventArgs e)
         {
             try
-            {
-                this.lblErrorList.Visible = false;
+            { 
+                this.lblErrorList.Visible = false;                
                 LoadOrderSelected();
                 HideSubMenu();
                 EnableButtons();
@@ -57,6 +56,11 @@ namespace FrmCore
                 this.Enabled = false;
                 MessageBox.Show(ex.Message, "NO DATA DEVICES!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public void ProgressBarDevices(object o)
+        {        
+            this.pgbStatusOrder.Value = CoreSystem.ListAssembly.Count / CoreSystem.InternalOrders.Count * 100;        
         }
 
         /// <summary>
@@ -94,9 +98,10 @@ namespace FrmCore
                         {
                             CoreSystem.LoadDevices(eType, eValidation);
                             CoreSystem.PreviewDevices.Add(CoreSystem.DeviceAssembly);
+                            this.pgbStatusOrder.Value = (int)((float)CoreSystem.PreviewDevices.Count / CoreSystem.SelectedOrder.CountDevice * 100);
                             Device.SaveLogDevices(CoreSystem.DeviceAssembly, "Assembly");
                             CoreSystem.DeviceAssembly = null;
-                            SerialsNumbers.SaveSerialsNumbers();
+                            SerialsNumbers.SaveSerialsNumbers();                            
                             DAO.ModifyListComponents(Stock.ComponentsStock);
                             PressButton();
                             LoadListAssembly();
@@ -482,7 +487,7 @@ namespace FrmCore
         {
             if (!(this.ChangeForm is null))
             {
-                this.ChangeForm.Invoke(2);
+                this.ChangeForm.Invoke();
             }
         }
     }

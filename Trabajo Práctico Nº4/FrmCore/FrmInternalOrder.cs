@@ -11,8 +11,7 @@ using Library;
 
 namespace FrmCore
 {
-    public delegate void CallBackOrder(int type);
-
+    public delegate void CallBackOrder();
     public partial class FrmInternalOrder : Form
     {
         public event CallBackOrder ChangeForm;
@@ -51,6 +50,21 @@ namespace FrmCore
         {
             try
             {
+                SelectedOrder();
+            }
+            catch (Exception ex)
+            {
+                this.lblErrorList.Text = ex.Message;
+            }
+        }
+
+        /// <summary>
+        /// Selected order
+        /// </summary>
+        private void SelectedOrder()
+        {
+            try
+            {
                 if (CoreSystem.InternalOrders is null)
                 {
                     this.lblErrorList.Visible = true;
@@ -71,11 +85,10 @@ namespace FrmCore
                 {
                     ChangeInternalOrder();
                 }
-
             }
             catch (Exception ex)
             {
-                this.lblErrorList.Text = ex.Message;
+                throw new Exception (ex.Message);
             }
         }
 
@@ -118,7 +131,24 @@ namespace FrmCore
         {
             if (!(this.ChangeForm is null))
             {
-                this.ChangeForm.Invoke(1);
+                this.ChangeForm.Invoke();
+            }
+        }
+
+        /// <summary>
+        /// Loads the selected device in the selected order.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void dgvInternalOrder_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                SelectedOrder();
+            }
+            catch (Exception ex)
+            {
+                this.lblErrorList.Text = ex.Message;
             }
         }
     }

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    public static class ComponentsExtension
+    public static class ExtensionMethods
     {
         /// <summary>
         /// Extension of a list of components where it compares the received name and returns the item from the list.
         /// </summary>
         /// <param name="components"> List Components</param>
         /// <param name="name">Component name</param>
-        /// <returns></returns>
+        /// <returns>Component</returns>
         public static Components DataExtension(this List<Components> components, string name)
         {
             foreach (Components item in components)
@@ -25,6 +25,5 @@ namespace Library
             }
             return null;
         }
-
     }
 }

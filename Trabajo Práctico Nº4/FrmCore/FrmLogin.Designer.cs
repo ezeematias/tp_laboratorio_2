@@ -38,6 +38,7 @@ namespace FrmCore
             this.tbxUser = new System.Windows.Forms.TextBox();
             this.tbxPass = new System.Windows.Forms.TextBox();
             this.llbPass = new System.Windows.Forms.LinkLabel();
+            this.lblIncorrect = new System.Windows.Forms.Label();
             this.pnlBack.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -153,6 +154,20 @@ namespace FrmCore
             this.llbPass.Text = "Did you forget your password?";
             this.llbPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbPass_LinkClicked);
             // 
+            // lblIncorrect
+            // 
+            this.lblIncorrect.AutoSize = true;
+            this.lblIncorrect.BackColor = System.Drawing.Color.Transparent;
+            this.lblIncorrect.CausesValidation = false;
+            this.lblIncorrect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIncorrect.ForeColor = System.Drawing.Color.Red;
+            this.lblIncorrect.Location = new System.Drawing.Point(293, 92);
+            this.lblIncorrect.Name = "lblIncorrect";
+            this.lblIncorrect.Size = new System.Drawing.Size(165, 16);
+            this.lblIncorrect.TabIndex = 9;
+            this.lblIncorrect.Text = "Incorrect user or password";
+            this.lblIncorrect.Visible = false;
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,6 +176,7 @@ namespace FrmCore
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(689, 330);
+            this.Controls.Add(this.lblIncorrect);
             this.Controls.Add(this.llbPass);
             this.Controls.Add(this.tbxPass);
             this.Controls.Add(this.pnlBack);
@@ -193,6 +209,7 @@ namespace FrmCore
         private System.Windows.Forms.TextBox tbxUser;
         private System.Windows.Forms.TextBox tbxPass;
         private System.Windows.Forms.LinkLabel llbPass;
+        private System.Windows.Forms.Label lblIncorrect;
     }
 }
 

@@ -36,13 +36,19 @@ namespace FrmCore
         /// <param name="e"></param>
         private void FrmProduction_Load(object sender, EventArgs e)
         {
-            //TODO: Descomentar para mostrar el nombre del operador
-            //this.lblTitleOperator.Text = Login.OperatorLog.ToString();
-            ButtonAssemblyFalse();
-            Stock.DevicesStock = DAO.LoadDevice();
-            Stock.ComponentsStock = DAO.LoadComponent();
-            thread = new Thread(ThreadLogo);
-            thread.Start();
+            try
+            {                
+                this.lblTitleOperator.Text = Login.OperatorLog.ToString();
+                ButtonAssemblyFalse();
+                Stock.DevicesStock = DAO.LoadDevice();
+                Stock.ComponentsStock = DAO.LoadComponent();
+                thread = new Thread(ThreadLogo);
+                thread.Start();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR DATA BASE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         /// <summary>
@@ -164,6 +170,26 @@ namespace FrmCore
         private void btnOptions_MouseMove(object sender, MouseEventArgs e)
         {
             ButtonFormatColorMove(this.btnOptions);
+        }
+
+        /// <summary>
+        /// Button text design when hovering.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAbout_MouseLeave(object sender, EventArgs e)
+        {
+            ButtonFormatColorLeave(this.btnAbout);
+        }
+
+        /// <summary>
+        /// Button text design when hovering.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAbout_MouseMove(object sender, MouseEventArgs e)
+        {
+            ButtonFormatColorMove(this.btnAbout);
         }
 
         /// <summary>
@@ -298,7 +324,7 @@ namespace FrmCore
         {
             FrmInternalOrder internalOrder = new FrmInternalOrder();
             internalOrder.ChangeForm += this.ChangeChild;
-            OpenChildForm(internalOrder);            
+            OpenChildForm(internalOrder);
         }
 
         /// <summary>
@@ -391,33 +417,9 @@ namespace FrmCore
         }
 
         /// <summary>
-        /// Open the form inside this.form.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void FrmProduction_BackColorChanged(object sender, EventArgs e)
-        {
-            this.btnAssembly.Enabled = true;
-            ButtonAssemblyFormat();
-            OpenChildForm(new FrmAssembly());
-        }
-
-        /// <summary>
-        /// Open the form inside this.form.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void FrmProduction_TextChanged(object sender, EventArgs e)
-        {
-            CloseChildForm();
-            ButtonAssemblyFalse();
-        }
-
-        /// <summary>
         /// Changes the active child form.
         /// </summary>
-        /// <param name="type"></param>
-        public void ChangeChild(int type)
+        public void ChangeChild()
         {
             this.btnAssembly.Enabled = true;
             ButtonAssemblyFormat();
@@ -429,8 +431,7 @@ namespace FrmCore
         /// <summary>
         /// Changes the active child form.
         /// </summary>
-        /// <param name="type"></param>
-        public void ChangeChildAssemble(int type)
+        public void ChangeChildAssemble()
         {
             CloseChildForm();
             ButtonAssemblyFalse();
@@ -440,15 +441,16 @@ namespace FrmCore
         /// Play logo.
         /// </summary>
         public void ThreadLogo()
-        {            
+        {
             do
             {
                 for (int i = 1; i < 13; i++)
                 {
                     this.pnlConnected.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject($"TP4_LOGO_Hilos_{i}");
-                    System.Threading.Thread.Sleep(100);                    
+                    System.Threading.Thread.Sleep(100);
                 }
             } while (true);
         }
+
     }
 }

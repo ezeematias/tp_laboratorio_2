@@ -81,6 +81,7 @@ namespace FrmCore
             this.dgvInternalOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInternalOrder.Size = new System.Drawing.Size(568, 371);
             this.dgvInternalOrder.TabIndex = 4;
+            this.dgvInternalOrder.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvInternalOrder_CellMouseDoubleClick);
             // 
             // btnAceptOrder
             // 

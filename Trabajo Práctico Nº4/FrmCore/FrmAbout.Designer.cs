@@ -79,7 +79,7 @@ namespace FrmCore
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(273, 33);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Practical Work No.3";
+            this.label2.Text = "Practical Work No.4";
             // 
             // label4
             // 

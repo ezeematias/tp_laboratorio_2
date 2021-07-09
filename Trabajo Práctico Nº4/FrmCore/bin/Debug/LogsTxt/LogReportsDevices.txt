@@ -2688,3 +2688,67 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 09/07/2021 12:05:47
+ Work order Nº 5165
+ -- Performed by -- 
+ Operator: Federico Dávila
+
+****************************
+
+ Code       CNT_A9_FC           
+ Type       AccessControl       
+ Validation Face                
+ S/N        4000016029          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > Face         1         
+   > Camera       1         
+   > Relay        1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ > 09/07/2021 13:12:59
+ Work order Nº 5164
+ -- Performed by -- 
+ Operator: Federico Dávila
+
+****************************
+
+ Code       CNT_ReadPanel_ACC   
+ Type       PanelAccess         
+ Validation Finger              
+ S/N        6000027961          
+
+----- Components -----------
+
+   > Mother       1         
+   > Core         10        
+   > Package      10        
+   > Case         10        
+   > Display      10        
+   > Keyboard     10        
+   > Led          10        
+   > Sound        2         
+   > RFID         1         
+   > FingerPrint  1         
+   > Relay        2         
+   > RFID         1         
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+

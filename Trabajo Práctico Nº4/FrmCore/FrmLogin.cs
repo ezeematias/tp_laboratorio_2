@@ -10,14 +10,12 @@ using System.Windows.Forms;
 using Library;
 using System.IO;
 using LoginOperators;
+using SQL;
 
 namespace FrmCore
 {
     public partial class FrmLogin : Form
     {
-        //TODO: Meter los operadores en la DB y armar bien el login. 
-        //TODO: Ver si armo un Register de operadores.
-
         /// <summary>
         /// Builder default.
         /// </summary>
@@ -36,10 +34,11 @@ namespace FrmCore
             SetTextBox();
             try
             {
+                this.lblIncorrect.Visible = false;                
                 Operator.ReadOperator();
             }
             catch (Exception ex)
-            {                
+            {
                 MessageBox.Show("Operator database not found. You must be logged in as an administrator", "ADMIN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Login.LoadAdministrator();
                 Operator.SaveOperator();
@@ -54,7 +53,16 @@ namespace FrmCore
         /// <param name="e"></param>
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-            ValidateUser();
+            try
+            {
+                ValidateUser();
+                this.lblIncorrect.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                this.lblIncorrect.Visible = true;
+                this.lblIncorrect.Text = ex.Message;
+            }
         }
 
         /// <summary>
@@ -88,30 +96,37 @@ namespace FrmCore
         /// </summary>
         private void ValidateUser()
         {
-            bool invalidUser = true;
-            if (int.TryParse(tbxUser.Text, out int user) && int.TryParse(tbxPass.Text, out int pass))
+            try
             {
-                if (Login.LogIn(user, pass))
-                {
-                    invalidUser = false;
-                    FrmProduction production = new FrmProduction();
-                    this.Hide();
-                    SetTextBox();                    
-                    DialogResult dialogResult = production.ShowDialog();
-                    if (DialogResult.Abort == dialogResult)
+                bool invalidUser = true;
+                if (int.TryParse(tbxUser.Text, out int user) && int.TryParse(tbxPass.Text, out int pass))
+                {                   
+                    if (DAO.LoginOprator(user.ToString(), pass.ToString()))
                     {
-                        this.Dispose();
-                    }
-                    else if (DialogResult.Cancel == dialogResult)
-                    {
+                        invalidUser = false;
+                        FrmProduction production = new FrmProduction();
+                        this.Hide();
                         SetTextBox();
-                        this.Show();
+                        DialogResult dialogResult = production.ShowDialog();
+                        if (DialogResult.Abort == dialogResult)
+                        {
+                            this.Dispose();
+                        }
+                        else if (DialogResult.Cancel == dialogResult)
+                        {
+                            SetTextBox();
+                            this.Show();
+                        }
                     }
                 }
+                if (invalidUser)
+                {
+                    throw new Exception("You must enter username and password");       
+                }
             }
-            if (invalidUser)
+            catch (Exception ex)
             {
-                MessageBox.Show("Incorrect operator number or password", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new Exception(ex.Message);
             }
         }
 
